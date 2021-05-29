@@ -1,22 +1,4 @@
-<?php
-session_start();
-if ($_SESSION['status']!="admin") {
-    header("location:../../index.php?pesan=belum_login");
-}
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>PPDB SMKN 1 Kragilan</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
-
-  <script src="../../../js/bootstrap.min.js"></script>
-</head>
-<body>
-
+<?php include ('../../header.php') ?>
 
 <div class="container">
 

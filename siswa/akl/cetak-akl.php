@@ -3,16 +3,24 @@ session_start();
 if ($_SESSION['status']!="siswa" && $_SESSION['status']!="admin") {
     header("location:../../login/akl/index.php?pesan=belum_login");
 }
+
+include '../../koneksi.php';
+$id_siswa = isset($_GET['id']) ? abs((int) $_GET['id']) : 0;
+$data_siswa = mysqli_query($koneksi, "select nama_siswa from f_siswa_akl where id='$id_siswa'");
+while ($d_siswa = mysqli_fetch_array($data_siswa)) {
+
+  $nama_siswa = $d_siswa['nama_siswa'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>PPDB SMKN 1 Kragilan</title>
+  <title>PPDB SMKN 1 Kragilan - <?= $nama_siswa ?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../css/bootstrap.min.css">
-  <script src="../../js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+  <!-- <script src="../../assets/js/bootstrap.min.js"></script> -->
 </head>
 <body>
 
@@ -22,16 +30,16 @@ if ($_SESSION['status']!="siswa" && $_SESSION['status']!="admin") {
     <table>
       <tr>
         <td>
-          <center><img style="margin-bottom:  80px; margin-top:  25px; margin-right: 90px" src="../../images/logo-banten-cetak.png" />
+          <center><img style="margin-bottom: 0px; margin-top:  0px; margin-right: 70px" src="../../assets/images/logo-banten-cetak.png" />
         </td>
         <td>
-          <center><h5 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h5></center>
+          <center><h5 style="margin-top:  30px;"><b>SMK Negeri 1 Kragilan</b></h5></center>
           <center><h6><b>Bukti Seleksi Administrasi Calon Peserta Didik Baru</b></h6></center>
-          <center><h6><b>Tahun Pelajaran 2020/2021</b></h6></center>
+          <center><h6><b>Tahun Pelajaran 2021/2022</b></h6></center>
           <center><h6><b>Program Studi Akuntansi Keuangan Lembaga</b></h6></center><br>
         </td>
         <td>
-          <center><img style="margin-bottom:  80px; margin-top:  25px; margin-left: 90px" src="../../images/logo-smkn1-cetak.png" />
+          <center><img style="margin-bottom: 0px; margin-top:  0px; margin-left: 70px" src="../../assets/images/logo-smkn1-cetak.png" />
         </td>
       </tr>
     </table>
@@ -279,8 +287,7 @@ if ($_SESSION['status']!="siswa" && $_SESSION['status']!="admin") {
         </td>
       </tr>
     </table>
-    <img width="200px" align="right" src="../../images/stampel.png" style="margin-right:  80px;"/>
-
+    <img width="200px" align="right" src="../../assets/images/stampel.png" style="margin-right:  80px;"/>
     <center>
   <?php
       } ?>

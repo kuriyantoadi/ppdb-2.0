@@ -2,25 +2,11 @@
 session_start();
 if ($_SESSION['status']!="akl") {
     header("location:../../index.php?pesan=belum_login");
-} else {
+}
+
+include '../header.php';
     ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <title>Operator AKL PPDB SMKN 1 Kragilan</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="../../../css/bootstrap.min.css">
-
-  <script src="../../../js/bootstrap.min.js"></script> -->
-  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
-  <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../../../js/jquery-latest.js"></script>
-  <script type="text/javascript" src="../../../js/jquery.tablesorter.min.js"></script>
-</head>
-
-<body>
 
 
 
@@ -157,7 +143,8 @@ if ($_SESSION['status']!="akl") {
           <td>
             <center>
               <?php
-        include('../../validasi.php'); ?>
+              include('../../validasi.php');
+              ?>
           </td>
           <td>
             <center>
@@ -179,47 +166,4 @@ if ($_SESSION['status']!="akl") {
   ?>
     </div>
   </div>
-  <script>
-    $(document).ready(function() {
-      $("#domainsTable").tablesorter({
-        sortList: [
-          [3, 1],
-          [2, 0]
-        ]
-      });
-    });
-
-    function searchTable() {
-      var input;
-      var saring;
-      var status;
-      var tbody;
-      var tr;
-      var td;
-      var i;
-      var j;
-      input = document.getElementById("input");
-      saring = input.value.toUpperCase();
-      tbody = document.getElementsByTagName("tbody")[0];;
-      tr = tbody.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td");
-        for (j = 0; j < td.length; j++) {
-          if (td[j].innerHTML.toUpperCase().indexOf(saring) > -1) {
-            status = true;
-          }
-        }
-        if (status) {
-          tr[i].style.display = "";
-          status = false;
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-  </script>
-  <?php
-} ?>
-</body>
-
-</html>
+  <?php include '../footer.php' ?>

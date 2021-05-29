@@ -271,6 +271,7 @@ $rt = $_POST['rt'];
 $rw = $_POST['rw'];
 $jarak_kesekolah = $_POST['jarak_kesekolah'];
 $nama_org_tua = $_POST['nama_org_tua'];
+$no_hp_org_tua = $_POST['no_hp_org_tua'];
 $pekerjaan_org_tua = $_POST['pekerjaan_org_tua'];
 $kip = $_POST['kip'];
 $un_bind = $_POST['un_bind'];
@@ -351,6 +352,7 @@ mysqli_query($koneksi, "UPDATE f_siswa_akl SET
              rw='$rw',
              jarak_kesekolah='$jarak_kesekolah',
              nama_org_tua='$nama_org_tua',
+             no_hp_org_tua='$no_hp_org_tua',
              kip='$kip',
              pdf_skhun='$nisn-$pdf_skhun_up.pdf',
              pdf_surat_dokter='$nisn-$pdf_surat_dokter_up.pdf',

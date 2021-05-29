@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>Calon Siswa sudah Mendaftar</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../../js/jquery-latest.js"></script>
-  <script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
-
-</head>
-
-<body>
-
+<?php include('../header.php') ?>
 
 
   <div class="container">
     <div class="row">
       <div class="col-md-3">
-        <center><img style="margin-top: 25px;" src="../../images/logo-banten.png" />
+        <center><img style="margin-top: 25px;" src="../../assets/images/logo-banten.png" />
       </div>
       <div class="col-md-6">
         <center>
@@ -38,7 +22,7 @@
         <!-- font ganti jenis -->
       </div>
       <div class="col-md-3">
-        <center><img style="margin-bottom:  80px; margin-top:  25px;" class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1.png" />
+        <center><img style="margin-bottom:  80px; margin-top:  25px;" class="img-fluid" alt="Bootstrap Image Preview" src="../../assets/images/logo-smkn1.png" />
       </div>
     </div>
 
@@ -141,47 +125,4 @@
   ?>
     </div>
   </div>
-  <script>
-    $(document).ready(function() {
-      $("#domainsTable").tablesorter({
-        sortList: [
-          [3, 1],
-          [2, 0]
-        ]
-      });
-    });
-
-    function searchTable() {
-      var input;
-      var saring;
-      var status;
-      var tbody;
-      var tr;
-      var td;
-      var i;
-      var j;
-      input = document.getElementById("input");
-      saring = input.value.toUpperCase();
-      tbody = document.getElementsByTagName("tbody")[0];;
-      tr = tbody.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td");
-        for (j = 0; j < td.length; j++) {
-          if (td[j].innerHTML.toUpperCase().indexOf(saring) > -1) {
-            status = true;
-          }
-        }
-        if (status) {
-          tr[i].style.display = "";
-          status = false;
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-
-    
-  </script>
-</body>
-
-</html>
+<?php include('../footer.php') ?>

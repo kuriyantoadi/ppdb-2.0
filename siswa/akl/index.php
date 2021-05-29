@@ -1,2 +1,2 @@
 <?php
-header("location:../../login/akl/");
+// header("location:../../login/akl/");

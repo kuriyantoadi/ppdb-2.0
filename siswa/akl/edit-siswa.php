@@ -3,27 +3,16 @@ session_start();
 if ($_SESSION['status']!="siswa") {
     header("location:../../login/akl/index.php?pesan=belum_login");
 }
+
+include '../header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>PPDB SMKN 1 Kragilan</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-
-<body>
 
   <div class="container">
 
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3">
-          <center><img style="margin-top: 25px;" src="../../images/logo-banten.png" />
+          <center><img style="margin-top: 25px;" src="../../assets/images/logo-banten.png" />
         </div>
         <div class="col-md-6">
           <center>
@@ -44,7 +33,7 @@ if ($_SESSION['status']!="siswa") {
           <!-- font ganti jenis -->
         </div>
         <div class="col-md-3">
-          <center><img style="margin-bottom:  80px; margin-top:  25px;" class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1.png" />
+          <center><img style="margin-bottom:  80px; margin-top:  25px;" class="img-fluid" src="../../assets/images/logo-smkn1.png" />
         </div>
       </div>
     </div>
@@ -67,6 +56,7 @@ if ($_SESSION['status']!="siswa") {
       tgl_lahir,
       tempat_lahir,
       tahun_lulus,
+      no_hp,
       nik,
       no_kk,
       tgl_kk,
@@ -171,9 +161,14 @@ if ($_SESSION['status']!="siswa") {
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="email">Jenis Kelamin :</label>
-        <div class="col-sm-2">
-          <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1" required>
-            <option value="">Pilih</option>
+        <div class="col-sm-3">
+          <select name="jenis_kelamin" class="form-control" required>
+            <?php if (empty($d['jenis_kelamin'])){  ?>
+              <option value="">Pilih</option>
+            <?php }else{ ?>
+              <option value="<?= $d['jenis_kelamin'] ?>">Pilihan Awal | <?= $d['jenis_kelamin'] ?></option>
+            <?php } ?>
+
             <option value="Laki-laki">Laki-laki</option>
             <option value="Perempuan">Perempuan</option>
           </select>
@@ -201,7 +196,7 @@ if ($_SESSION['status']!="siswa") {
       <div class="form-group">
         <label class="control-label col-sm-2" for="email">Nomor WhatsApp :</label>
         <div class="col-sm-3">
-          <input type="number" class="form-control" name="no_hp" placeholder="Nomor WhatsApp" required>
+          <input type="number" class="form-control" name="no_hp" placeholder="Nomor WhatsApp" value="<?= $d['no_hp'] ?>" required>
         </div>
       </div>
 
@@ -275,7 +270,7 @@ if ($_SESSION['status']!="siswa") {
       <div class="form-group">
         <label class="control-label col-sm-2" for="email">Jarak Alamat Siswa ke Sekolah :</label><b>Meter</b>
         <div class="col-sm-4">
-          <input type="number" class="form-control" placeholder="Jarak Rumah ke Sekolah" name="jarak_kesekolah" required>
+          <input type="number" class="form-control" placeholder="Jarak Rumah ke Sekolah" name="jarak_kesekolah" value="<?= $d['jarak_kesekolah'] ?>" required>
         </div>
       </div>
 
@@ -285,6 +280,12 @@ if ($_SESSION['status']!="siswa") {
         <label class="control-label col-sm-2" for="email">Nama Orang Tua/Wali :</label>
         <div class="col-sm-6">
           <input type="text" class="form-control" placeholder="Nama Orang Tua" name="nama_org_tua" value="<?php echo $d['nama_org_tua']; ?>" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Nomor Hp Orang Tua/Wali :</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" placeholder="Pekerjaan Orang Tua" name="no_hp_org_tua" value="<?php echo $d['pekerjaan_org_tua']; ?>" required>
         </div>
       </div>
       <div class="form-group">
@@ -303,7 +304,6 @@ if ($_SESSION['status']!="siswa") {
       <br>
 
       <h4>F. INPUT SCAN BERKAS CALON PESERTA DIDIK</h4>
-
       <div class="form-group">
         <label class="control-label col-sm-2">SKHUN atau Surat Keterangan Lulus</label>
         <div class="col-sm-6">
@@ -371,34 +371,38 @@ if ($_SESSION['status']!="siswa") {
       <div class="form-group">
         <label class="control-label col-sm-2">Nilai Bahasa Indonesia </label>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Nilai Bahasa Indonesia" name="un_bind" value="" required>
+          <input type="number" class="form-control" placeholder="Nilai Bahasa Indonesia" name="un_bind" value="<?= $d['un_bind'] ?>" required>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2">Nilai Bahasa Inggris </label>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Nilai Bahasa Inggris" name="un_bing" value="" required>
+          <input type="number" class="form-control" placeholder="Nilai Bahasa Inggris" name="un_bing" value="<?= $d['un_bing'] ?>" required>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2">Nilai Matematika </label>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Nilai Matematika" name="un_mtk" value="" required>
+          <input type="number" class="form-control" placeholder="Nilai Matematika" name="un_mtk" value="<?= $d['un_mtk'] ?>" required>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2">Nilai IPA </label>
         <div class="col-sm-3">
-          <input type="number" class="form-control" placeholder="Nilai IPA" name="un_ipa" value="" required>
+          <input type="number" class="form-control" placeholder="Nilai IPA" name="un_ipa" value="<?= $d['un_ipa'] ?>" required>
         </div>
       </div>
       <br>
       <h4>H. KONDISI FISIK DAN KEBIASAAN</h4>
       <div class="form-group">
         <label class="control-label col-sm-2">Apakah anda bertindik (bagi laki-laki) </label>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <select name="bertindik" class="form-control" required>
-            <option value="">Pilihan Anda</option>
+            <?php if (empty($d['bertindik'])){  ?>
+              <option value="">Pilihan Anda</option>
+            <?php }else{ ?>
+              <option value="<?= $d['bertindik'] ?>">Pilihan Awal | <?= $d['bertindik'] ?></option>
+            <?php } ?>
             <option value="Ya">Ya</option>
             <option value="Tidak">Tidak</option>
             <option value="Perempuan">Saya Perempuan</option>
@@ -407,9 +411,13 @@ if ($_SESSION['status']!="siswa") {
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2">Apakah anda Perokok </label>
-        <div class="col-sm-2">
-          <select name="perokok" class="form-control" value="<?php echo $d['perokok']; ?>" required>
-            <option value="">Pilihan Anda</option>
+        <div class="col-sm-3">
+          <select name="perokok" class="form-control"  required>
+            <?php if (empty($d['perokok'])){  ?>
+              <option value="">Pilihan Anda</option>
+            <?php }else{ ?>
+              <option value="<?= $d['perokok'] ?>">Pilihan Awal | <?= $d['perokok'] ?></option>
+            <?php } ?>
             <option value="Ya">Ya</option>
             <option value="Tidak">Tidak</option>
           </select>
@@ -417,9 +425,13 @@ if ($_SESSION['status']!="siswa") {
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2">Apakah anda pemakai Psikotropika<br>(Narkoba, Ganja dan sejenisnya) </label>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <select name="psikotropika" class="form-control" required>
-            <option value="">Pilihan Anda</option>
+            <?php if (empty($d['psikotropika'])){  ?>
+              <option value="">Pilihan Anda</option>
+            <?php }else{ ?>
+              <option value="<?= $d['psikotropika'] ?>">Pilihan Awal | <?= $d['psikotropika'] ?></option>
+            <?php } ?>
             <option value="Ya">Ya</option>
             <option value="Tidak">Tidak</option>
           </select>
@@ -427,9 +439,13 @@ if ($_SESSION['status']!="siswa") {
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2">Apakah anda bertato </label>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <select name="bertato" class="form-control" required>
-            <option value="">Pilihan Anda</option>
+            <?php if (empty($d['bertato'])){  ?>
+              <option value="">Pilihan Anda</option>
+            <?php }else{ ?>
+              <option value="<?= $d['bertato'] ?>">Pilihan Awal | <?= $d['bertato'] ?></option>
+            <?php } ?>
             <option value="Ya">Ya</option>
             <option value="Tidak">Tidak</option>
           </select>
@@ -437,9 +453,13 @@ if ($_SESSION['status']!="siswa") {
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2">Apakah anda peminum-minuman keras </label>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <select name="peminum" class="form-control" required>
-            <option value="">Pilihan Anda</option>
+            <?php if (empty($d['peminum'])){  ?>
+              <option value="">Pilihan Anda</option>
+            <?php }else{ ?>
+              <option value="<?= $d['peminum'] ?>">Pilihan Awal | <?= $d['peminum'] ?></option>
+            <?php } ?>
             <option value="Ya">Ya</option>
             <option value="Tidak">Tidak</option>
           </select>
@@ -447,9 +467,13 @@ if ($_SESSION['status']!="siswa") {
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2">Apakah anda Buta Warna </label>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
           <select name="buta_warna" class="form-control" required>
-            <option value="">Pilihan Anda</option>
+            <?php if (empty($d['buta_warna'])){  ?>
+              <option value="">Pilihan Anda</option>
+            <?php }else{ ?>
+              <option value="<?= $d['buta_warna'] ?>">Pilihan Awal | <?= $d['buta_warna'] ?></option>
+            <?php } ?>
             <option value="Ya">Ya</option>
             <option value="Tidak">Tidak</option>
           </select>
@@ -468,20 +492,4 @@ if ($_SESSION['status']!="siswa") {
     </form>
   </div>
 
-  <?php  ?>
-  <script src="../0-datepicker/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-  <script src="../0-datepicker/js/custom.js"></script>
-
-  <script>
-    $(document).ready(function() {
-      setDatePicker()
-      setDateRangePicker(".startdate", ".enddate")
-      setMonthPicker()
-      setYearPicker()
-      setYearRangePicker(".startyear", ".endyear")
-    })
-  </script>
-
-</body>
-
-</html>
+<?php include '../footer.php' ?>

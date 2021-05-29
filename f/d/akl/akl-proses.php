@@ -38,7 +38,5 @@ if ($_SESSION['status']!="akl") {
                where id='$id'
                ");
 
-
-
     header("location:index.php");
 }

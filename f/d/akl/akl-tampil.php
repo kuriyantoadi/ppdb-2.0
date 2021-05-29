@@ -3,18 +3,9 @@ session_start();
 if ($_SESSION['status']!="akl") {
     header("location:../../index.php?pesan=belum_login");
 }
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Operator  PPDB SMKN 1 Kragilan</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 
-  <script src="../../../js/bootstrap.min.js"></script>
-</head>
-<body>
+include '../header.php';
+?>
 
 <div class="container">
 
@@ -109,8 +100,6 @@ if ($_SESSION['status']!="akl") {
     </div>
 </div>
 </div>
-
-
 
 
   </body>

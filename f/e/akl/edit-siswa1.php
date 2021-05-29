@@ -1,4 +1,22 @@
-<?php include('../../header.php') ?>
+<?php
+session_start();
+if ($_SESSION['status']!="admin") {
+    header("location:../../index.php?pesan=belum_login");
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PPDB SMKN 1 Kragilan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+  <script src="../../../js/bootstrap.min.js"></script>
+
+  <link href="../../../siswa/0-datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+</head>
+<body>
 
 <div class="container">
 
@@ -319,4 +337,20 @@
     </div>
   </form>
 </div>
-<?php include '../../footer.php' ?>
+
+<?php  ?>
+    <script src="../../../siswa/0-datepicker/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../../../siswa/0-datepicker/js/custom.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        setDatePicker()
+        setDateRangePicker(".startdate", ".enddate")
+        setMonthPicker()
+        setYearPicker()
+        setYearRangePicker(".startyear", ".endyear")
+    })
+    </script>
+
+  </body>
+</html>
