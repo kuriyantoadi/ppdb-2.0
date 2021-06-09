@@ -19,7 +19,7 @@ include '../header.php';
             <h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2>
           </center>
           <center>
-            <h4><b>Form Seleksi Administrasi (cek)</b></h4>
+            <h4><b>Form Pendaftaran</b></h4>
           </center>
           <center>
             <h4><b>Calon Peserta Didik Baru</b></h4>
@@ -28,7 +28,7 @@ include '../header.php';
             <h5><b>Tahun Pelajaran 2021/2022</b></h4>
           </center>
           <center>
-            <h4><b>Program Studi Akuntansi Keuangan Lembaga</b></h4>
+            <h4><b>Program Studi Akuntansi dan Keuangan Lembaga</b></h4>
           </center><br>
           <!-- font ganti jenis -->
         </div>
@@ -57,7 +57,7 @@ include '../header.php';
         <div class="col-sm-6">
           <select class="form-control" name="kompetensi_keahlian_2">
             <option value="">Pilih</option>
-            <option value="tidak memilih">Hanya 1 Kompetensi Keahlian</option>
+            <!-- <option value="tidak memilih">Hanya 1 Kompetensi Keahlian</option> -->
             <!-- <option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option> -->
             <option value="Otomatisasi dan Tata Kelola Perkantoran">Otomatisasi dan Tata Kelola Perkantoran</option>
             <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>

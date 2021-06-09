@@ -137,7 +137,7 @@
 </div>
 
 <br>
-<h4>D. DATA ORANG TUA/WALI CALON PSERTA DIDIK</h4>
+<h4>D. DATA ORANG TUA/WALI CALON PESERTA DIDIK</h4>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Nama Orang Tua/Wali :</label>
   <div class="col-sm-6">
@@ -170,60 +170,106 @@
   <label class="control-label col-sm-2">SKHUN atau Surat Keterangan Lulus</label>
   <div class="col-sm-6">
     <input type="file" name="pdf_skhun" accept="application/pdf" class="form-control-file" id="cek_skhu" required>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Surat Sehat dari Dokter Pemerintah</label>
   <div class="col-sm-6">
     <input type="file" name="pdf_surat_dokter" accept="application/pdf" class="form-control-file" id="cek_surat_dokter" required>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Kartu Keluarga (KK) </label>
   <div class="col-sm-6">
     <input type="file" name="pdf_kk" accept="application/pdf" class="form-control-file" id="cek_kk" required>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Akta Kelahiran </label>
   <div class="col-sm-6">
     <input type="file" name="pdf_akta" accept="application/pdf" class="form-control-file" id="cek_akta" required>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
-  <label class="control-label col-sm-2">PKH/KKS/KIP/Jamsosda </label>
-  <div class="col-sm-6">
-    <input type="file" name="pdf_akta" accept="application/pdf" class="form-control-file" id="cek_akta" required>
-  </div>
-</div>
-<div class="form-group">
-  <label class="control-label col-sm-2">Photo </label>
+  <label class="control-label col-sm-2">Photo Berseragam Sekolah Background Merah</label>
   <div class="col-sm-6">
     <input type="file" name="pdf_photo" accept="application/pdf" class="form-control-file" id="cek_photo" required>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Swafoto memegang KK Sedang diukur tinggi badan </label>
   <div class="col-sm-6">
     <input type="file" name="pdf_swa_kk" accept="application/pdf" class="form-control-file" id="cek_swa_kk" required>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2">Rapor Semester 2 </label>
+  <div class="col-sm-6">
+    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-2">Rapor Semester 3 </label>
+  <div class="col-sm-6">
+    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-2">Rapor Semester 4 </label>
+  <div class="col-sm-6">
+    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-2">Rapor Semester 5 </label>
+  <div class="col-sm-6">
+    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-2">Rapor Semester 6</label>
+  <div class="col-sm-6">
+    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-2">PKH/KKS/KIP/Jamsosda </label>
+  <div class="col-sm-6">
+    <input type="file" name="pdf_akta" accept="application/pdf" class="form-control-file" id="cek_akta" required>
+    <h6>Ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Piagam 1 </label>
   <div class="col-sm-6">
     <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1">
+    <h6>Ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Piagam 2</label>
   <div class="col-sm-6">
     <input type="file" name="pdf_piagam2" accept="application/pdf" class="form-control-file" id="cek_piagam2">
+    <h6>Ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Piagam 3 </label>
   <div class="col-sm-6">
     <input type="file" name="pdf_piagam3" accept="application/pdf" class="form-control-file" id="cek_piagam3">
+    <h6>Ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <h6><b>Informasi :</h6>
@@ -231,37 +277,39 @@
 <h6>2. Dokumen yang di <b>Scan Harus Asli (bukan Photo Copy)</b></h6>
 <h6>3. Piagam dan PKH/KKS/KIP/Jamsosda boleh dikosongkan</h6>
 <h6>4. Piagam hasil perlombaan dan/atau penghargaan di bidang akademik maupun non akademik</h6>
-<h6>5. Contoh swa photo dapat dilihat di link berikut(belum di kerjakan)</h6>
-<h6>6. Surat sehat harus ditandatangani oleh dokter pemerintah.</h6>
+<h6>5. Piagam boleh di isi bukti hafiz alquran atau bukti hafal kitab sesuai agama yang dianut</h6>
+<h6>6. Contoh swa photo dapat dilihat di link berikut(belum di kerjakan)</h6>
+<h6>7. Surat sehat harus ditandatangani oleh dokter pemerintah.</h6>
+<h6>8. Proses daftar tergatung jaringan internet, karena file yang diupload cukup banyak</h6>
 
 <br>
-<h4>G. INPUT NILAI RATA-RATA RAPORT SMP/MTS/Sederajat</h4>
+<h4>G. INPUT NILAI RATA-RATA RAPOR SMP/MTS/Sederajat</h4>
 <div class="form-group">
-  <label class="control-label col-sm-2">Rata-rata Raport Semester 2</label>
+  <label class="control-label col-sm-2">Rata-rata Rapor Semester 2</label>
   <div class="col-sm-3">
     <input type="number" class="form-control" placeholder="Semester 2" name="un_bind" required>
   </div>
 </div>
 <div class="form-group">
-  <label class="control-label col-sm-2">Rata-rata Raport Semester 3</label>
+  <label class="control-label col-sm-2">Rata-rata Rapor Semester 3</label>
   <div class="col-sm-3">
     <input type="number" class="form-control" placeholder="Semester 3" name="un_bing"  required>
   </div>
 </div>
 <div class="form-group">
-  <label class="control-label col-sm-2">Rata-rata Raport Semester 4</label>
+  <label class="control-label col-sm-2">Rata-rata Rapor Semester 4</label>
   <div class="col-sm-3">
     <input type="number" class="form-control" placeholder="Semester 4" name="un_mtk" required>
   </div>
 </div>
 <div class="form-group">
-  <label class="control-label col-sm-2">Rata-rata Raport Semester 5</label>
+  <label class="control-label col-sm-2">Rata-rata Rapor Semester 5</label>
   <div class="col-sm-3">
     <input type="number" class="form-control" placeholder="Semester 5" name="un_ipa"  required>
   </div>
 </div>
 <div class="form-group">
-  <label class="control-label col-sm-2">Rata-rata Raport Semester 6</label>
+  <label class="control-label col-sm-2">Rata-rata Rapor Semester 6</label>
   <div class="col-sm-3">
     <input type="number" class="form-control" placeholder="Semester 6" name="un_ipa"  required>
   </div>
