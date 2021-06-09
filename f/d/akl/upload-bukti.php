@@ -1,44 +1,34 @@
+<?php include '../header.php'; ?>
+
 <?php
 session_start();
-if ($_SESSION['status']!="siswa") {
-    header("location:../../login/akl/index.php?pesan=belum_login");
+if ($_SESSION['status']!="akl") {
+    header("location:../../index.php?pesan=belum_login");
 }
+
+include '../header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>PPDB SMKN 1 Kragilan</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-
-  <!-- <script src="../../assets/js/bootstrap.min.js"></script> -->
-</head>
-<body>
-
 
 <div class="container">
 
   <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-md-2">
 		</div>
-		<div class="col-md-6">
-      <center><h3>Tampil Data Pendaftaran Calon Peserta Didik</h3></center>
-      <center><h3>SMK Negeri 1 Kragilan</h3></center>
+		<div class="col-md-8">
+      <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
       <center><h3>Kompetensi Keahlian Akuntansi Keuangan Lembaga</h3></center>
+      <center><h3>Upload Bukti Pendaftaran</h3></center>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-2">
 		</div>
   </div>
 
   <table class="table table-bordered">
     <?php
       include '../../../koneksi.php';
-       $id = isset($_GET['id']) ? abs((int) $_GET['id']) : 0;
+      $id = $_GET['id'];
       $data = mysqli_query($koneksi, "select
-
       id,
   		no_p,
   		tgl_pendaftaran,
@@ -89,13 +79,23 @@ if ($_SESSION['status']!="siswa") {
   		psikotropika,
   		bertato,
   		peminum,
+      val_skhun,
+      val_surat_dokter,
+      val_kk,
+      val_akta,
+      val_photo,
+      val_swaphoto,
+      val_piagam1,
+      val_piagam2,
+      val_piagam3,
       buta_warna,
       kompetensi_keahlian_2
+
        from f_siswa_akl where id='$id'");
       while ($d = mysqli_fetch_array($data)) {
-          include('akl-tampil.php'); ?>
+          include('../form-bukti-daftar.php'); ?>
 
-    </table><br>
+    <br>
     <?php
       } ?>
 
@@ -104,5 +104,9 @@ if ($_SESSION['status']!="siswa") {
 </div>
 </div>
 
+
   </body>
 </html>
+
+
+<?php include '../footer.php'; ?>

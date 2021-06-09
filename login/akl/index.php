@@ -60,7 +60,7 @@
 
       <!-- Remind Passowrd -->
       <div id="formFooter">
-        <a class="underlineHover" href="#">Lupa Password</a>
+        <a class="underlineHover" href="#">Siswa sudah bisa seleksi Administrasi</a>
       </div>
 
     </div>

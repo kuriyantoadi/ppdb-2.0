@@ -285,7 +285,7 @@ include '../header.php';
       <div class="form-group">
         <label class="control-label col-sm-2" for="email">Nomor Hp Orang Tua/Wali :</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" placeholder="Pekerjaan Orang Tua" name="no_hp_org_tua" value="<?php echo $d['pekerjaan_org_tua']; ?>" required>
+          <input type="text" class="form-control" placeholder="Nomor Hp Orang Tua/Wali" name="no_hp_org_tua" value="<?php echo $d['pekerjaan_org_tua']; ?>" required>
         </div>
       </div>
       <div class="form-group">
