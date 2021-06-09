@@ -1,147 +1,70 @@
-<?php
-// session_start();
-// if ($_SESSION['status']!="siswa") {
-//     header("location:../../login/akl/index.php?pesan=belum_login");
-// }
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-include '../header.php';
-?>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <div class="container">
+  <title></title>
+</head>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3">
-          <center><img style="margin-top: 25px;" src="../../assets/images/logo-banten.png" />
-        </div>
-        <div class="col-md-6">
-          <center>
-            <h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2>
-          </center>
-          <center>
-            <h4><b>Form Pendaftaran</b></h4>
-          </center>
-          <center>
-            <h4><b>Calon Peserta Didik Baru</b></h4>
-          </center>
-          <center>
-            <h5><b>Tahun Pelajaran 2021/2022</b></h4>
-          </center>
-          <center>
-            <h4><b>Program Studi Akuntansi dan Keuangan Lembaga</b></h4>
-          </center><br>
-          <!-- font ganti jenis -->
-        </div>
-        <div class="col-md-3">
-          <center><img style="margin-bottom:  80px; margin-top:  25px;" class="img-fluid" src="../../assets/images/logo-smkn1.png" />
-        </div>
+<body>
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="../../assets/js/jquery-latest.js"></script>
+  <script src="" charset="utf-8"></script>
+  <link rel="stylesheet" href="../../assets/css/login.css">
+  <!-- Include the above in your HEAD tag ---------->
+
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <?php
+                if (isset($_GET['pesan'])) {
+                    if ($_GET['pesan'] == "gagal") {
+                        echo "
+						<div class='alert alert-danger' role='alert'>
+							<center>Maaf Password anda salah!
+						</div>";
+                    } elseif ($_GET['pesan'] == "logout") {
+                        echo "
+						<div class='alert alert-warning' role='alert'>
+							<center>Anda Berhasil Logout
+						</div>
+						";
+                    } elseif ($_GET['pesan'] == "belum_login") {
+                        echo "
+						<div class='alert alert-danger' role='alert'>
+							<center>Maaf anda harus login dulu
+						</div>";
+                    }
+                }
+                ?>
+
+          <h4 style="margin-top:  40px;">Login PPDB SMK Negeri 1 Kragilan</h5>
+          <h4 style="margin-bottom: 40px;">Komptensi Keahlian Akuntansi Keuangan Lembaga</h5>
+
       </div>
+
+      <!-- Login Form -->
+
+      <form method="post" action="cek_login.php">
+        <input type="text" id="login" class="fadeIn second" name="nisn" placeholder="NISN">
+        <input type="text" id="password" class="fadeIn third" name="nik" placeholder="NIK">
+        <input type="submit" class="fadeIn fourth" >
+      </form>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="daftar.php">Belum Daftar</a>
+      </div>
+
     </div>
-
-    <!-- <form class="form-horizontal" action="update-siswa.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()"> -->
-      <form class="form-horizontal" action="" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
-
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="email">Tanggal Pendaftaran :</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control" name="tgl_pendfataran" value="<?php echo date('d-m-Y'); ?>" required readonly>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="email">Kompetensi Keahlian :</label>
-        <div class="col-sm-6">
-          <input type="text" class="form-control" name="kompetensi_keahlian" value="Akuntansi dan Keuangan Lembaga" readonly>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="email">Kompetensi Keahlian Ke-2 :</label>
-        <div class="col-sm-6">
-          <select class="form-control" name="kompetensi_keahlian_2">
-            <option value="">Pilih</option>
-            <!-- <option value="tidak memilih">Hanya 1 Kompetensi Keahlian</option> -->
-            <!-- <option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option> -->
-            <option value="Otomatisasi dan Tata Kelola Perkantoran">Otomatisasi dan Tata Kelola Perkantoran</option>
-            <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
-            <option value="Teknik Kendaraan Ringan Otomotif">Teknik Kendaraan Ringan Otomotif</option>
-            <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
-            <option value="Teknik Pemesinan">Teknik Pemesinan</option>
-          </select>
-        </div>
-      </div>
-
-      <br>
-      <?php include '../form.php' ?>
-
-      <h4>H. KONDISI FISIK DAN KEBIASAAN</h4>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda bertindik (bagi laki-laki) </label>
-        <div class="col-sm-3">
-          <select name="bertindik" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-            <option value="Perempuan">Saya Perempuan</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda Perokok </label>
-        <div class="col-sm-3">
-          <select name="perokok" class="form-control"  required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda pemakai Psikotropika<br>(Narkoba, Ganja dan sejenisnya) </label>
-        <div class="col-sm-3">
-          <select name="psikotropika" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda bertato </label>
-        <div class="col-sm-3">
-          <select name="bertato" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda peminum-minuman keras </label>
-        <div class="col-sm-3">
-          <select name="peminum" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda Buta Warna </label>
-        <div class="col-sm-3">
-          <select name="buta_warna" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <br>
-
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" name="upload" value="upload" class="btn btn-default">Submit</button>
-        </div>
-      </div>
-    </form>
   </div>
+</body>
 
-<?php include '../footer.php' ?>
+</html>
