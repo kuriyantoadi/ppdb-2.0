@@ -41,8 +41,7 @@ include '../header.php';
     <!-- <form class="form-horizontal" action="update-siswa.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()"> -->
     <?php
     include '../../koneksi.php';
-    // $nik = isset($_GET['nik']) ? abs((int) $_GET['nik']) : 0;
-    $nik = $_GET['nik'];
+    $nik = isset($_GET['nik']) ? abs((int) $_GET['nik']) : 0;
     $cek_kartu = mysqli_query($koneksi, "select
     id,
     npsn_sekolah
