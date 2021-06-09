@@ -213,35 +213,35 @@
   <label class="control-label col-sm-2">Rapor Semester 2 </label>
   <div class="col-sm-6">
     <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
-    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 3 </label>
   <div class="col-sm-6">
     <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
-    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 4 </label>
   <div class="col-sm-6">
     <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
-    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 5 </label>
   <div class="col-sm-6">
     <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
-    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 6</label>
   <div class="col-sm-6">
     <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
-    <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
+    <h6>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">

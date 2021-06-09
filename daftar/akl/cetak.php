@@ -1,8 +1,8 @@
 <?php
-session_start();
-if ($_SESSION['status']!="siswa" && $_SESSION['status']!="admin") {
-    header("location:../../login/akl/index.php?pesan=belum_login");
-}
+// session_start();
+// if ($_SESSION['status']!="siswa" && $_SESSION['status']!="admin") {
+//     header("location:../../login/akl/index.php?pesan=belum_login");
+// }
 
 include '../../koneksi.php';
 $id_siswa = isset($_GET['id']) ? abs((int) $_GET['id']) : 0;

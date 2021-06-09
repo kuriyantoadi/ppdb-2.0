@@ -38,8 +38,10 @@ include '../header.php';
       </div>
     </div>
 
+    <?php include '../../alert.php' ?>
+
     <!-- <form class="form-horizontal" action="update-siswa.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()"> -->
-      <form class="form-horizontal" action="" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
+      <form class="form-horizontal" action="daftar_up.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
 
       <div class="form-group">
         <label class="control-label col-sm-2" for="email">Tanggal Pendaftaran :</label>
