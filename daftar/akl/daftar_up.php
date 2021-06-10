@@ -291,7 +291,7 @@ if ($_POST['upload']) {
 
     // pdf_kip
     if ($_POST['upload']) {
-        $ekstensi_diperbolehkan  = array('pdf');
+        $ekstensi_diperbolehkan  = array('pdf','');
         $pdf_kip = $_FILES['pdf_kip']['name'];
         $pdf_kip_up = "kip";
         $x = explode('.', $pdf_kip);
