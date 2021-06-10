@@ -247,7 +247,7 @@
 <div class="form-group">
   <label class="control-label col-sm-2">PKH/KKS/KIP/Jamsosda </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_kip" accept="application/pdf" class="form-control-file" required>
+    <input type="file" name="pdf_kip" accept="application/pdf" class="form-control-file">
     <h6>Ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>

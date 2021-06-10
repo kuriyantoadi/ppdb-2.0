@@ -1,8 +1,5 @@
 <?php
-// session_start();
-// if ($_SESSION['status']!="siswa" && $_SESSION['status']!="admin") {
-//     header("location:../../login/akl/index.php?pesan=belum_login");
-// }
+
 
 include '../../koneksi.php';
 $nisn = isset($_GET['nisn']) ? abs((int) $_GET['nisn']) : 0;
