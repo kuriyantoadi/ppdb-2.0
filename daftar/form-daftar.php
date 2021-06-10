@@ -212,42 +212,42 @@
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 2 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <input type="file" name="pdf_rapor2" accept="application/pdf" class="form-control-file" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 3 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <input type="file" name="pdf_rapor3" accept="application/pdf" class="form-control-file" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 4 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <input type="file" name="pdf_rapor4" accept="application/pdf" class="form-control-file" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 5 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <input type="file" name="pdf_rapor5" accept="application/pdf" class="form-control-file" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 6</label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <input type="file" name="pdf_rapor6" accept="application/pdf" class="form-control-file" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">PKH/KKS/KIP/Jamsosda </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_akta" accept="application/pdf" class="form-control-file" id="cek_akta" required>
+    <input type="file" name="pdf_kip" accept="application/pdf" class="form-control-file" required>
     <h6>Ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
@@ -287,31 +287,31 @@
 <div class="form-group">
   <label class="control-label col-sm-2">Rata-rata Rapor Semester 2</label>
   <div class="col-sm-3">
-    <input type="number" class="form-control" placeholder="Semester 2" name="un_bind" required>
+    <input type="number" class="form-control" placeholder="Semester 2" name="rapor_2" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rata-rata Rapor Semester 3</label>
   <div class="col-sm-3">
-    <input type="number" class="form-control" placeholder="Semester 3" name="un_bing"  required>
+    <input type="number" class="form-control" placeholder="Semester 3" name="rapor_3"  required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rata-rata Rapor Semester 4</label>
   <div class="col-sm-3">
-    <input type="number" class="form-control" placeholder="Semester 4" name="un_mtk" required>
+    <input type="number" class="form-control" placeholder="Semester 4" name="rapor_4" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rata-rata Rapor Semester 5</label>
   <div class="col-sm-3">
-    <input type="number" class="form-control" placeholder="Semester 5" name="un_ipa"  required>
+    <input type="number" class="form-control" placeholder="Semester 5" name="rapor_5"  required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rata-rata Rapor Semester 6</label>
   <div class="col-sm-3">
-    <input type="number" class="form-control" placeholder="Semester 6" name="un_ipa"  required>
+    <input type="number" class="form-control" placeholder="Semester 6" name="rapor_6"  required>
   </div>
 </div>
 <br>

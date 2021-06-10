@@ -44,7 +44,8 @@ include '../header.php';
     $nik = isset($_GET['nik']) ? abs((int) $_GET['nik']) : 0;
     $cek_kartu = mysqli_query($koneksi, "select
     id,
-    npsn_sekolah
+    npsn_sekolah,
+    nisn
     from f_siswa_akl where nik='$nik'");
 
     ?>
@@ -62,7 +63,7 @@ include '../header.php';
               $cek_npsn = $d1['npsn_sekolah'];
               if ($cek_npsn) {
                 ?>
-                <a style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="cetak.php?id=<?= $d1['id']; ?>">Cetak PDF</a>
+                <a style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="cetak.php?nisn=<?= $d1['nisn']; ?>">Cetak PDF</a>
               <?php
                 }
               }
@@ -74,59 +75,7 @@ include '../header.php';
       <?php
       // include '../../koneksi.php';
       // $nik = isset($_GET['nik']) ? abs((int) $_GET['nik']) : 0;
-      $data = mysqli_query($koneksi, "select
-      id,
-      no_p,
-      tgl_pendaftaran,
-      kompetensi_keahlian,
-      asal_sekolah,
-      npsn_sekolah,
-      nisn,
-      nama_siswa,
-      jenis_kelamin,
-      tgl_lahir,
-      tempat_lahir,
-      tahun_lulus,
-      no_hp,
-      nik,
-      no_kk,
-      tgl_kk,
-      kota,
-      kecamatan,
-      kelurahan,
-      kode_pos,
-      alamat,
-      rt,
-      rw,
-      jarak_kesekolah,
-      nama_org_tua,
-      pekerjaan_org_tua,
-      kip,
-      pdf_skhun,
-      pdf_surat_dokter,
-      pdf_kk,
-      pdf_akta,
-      pdf_photo,
-      pdf_swa_kk,
-      pdf_piagam1,
-      pdf_piagam2,
-      pdf_piagam3,
-      un_bind,
-      un_bing,
-      un_mtk,
-      un_ipa,
-      id,
-      username,
-      password,
-      enk,
-      bertindik,
-      psikotropika,
-      bertato,
-      perokok,
-      peminum,
-      buta_warna,
-      kompetensi_keahlian_2
-       from f_siswa_akl where nik='$nik'");
+      $data = mysqli_query($koneksi, "select * from f_siswa_akl where nik='$nik'");
       while ($d = mysqli_fetch_array($data)) {
           //validasi jika npsn kosong
           $cek_npsn = $d['npsn_sekolah'];

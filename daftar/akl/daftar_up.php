@@ -31,7 +31,7 @@ if ($_POST['upload']) {
         echo 'File SKHUN tidak pdf';
         echo "<br>";
         echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-        header("location:gagal-upload.php");
+        // header("location:gagal-upload.php");
         exit;
     }
 }
@@ -59,7 +59,7 @@ if ($_POST['upload']) {
           echo 'pdf_surat_dokter';
           echo "<br>";
           echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-          header("location:gagal-upload.php");
+          // header("location:gagal-upload.php");
           exit;
       }
   }
@@ -85,7 +85,7 @@ if ($_POST['upload']) {
         } else {
             echo 'pdf_kk';
             echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-            header("location:gagal-upload.php");
+            // header("location:gagal-upload.php");
             exit;
         }
     }
@@ -111,7 +111,7 @@ if ($_POST['upload']) {
           } else {
               echo 'pdf_akta';
               echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-              header("location:gagal-upload.php");
+              // header("location:gagal-upload.php");
               exit;
           }
       }
@@ -137,7 +137,7 @@ if ($_POST['upload']) {
       } else {
           echo 'pdf_photo';
           echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-          header("location:gagal-upload.php");
+          // header("location:gagal-upload.php");
           exit;
       }
   }
@@ -163,7 +163,7 @@ if ($_POST['upload']) {
         } else {
             echo 'pdf_swa_kk';
             echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-            header("location:gagal-upload.php");
+            // header("location:gagal-upload.php");
             exit;
         }
     }
@@ -188,7 +188,7 @@ if ($_POST['upload']) {
         } else {
             echo 'pdf_rapor2';
             echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-            header("location:gagal-upload.php");
+            // header("location:gagal-upload.php");
             exit;
         }
     }
@@ -212,7 +212,7 @@ if ($_POST['upload']) {
         } else {
             echo 'pdf_rapor3';
             echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-            header("location:gagal-upload.php");
+            // header("location:gagal-upload.php");
             exit;
         }
     }
@@ -236,7 +236,7 @@ if ($_POST['upload']) {
         } else {
             echo 'pdf_rapor4';
             echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-            header("location:gagal-upload.php");
+            // header("location:gagal-upload.php");
             exit;
         }
     }
@@ -260,7 +260,7 @@ if ($_POST['upload']) {
         } else {
             echo 'pdf_rapor5';
             echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-            header("location:gagal-upload.php");
+            // header("location:gagal-upload.php");
             exit;
         }
     }
@@ -284,7 +284,7 @@ if ($_POST['upload']) {
         } else {
             echo 'pdf_rapor6';
             echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-            header("location:gagal-upload.php");
+            // header("location:gagal-upload.php");
             exit;
         }
     }
@@ -293,6 +293,7 @@ if ($_POST['upload']) {
     if ($_POST['upload']) {
         $ekstensi_diperbolehkan  = array('pdf');
         $pdf_kip = $_FILES['pdf_kip']['name'];
+        $pdf_kip_up = "kip";
         $x = explode('.', $pdf_kip);
         $ekstensi = strtolower(end($x));
         $ukuran    = $_FILES['pdf_kip']['size'];
@@ -308,7 +309,7 @@ if ($_POST['upload']) {
         } else {
             echo 'pdf_kip';
             echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-            header("location:gagal-upload.php");
+            // header("location:gagal-upload.php");
             exit;
         }
     }
@@ -333,7 +334,7 @@ if ($_POST['upload']) {
           } else {
               echo 'pdf_piagam1';
               echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-              header("location:gagal-upload.php");
+              // // header("location:gagal-upload.php");
               exit;
           }
       }
@@ -360,7 +361,7 @@ if ($_POST['upload']) {
             } else {
                 echo 'pdf_piagam2';
                 echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-                header("location:gagal-upload.php");
+                // header("location:gagal-upload.php");
                 exit;
             }
         }
@@ -377,7 +378,7 @@ if ($_POST['upload']) {
               $file_tmp = $_FILES['pdf_piagam3']['tmp_name'];
               if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
                   if ($ukuran < 544070) {
-                      move_uploaded_file($file_tmp, '../assets/file_upload/akl/'.$nisn.'-'.$pdf_piagam3_up.'.pdf');
+                      move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_piagam3_up.'.pdf');
                   } else {
                       echo 'pdf_piagam3';
                       echo 'UKURAN FILE TERLALU BESAR';
@@ -386,12 +387,11 @@ if ($_POST['upload']) {
               } else {
                   echo 'pdf_piagam3';
                   echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
-                  header("location:gagal-upload.php");
+                  // header("location:gagal-upload.php");
                   exit;
               }
           }
 
-$no_p = $_POST['no_p'];
 $tgl_pendaftaran = $_POST['tgl_pendfataran'];
 $kompetensi_keahlian = $_POST['kompetensi_keahlian'];
 $asal_sekolah = $_POST['asal_sekolah'];
@@ -486,66 +486,85 @@ while ($row = mysqli_fetch_assoc($cek_max)) {
 $kode_urut =  sprintf("%04s", $no_urut);
 $no_p = "$kode_jurusan-$tgl_pendaftaran-$nisn-$kode_urut";
 
-mysqli_query($koneksi, "UPDATE f_siswa_akl SET
-             no_p='$no_p',
-             tgl_pendaftaran='$tgl_pendaftaran',
-             kompetensi_keahlian='$kompetensi_keahlian',
-             kompetensi_keahlian_2='$kompetensi_keahlian_2',
-             asal_sekolah='$asal_sekolah',
-             npsn_sekolah='$npsn_sekolah',
-             nisn='$nisn',
-             nama_siswa='$nama_siswa',
-             jenis_kelamin='$jenis_kelamin',
-             tempat_lahir='$tempat_lahir',
-             tgl_lahir='$tgl_lahir',
-             tahun_lulus='$tahun_lulus',
-             no_hp='$no_hp',
-             nik='$nik',
-             no_kk='$no_kk',
-             tgl_kk='$tgl_kk',
-             kota='$kota',
-             kecamatan='$kecamatan',
-             kelurahan='$kelurahan',
-             kode_pos='$kode_pos',
-             alamat='$alamat',
-             rt='$rt',
-             rw='$rw',
-             jarak_kesekolah='$jarak_kesekolah',
-             nama_org_tua='$nama_org_tua',
-             no_hp_org_tua='$no_hp_org_tua',
-             pekerjaan_org_tua='$pekerjaan_org_tua',
-             kip='$kip',
-             pdf_skhun='$nisn-$pdf_skhun_up.pdf',
-             pdf_surat_dokter='$nisn-$pdf_surat_dokter_up.pdf',
-             pdf_kk='$nisn-$pdf_kk_up.pdf',
-             pdf_akta='$nisn-$pdf_akta_up.pdf',
-             pdf_photo='$nisn-$pdf_photo_up.pdf',
-             pdf_swa_kk='$nisn-$pdf_swa_kk_up.pdf',
-             pdf_kip='$nisn-$pdf_kip',
-             pdf_rapor2='$nisn-$pdf_rapor2',
-             pdf_rapor3='$nisn-$pdf_rapor3',
-             pdf_rapor4='$nisn-$pdf_rapor4',
-             pdf_rapor5='$nisn-$pdf_rapor5',
-             pdf_rapor6='$nisn-$pdf_rapor6',
-             pdf_piagam1='$nisn-$pdf_piagam1_up.pdf',
-             pdf_piagam2='$nisn-$pdf_piagam2_up.pdf',
-             pdf_piagam3='$nisn-$pdf_piagam3_up.pdf',
-             rapor_2='$rapor_2',
-             rapor_3='$rapor_3',
-             rapor_4='$rapor_4',
-             rapor_5='$rapor_5',
-             rapor_6='$rapor_6',
-             username='$nisn',
-             password='$password',
-             enk='$enk',
-             bertindik='$bertindik',
-             perokok='$perokok',
-             psikotropika='$psikotropika',
-             bertato='$bertato',
-             peminum='$peminum',
-             buta_warna='$buta_warna'
+mysqli_query($koneksi, "INSERT INTO f_siswa_akl VALUES (
+                          '',
+                          '$no_p',
+                          '$tgl_pendaftaran',
+                          '$kompetensi_keahlian',
+                          '$kompetensi_keahlian_2',
+                          '$asal_sekolah',
+                          '$npsn_sekolah',
+                          '$nisn',
+                          '$nama_siswa',
+                          '$jenis_kelamin',
+                          '$tempat_lahir',
+                          '$tgl_lahir',
+                          '$tahun_lulus',
+                          '$no_hp',
+                          '$nik',
+                          '$no_kk',
+                          '$tgl_kk',
+                          '$kota',
+                          '$kecamatan',
+                          '$kelurahan',
+                          '$kode_pos',
+                          '$alamat',
+                          '$rt',
+                          '$rw',
+                          '$jarak_kesekolah',
+                          '$nama_org_tua',
+                          '$no_hp_org_tua',
+                          '$pekerjaan_org_tua',
+                          '$kip',
+                          '$nisn-$pdf_skhun_up.pdf',
+                          '$nisn-$pdf_surat_dokter_up.pdf',
+                          '$nisn-$pdf_kk_up.pdf',
+                          '$nisn-$pdf_akta_up.pdf',
+                          '$nisn-$pdf_photo_up.pdf',
+                          '$nisn-$pdf_swa_kk_up.pdf',
+                          '$nisn-$pdf_kip_up.pdf',
+                          '$nisn-rapor_2.pdf',
+                          '$nisn-rapor_3.pdf',
+                          '$nisn-rapor_4.pdf',
+                          '$nisn-rapor_5.pdf',
+                          '$nisn-rapor_6.pdf',
+                          '$nisn-piagam1.pdf',
+                          '$nisn-piagam2.pdf',
+                          '$nisn-piagam3.pdf',
+                          '$rapor_2',
+                          '$rapor_3',
+                          '$rapor_4',
+                          '$rapor_5',
+                          '$rapor_6',
+                          '$bertindik',
+                          '$perokok',
+                          '$psikotropika',
+                          '$bertato',
+                          '$peminum',
+                          '$buta_warna',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '',
+                          '$nisn',
+                          '$password',
+                          '',
+                          '$enk',
+                          ''
+                        );
              ");
 
 
 // node_id=<?php echo $d['node_id'];
- header("location:cetak.php?id=$id");
+ header("location:cetak.php?nisn=$nisn");

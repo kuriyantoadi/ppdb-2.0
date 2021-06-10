@@ -5,8 +5,8 @@
 // }
 
 include '../../koneksi.php';
-$id_siswa = isset($_GET['id']) ? abs((int) $_GET['id']) : 0;
-$data_siswa = mysqli_query($koneksi, "select nama_siswa from f_siswa_akl where id='$id_siswa'");
+$nisn = isset($_GET['nisn']) ? abs((int) $_GET['nisn']) : 0;
+$data_siswa = mysqli_query($koneksi, "select nama_siswa from f_siswa_akl where nisn='$nisn'");
 while ($d_siswa = mysqli_fetch_array($data_siswa)) {
 
   $nama_siswa = $d_siswa['nama_siswa'];
@@ -33,8 +33,8 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
           <center><img style="margin-bottom: 0px; margin-top:  0px; margin-right: 70px" src="../../assets/images/logo-banten-cetak.png" />
         </td>
         <td>
-          <center><h5 style="margin-top:  30px;"><b>SMK Negeri 1 Kragilan</b></h5></center>
-          <center><h6><b>Bukti Seleksi Administrasi Calon Peserta Didik Baru</b></h6></center>
+          <center><h5><b>SMK Negeri 1 Kragilan</b></h5></center>
+          <center><h6><b>Bukti Pendaftaran Calon Peserta Didik Baru</b></h6></center>
           <center><h6><b>Tahun Pelajaran 2021/2022</b></h6></center>
           <center><h6><b>Program Studi Akuntansi Keuangan Lembaga</b></h6></center><br>
         </td>
@@ -49,60 +49,7 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
     <?php
       include '../../koneksi.php';
       $id = isset($_GET['id']) ? abs((int) $_GET['id']) : 0;
-      $data = mysqli_query($koneksi, "select
-
-      id,
-      no_p,
-      tgl_pendaftaran,
-      kompetensi_keahlian,
-      asal_sekolah,
-      npsn_sekolah,
-      nisn,
-      nama_siswa,
-      jenis_kelamin,
-      tgl_lahir,
-      tempat_lahir,
-      tahun_lulus,
-      nik,
-      no_kk,
-      tgl_kk,
-      kota,
-      kecamatan,
-      kelurahan,
-      kode_pos,
-      alamat,
-      rt,
-      rw,
-      jarak_kesekolah,
-      nama_org_tua,
-      pekerjaan_org_tua,
-      kip,
-      pdf_skhun,
-      pdf_surat_dokter,
-      pdf_kk,
-      pdf_akta,
-      pdf_photo,
-      pdf_swa_kk,
-      pdf_piagam1,
-      pdf_piagam2,
-      pdf_piagam3,
-      un_bind,
-      un_bing,
-      un_mtk,
-      un_ipa,
-      id,
-      username,
-      password,
-      enk,
-      bertindik,
-      psikotropika,
-      bertato,
-      perokok,
-      peminum,
-      buta_warna,
-      kompetensi_keahlian_2
-
-       from f_siswa_akl where id='$id'");
+      $data = mysqli_query($koneksi, "select * from f_siswa_akl where nisn='$nisn'");
       while ($d = mysqli_fetch_array($data)) {
           ?>
 
@@ -207,22 +154,25 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
         <td>PKH / KKS / KIP / Jamsosda</td>
         <td><?php echo $d['kip']; ?></td>
       </tr>
-
       <tr>
-        <td>Nilai UN Bahasa Indonesia</td>
-        <td><?php echo $d['un_bind']; ?></td>
+        <td>Nilai Rata-rata Rapor Semester 2</td>
+        <td><?php echo $d['rapor_2']; ?></td>
       </tr>
       <tr>
-        <td>Nilai UN Bahasa Inggris</td>
-        <td><?php echo $d['un_bing']; ?></td>
+        <td>Nilai Rata-rata Rapor Semester 3</td>
+        <td><?php echo $d['rapor_3']; ?></td>
       </tr>
       <tr>
-        <td>Nilai UN Matematika</td>
-        <td><?php echo $d['un_mtk']; ?></td>
+        <td>Nilai Rata-rata Rapor Semester 4</td>
+        <td><?php echo $d['rapor_4']; ?></td>
       </tr>
       <tr>
-        <td>Nilai UN IPA</td>
-        <td><?php echo $d['un_ipa']; ?></td>
+        <td>Nilai Rata-rata Rapor Semester 5</td>
+        <td><?php echo $d['rapor_5']; ?></td>
+      </tr>
+      <tr>
+        <td>Nilai Rata-rata Rapor Semester 6</td>
+        <td><?php echo $d['rapor_6']; ?></td>
       </tr>
       <tr>
         <td>Username Test</td>
@@ -270,24 +220,19 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
             <b>Informasi :</b>
             <ol>
               <li>Bukti pendaftaran agar dicetak, minimal 1 lembar, sebagai bukti Pendaftaran.</li>
-              <!-- <li>Bukti pendaftaran hanya muncul 1 kali ketika daftar.</li> -->
-              <!-- <li>Bukti pendaftaran tidak boleh disebar luaskan untuk kepentingan apapun.</li> -->
-              <!-- <li>Setiap calon peserta didik baru bertanggung jawab atas bukti pendaftaran.</li> -->
+              <li>Siswa memberikan bukti pendaftaran dan berkas ke panitia untuk mendapatkan bukti pendaftaran PPDB dari Provinsi.</li>
               <li>Username dan Password Tes hanya dapat dipakai di Web smkn1kragilan.sch.id.</li>
-              <li>Username dan Password Tes hanya dapat digunakan 1 kali.</li>
-              <li>Peserta yang dinyatakan tidak lolos pemberkasan/seleksi administrasi maka tidak bisa mengikuti Tes Penelurusan Minat dan Bakat.</li>
-              <li>Jika ada peserta yang sudah dinyatakan lolos dan tidak bisa masuk ke login web Tes Penelurusan Minat dan Bakat segera menghubungi panitia bagian informasi.</li>
+              <li>Peserta akan mendapatkan nilai 0 jika tidak mengikuti Tes Minat dan Bakat.</li>
+              <li>Jika ada peserta yang tidak bisa masuk ke login web Tes Penelurusan Minat dan Bakat segera menghubungi panitia bagian informasi.</li>
               <li>Tes dilaksanakan secara online di tempat tinggal masing-masing calon peserta didik.</li>
               <li>Jika calon peserta didik melakukan kecurangan ketika mengerjakan soal tes, maka akan dinyatakan gugur dari pendaftaran.</li>
-              <!-- <li>Jika ada kesalahan data diri pada bukti pendaftaran (hanya data diri), calon peserta didik harus menginformasikan kepada panitia bagian informasi.</li> -->
-              <li>Apabila ditemukan data yang tidak sesuai calon peserta didik baru maka sekolah berhak untuk membatalkan hasil seleksi pendaftaran.</li>
-              <!-- <li>Spesifikasi laptop minimal RAM 4GB, Prosessor setara Intel Core I3 dan Hardisk Minimal 150GB</li> -->
+              <li>Apabila ditemukan data calon peserta didik baru yang tidak sesuai, maka sekolah berhak untuk membatalkan hasil seleksi pendaftaran.</li>
             </ol>
           </p>
         </td>
       </tr>
     </table>
-    <img width="200px" align="right" src="../../assets/images/stampel.png" style="margin-right:  80px;"/>
+    <img height="100px" align="right" src="../../assets/images/stampel.png" style="margin-right:  80px;"/>
     <center>
   <?php
       } ?>
