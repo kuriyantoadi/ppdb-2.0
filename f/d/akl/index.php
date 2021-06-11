@@ -7,9 +7,6 @@ if ($_SESSION['status']!="akl") {
 include '../header.php';
     ?>
 
-
-
-
   <div class="container">
     <center>
       <h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2>
@@ -24,6 +21,7 @@ include '../header.php';
     <br><br><br>
 
     <div class="form-group">
+      <?php include '../../../alert.php' ?>
       <div class="col-sm-7">
         <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
         <a href="../../e/akl/akl-lap.php" type="button" class="btn btn-success"
@@ -33,9 +31,8 @@ include '../header.php';
       <div class="col-sm-3">
         <input type='text' class="form-control" id='input' onkeyup='searchTable()'>
       </div>
-
-
     </div>
+
 
     <table class="table table-bordered table-hover" id="domainsTable">
       <thead>
@@ -43,9 +40,9 @@ include '../header.php';
           <th>
             <center>No
           </th>
-          <th>
+          <!-- <th>
             <center>Nomor Pendaftaran
-          </th>
+          </th> -->
           <th>
             <center>Tanggal Pendaftaran
           </th>
@@ -75,43 +72,11 @@ include '../header.php';
     $halperpage = 500;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-    $result = mysqli_query($koneksi, "SELECT no_p,
-      tgl_pendaftaran,
-      nisn,nama_siswa,
-      kompetensi_keahlian,
-      asal_sekolah,
-      kondisi,
-      val_skhun,
-      val_surat_dokter,
-      val_kk,
-      val_akta,
-      val_photo,
-      val_swaphoto,
-      val_piagam1,
-      val_piagam2,
-      val_piagam3,
-      id
-         FROM f_siswa_akl");
+    $result = mysqli_query($koneksi, "SELECT * FROM f_siswa_akl");
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT no_p,
-      tgl_pendaftaran,
-      nisn,
-      nama_siswa,
-      kompetensi_keahlian,
-      asal_sekolah,kondisi,
-      val_skhun,
-      val_surat_dokter,
-      val_kk,
-      val_akta,
-      val_photo,
-      val_swaphoto,
-      val_piagam1,
-      val_piagam2,
-      val_piagam3,
-      id
-        from f_siswa_akl LIMIT $mulai, $halperpage ");
+    $data = mysqli_query($koneksi, "SELECT * from f_siswa_akl LIMIT $mulai, $halperpage ");
     $no = $mulai+1;
 
 
@@ -122,9 +87,9 @@ include '../header.php';
           <td>
             <center><?php echo $no++ ?>
           </td>
-          <td>
+          <!-- <td>
             <center><?php echo $d['no_p']; ?>
-          </td>
+          </td> -->
           <td>
             <center><?php echo $d['tgl_pendaftaran']; ?>
           </td>
@@ -142,13 +107,11 @@ include '../header.php';
           </td>
           <td>
             <center>
-              <?php
-              include('../../validasi.php');
-              ?>
+              <?php include('../../tampil-validasi.php'); ?>
           </td>
           <td>
             <center>
-              <a type="button" class="btn btn-info btn-sm" href="akl-tampil.php?id=<?php echo $d['id']; ?>">Lihat</a>
+              <a type="button"  class="btn btn-info btn-sm" href="tampil.php?id=<?php echo $d['id']; ?>">Lihat</a>
           </td>
         </tr>
 

@@ -38,14 +38,15 @@ include '../header.php';
       </div>
     </div>
 
-    <!-- <form class="form-horizontal" action="update-siswa.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()"> -->
+    <form class="form-horizontal" action="edit_up.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
     <?php
     include '../../koneksi.php';
     $nik = isset($_GET['nik']) ? abs((int) $_GET['nik']) : 0;
     $cek_kartu = mysqli_query($koneksi, "select
     id,
     npsn_sekolah,
-    nisn
+    nisn,
+    catatan_operator
     from f_siswa_akl where nik='$nik'");
 
     ?>
@@ -66,10 +67,18 @@ include '../header.php';
                 <a style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="cetak.php?nisn=<?= $d1['nisn']; ?>">Cetak PDF</a>
               <?php
                 }
-              }
           ?>
         </td>
       </tr>
+      <tr>
+        <td>
+          <h4><strong>Catatan : </strong></h4>
+        </td>
+        <td>
+          <h4 style="margin-left: 10px"><?= $d1['catatan_operator']; ?></h4>
+        </td>
+      </tr>
+    <?php } ?>
       </table>
 
       <?php
@@ -80,6 +89,11 @@ include '../header.php';
           //validasi jika npsn kosong
           $cek_npsn = $d['npsn_sekolah'];
           if (!empty($cek_npsn)) {
+          ?>
+
+
+          <?php
+
               include('../form-lihat-data.php');
               exit;
           }else{

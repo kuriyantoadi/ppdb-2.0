@@ -45,7 +45,7 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
 
     <?php
       include '../../koneksi.php';
-      $id = isset($_GET['id']) ? abs((int) $_GET['id']) : 0;
+      $nisn = isset($_GET['nisn']) ? abs((int) $_GET['nisn']) : 0;
       $data = mysqli_query($koneksi, "select * from f_siswa_akl where nisn='$nisn'");
       while ($d = mysqli_fetch_array($data)) {
           ?>

@@ -33,7 +33,8 @@
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Nama Asal Sekolah :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="Nama Asal Sekolah" name="asal_sekolah" id="asal_sekolah" required>
+    <input type="hidden" name="id" value="<?= $d['id'] ?>">
+    <input type="text" class="form-control" placeholder="Nama Asal Sekolah" name="asal_sekolah" value="<?= $d['asal_sekolah'] ?>" id="asal_sekolah" required>
   </div>
 </div>
 <div class="form-group">
@@ -48,20 +49,20 @@
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">NISN :</label>
   <div class="col-sm-6">
-    <input type="number" class="form-control" placeholder="NISN" name="nisn"  required>
+    <input type="number" class="form-control" placeholder="NISN" name="nisn" value="<?= $d['nisn'] ?>"  required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Nama Calon Peserta Didik :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="Nama" name="nama_siswa" required>
+    <input type="text" class="form-control" placeholder="Nama" name="nama_siswa" value="<?= $d['nama_siswa'] ?>" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Jenis Kelamin :</label>
   <div class="col-sm-3">
     <select name="jenis_kelamin" class="form-control" required>
-      <option value="">Pilih</option>
+      <option value="<?= $d['jenis_kelamin'] ?>">Pilihan Awal | <?= $d['jenis_kelamin'] ?></option>
       <option value="Laki-laki">Laki-laki</option>
       <option value="Perempuan">Perempuan</option>
     </select>
@@ -70,26 +71,26 @@
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Tempat Lahir :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir"  required>
+    <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat_lahir" value="<?= $d['tempat_lahir'] ?>"  required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Tanggal Lahir :</label>
   <div class="col-sm-3">
-    <input type="text" name="tgl_lahir" class="form-control datepicker" required/>
+    <input type="text" name="tgl_lahir" class="form-control datepicker" value="<?= $d['tgl_lahir'] ?>" required/>
   </div>
   (Tanggal/Bulan/Tahun)
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Tahun lulus :</label>
   <div class="col-sm-6">
-    <input type="number" class="form-control" placeholder="Tahun lulus" name="tahun_lulus" required>
+    <input type="number" class="form-control" placeholder="Tahun lulus" value="<?= $d['tahun_lulus'] ?>" name="tahun_lulus" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Nomor WhatsApp :</label>
   <div class="col-sm-3">
-    <input type="number" class="form-control" name="no_hp" placeholder="Nomor WhatsApp"  required>
+    <input type="number" class="form-control" name="no_hp" value="<?= $d['no_hp'] ?>" placeholder="Nomor WhatsApp"  required>
   </div>
 </div>
 
@@ -99,19 +100,19 @@
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">NIK :</label>
   <div class="col-sm-6">
-    <input type="number" class="form-control" placeholder="NIK siswa dari KK" name="nik" required>
+    <input type="number" class="form-control" placeholder="NIK siswa dari KK" value="<?= $d['nik'] ?>" name="nik" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Nomor Kartu keluarga (KK) :</label>
   <div class="col-sm-6">
-    <input type="number" class="form-control" placeholder="Nomor KK" name="no_kk"  required>
+    <input type="number" class="form-control" placeholder="Nomor KK" name="no_kk" value="<?= $d['no_kk'] ?>"  required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Tanggal Diterbitkan KK :</label>
   <div class="col-sm-3">
-    <input type="text" name="tgl_kk" class="form-control datepicker" required/>
+    <input type="text" name="tgl_kk" class="form-control datepicker" value="<?= $d['tgl_kk'] ?>" required/>
   </div>
   (Bulan/Tanggal/Tahun)
 </div>
@@ -121,49 +122,49 @@
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Kabupaten/Kota :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="Kabupaten/Kota" name="kota"  required>
+    <input type="text" class="form-control" placeholder="Kabupaten/Kota" name="kota" value="<?= $d['kota'] ?>"  required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Kecamatan :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="Kecamatan" name="kecamatan"  required>
+    <input type="text" class="form-control" placeholder="Kecamatan" name="kecamatan" value="<?= $d['kecamatan'] ?>"  required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Kelurahan/Desa :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="Kelurahan/Desa" name="kelurahan" required>
+    <input type="text" class="form-control" placeholder="Kelurahan/Desa" value="<?= $d['kelurahan'] ?>" name="kelurahan" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Kode POS :</label>
   <div class="col-sm-6">
-    <input type="number" class="form-control" placeholder="Kode POS" name="kode_pos"  required>
+    <input type="number" class="form-control" placeholder="Kode POS" name="kode_pos" value="<?= $d['kode_pos'] ?>"  required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Alamat :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="Alamat" name="alamat"  required>
+    <input type="text" class="form-control" placeholder="Alamat" name="alamat" value="<?= $d['alamat'] ?>"  required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">RT :</label>
   <div class="col-sm-6">
-    <input type="number" class="form-control" placeholder="RT" name="rt" required>
+    <input type="number" class="form-control" placeholder="RT" name="rt" value="<?= $d['rt'] ?>" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">RW :</label>
   <div class="col-sm-6">
-    <input type="number" class="form-control" placeholder="RW" name="rw"  required>
+    <input type="number" class="form-control" placeholder="RW" name="rw" value="<?= $d['rw'] ?>" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Jarak Alamat Siswa ke Sekolah :</label><b>Meter</b>
   <div class="col-sm-4">
-    <input type="number" class="form-control" placeholder="Jarak Rumah ke Sekolah" name="jarak_kesekolah" required>
+    <input type="number" class="form-control" placeholder="Jarak Rumah ke Sekolah" name="jarak_kesekolah" value="<?= $d['jarak_kesekolah'] ?>" required>
   </div>
 </div>
 
@@ -172,25 +173,25 @@
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Nama Orang Tua/Wali :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="Nama Orang Tua" name="nama_org_tua" required>
+    <input type="text" class="form-control" placeholder="Nama Orang Tua" value="<?= $d['nama_org_tua'] ?>" name="nama_org_tua" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Nomor Hp Orang Tua/Wali :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="Nomor Hp Orang Tua/Wali" name="no_hp_org_tua" required>
+    <input type="text" class="form-control" placeholder="Nomor Hp Orang Tua/Wali" value="<?= $d['no_hp_org_tua'] ?>" name="no_hp_org_tua" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Pekerjaan Orang Tua/Wali :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="Pekerjaan Orang Tua" name="pekerjaan_org_tua" required>
+    <input type="text" class="form-control" placeholder="Pekerjaan Orang Tua" value="<?= $d['pekerjaan_org_tua'] ?>" name="pekerjaan_org_tua" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">PKH/KKS/KIP/Jamsosda<br>(Diisi jika memiliki) :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" placeholder="PKH/KKS/KIP/Jamsosda" name="kip" >
+    <input type="text" class="form-control" placeholder="PKH/KKS/KIP/Jamsosda" value="<?= $d['kip'] ?>" name="kip" >
   </div>
 </div>
 
@@ -243,42 +244,42 @@
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 2 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <input type="file" name="pdf_rapor2" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 3 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <input type="file" name="pdf_rapor3" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 4 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <input type="file" name="pdf_rapor4" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 5 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <input type="file" name="pdf_rapor5" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 6</label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
+    <input type="file" name="pdf_rapor6" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">PKH/KKS/KIP/Jamsosda </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_akta" accept="application/pdf" class="form-control-file" id="cek_akta" required>
+    <input type="file" name="pdf_kip" accept="application/pdf" class="form-control-file" id="cek_akta">
     <h6>Ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
@@ -318,31 +319,31 @@
 <div class="form-group">
   <label class="control-label col-sm-2">Rata-rata Rapor Semester 2</label>
   <div class="col-sm-3">
-    <input type="number" class="form-control" placeholder="Semester 2" name="un_bind" required>
+    <input type="number" class="form-control" placeholder="Semester 2" name="rapor_2" value="<?= $d['rapor_2'] ?>" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rata-rata Rapor Semester 3</label>
   <div class="col-sm-3">
-    <input type="number" class="form-control" placeholder="Semester 3" name="un_bing"  required>
+    <input type="number" class="form-control" placeholder="Semester 3" name="rapor_3" value="<?= $d['rapor_3'] ?>" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rata-rata Rapor Semester 4</label>
   <div class="col-sm-3">
-    <input type="number" class="form-control" placeholder="Semester 4" name="un_mtk" required>
+    <input type="number" class="form-control" placeholder="Semester 4" name="rapor_4" value="<?= $d['rapor_4'] ?>" required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rata-rata Rapor Semester 5</label>
   <div class="col-sm-3">
-    <input type="number" class="form-control" placeholder="Semester 5" name="un_ipa"  required>
+    <input type="number" class="form-control" placeholder="Semester 5" name="rapor_5" value="<?= $d['rapor_5'] ?>"  required>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rata-rata Rapor Semester 6</label>
   <div class="col-sm-3">
-    <input type="number" class="form-control" placeholder="Semester 6" name="un_ipa"  required>
+    <input type="number" class="form-control" placeholder="Semester 6" name="rapor_6" value="<?= $d['rapor_6'] ?>"  required>
   </div>
 </div>
 <br>
