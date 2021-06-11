@@ -179,7 +179,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor2']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-raport_2'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_2'.'.pdf');
             } else {
                 echo 'pdf_rapor2';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -203,7 +203,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor3']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-raport_3'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_3'.'.pdf');
             } else {
                 echo 'pdf_rapor3';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -227,7 +227,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor4']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-raport_4'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_4'.'.pdf');
             } else {
                 echo 'pdf_rapor4';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -251,7 +251,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor5']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-raport_5'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_5'.'.pdf');
             } else {
                 echo 'pdf_rapor5';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -275,7 +275,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor6']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-raport_6'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_6'.'.pdf');
             } else {
                 echo 'pdf_rapor6';
                 echo 'UKURAN FILE TERLALU BESAR';
