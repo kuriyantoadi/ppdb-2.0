@@ -317,7 +317,7 @@ if ($_POST['upload']) {
       if ($_POST['upload']) {
           $ekstensi_diperbolehkan    = array('pdf','');
           $waktu = date('d-m-Y');
-          $pdf_piagam1_up = "pdf_piagam1";
+          // $pdf_piagam1_up = "pdf_piagam1";
           $pdf_piagam1 = $_FILES['pdf_piagam1']['name'];
           $x = explode('.', $pdf_piagam1);
           $ekstensi = strtolower(end($x));
@@ -325,7 +325,7 @@ if ($_POST['upload']) {
           $file_tmp = $_FILES['pdf_piagam1']['tmp_name'];
           if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
               if ($ukuran < 544070) {
-                  move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_piagam1_up.'.pdf');
+                  move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-piagam1'.'.pdf');
               } else {
                   echo 'pdf_piagam1';
                   echo 'UKURAN FILE TERLALU BESAR';
@@ -352,7 +352,7 @@ if ($_POST['upload']) {
             $file_tmp = $_FILES['pdf_piagam2']['tmp_name'];
             if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
                 if ($ukuran < 544070) {
-                    move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_piagam2_up.'.pdf');
+                    move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-piagam2'.'.pdf');
                 } else {
                     echo 'pdf_piagam2';
                     echo 'UKURAN FILE TERLALU BESAR';
@@ -378,7 +378,7 @@ if ($_POST['upload']) {
               $file_tmp = $_FILES['pdf_piagam3']['tmp_name'];
               if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
                   if ($ukuran < 544070) {
-                      move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_piagam3_up.'.pdf');
+                      move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'piagam1'.'.pdf');
                   } else {
                       echo 'pdf_piagam3';
                       echo 'UKURAN FILE TERLALU BESAR';
