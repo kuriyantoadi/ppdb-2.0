@@ -377,4 +377,10 @@
     </select>
   </div>
 </div>
+<div class="form-group">
+  <label class="control-label col-sm-2">Tinggi Badan </label>
+  <div class="col-sm-3">
+    <input type="number" name="tinggi_badan" value="" class="form-control" required>
+  </div>
+</div>
 <br>

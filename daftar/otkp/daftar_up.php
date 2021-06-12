@@ -21,7 +21,7 @@ if ($_POST['upload']) {
     $file_tmp = $_FILES['pdf_skhun']['tmp_name'];
     if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
         if ($ukuran < 544070) {
-            move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_skhun_up.'.pdf');
+            move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-'.$pdf_skhun_up.'.pdf');
         } else {
             echo 'pdf_skhun';
             echo 'UKURAN FILE TERLALU BESAR';
@@ -48,7 +48,7 @@ if ($_POST['upload']) {
       $file_tmp = $_FILES['pdf_surat_dokter']['tmp_name'];
       if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
           if ($ukuran < 544070) {
-              move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_surat_dokter_up.'.pdf');
+              move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-'.$pdf_surat_dokter_up.'.pdf');
           } else {
               echo 'pdf_surat_dokter';
               echo "<br>";
@@ -76,7 +76,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_kk']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_kk_up.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-'.$pdf_kk_up.'.pdf');
             } else {
                 echo 'pdf_kk';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -102,7 +102,7 @@ if ($_POST['upload']) {
           $file_tmp = $_FILES['pdf_akta']['tmp_name'];
           if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
               if ($ukuran < 544070) {
-                  move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_akta_up.'.pdf');
+                  move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-'.$pdf_akta_up.'.pdf');
               } else {
                   echo 'pdf_akta';
                   echo 'UKURAN FILE TERLALU BESAR';
@@ -128,7 +128,7 @@ if ($_POST['upload']) {
       $file_tmp = $_FILES['pdf_photo']['tmp_name'];
       if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
           if ($ukuran < 544070) {
-              move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_photo_up.'.pdf');
+              move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-'.$pdf_photo_up.'.pdf');
           } else {
               echo 'pdf_photo';
               echo 'UKURAN FILE TERLALU BESAR';
@@ -154,7 +154,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_swa_kk']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_swa_kk_up.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-'.$pdf_swa_kk_up.'.pdf');
             } else {
                 echo 'pdf_swa_kk';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -179,7 +179,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor2']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_2'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-rapor_2'.'.pdf');
             } else {
                 echo 'pdf_rapor2';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -203,7 +203,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor3']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_3'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-rapor_3'.'.pdf');
             } else {
                 echo 'pdf_rapor3';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -227,7 +227,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor4']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_4'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-rapor_4'.'.pdf');
             } else {
                 echo 'pdf_rapor4';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -251,7 +251,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor5']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_5'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-rapor_5'.'.pdf');
             } else {
                 echo 'pdf_rapor5';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -275,7 +275,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor6']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_6'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-rapor_6'.'.pdf');
             } else {
                 echo 'pdf_rapor6';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -300,7 +300,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_kip']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-kip'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-kip'.'.pdf');
             } else {
                 echo 'pdf_kip';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -325,7 +325,7 @@ if ($_POST['upload']) {
           $file_tmp = $_FILES['pdf_piagam1']['tmp_name'];
           if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
               if ($ukuran < 544070) {
-                  move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-piagam1'.'.pdf');
+                  move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-piagam1'.'.pdf');
               } else {
                   echo 'pdf_piagam1';
                   echo 'UKURAN FILE TERLALU BESAR';
@@ -352,7 +352,7 @@ if ($_POST['upload']) {
             $file_tmp = $_FILES['pdf_piagam2']['tmp_name'];
             if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
                 if ($ukuran < 544070) {
-                    move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-piagam2'.'.pdf');
+                    move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'-piagam2'.'.pdf');
                 } else {
                     echo 'pdf_piagam2';
                     echo 'UKURAN FILE TERLALU BESAR';
@@ -378,7 +378,7 @@ if ($_POST['upload']) {
               $file_tmp = $_FILES['pdf_piagam3']['tmp_name'];
               if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
                   if ($ukuran < 544070) {
-                      move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'piagam1'.'.pdf');
+                      move_uploaded_file($file_tmp, '../../assets/file_upload/otkp/'.$nisn.'piagam1'.'.pdf');
                   } else {
                       echo 'pdf_piagam3';
                       echo 'UKURAN FILE TERLALU BESAR';
@@ -429,6 +429,7 @@ $psikotropika = $_POST['psikotropika'];
 $bertato = $_POST['bertato'];
 $peminum = $_POST['peminum'];
 $buta_warna = $_POST['buta_warna'];
+$tinggi_badan = $_POST['tinggi_badan'];
 $kompetensi_keahlian_2 = $_POST['kompetensi_keahlian_2'];
 
 
@@ -471,14 +472,14 @@ $enk = md5($tgl_lahir);
 // akhir enkripsi
 
 // nomor pendaftaran
-// 01 = akl
+// 01 = otkp
 // 02 = otkp
 // 03 = tkj
 // 04 = rpl
 // 05 = tkr
-// 06 = tpm
+// 06 = otkp
 $kode_jurusan = '01';
-$cek_max = mysqli_query($koneksi, "SELECT max(id) FROM f_siswa_akl");
+$cek_max = mysqli_query($koneksi, "SELECT max(id) FROM f_siswa_otkp");
 while ($row = mysqli_fetch_assoc($cek_max)) {
     $max = $row['max(id)'];
     $no_urut = $max+1;
@@ -486,7 +487,7 @@ while ($row = mysqli_fetch_assoc($cek_max)) {
 $kode_urut =  sprintf("%04s", $no_urut);
 $no_p = "$kode_jurusan-$tgl_pendaftaran-$nisn-$kode_urut";
 
-mysqli_query($koneksi, "INSERT INTO f_siswa_akl VALUES (
+mysqli_query($koneksi, "INSERT INTO f_siswa_otkp VALUES (
                           '',
                           '$no_p',
                           '$tgl_pendaftaran',
@@ -542,6 +543,7 @@ mysqli_query($koneksi, "INSERT INTO f_siswa_akl VALUES (
                           '$bertato',
                           '$peminum',
                           '$buta_warna',
+                          '$tinggi_badan',
                           '',
                           '',
                           '',

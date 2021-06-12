@@ -7,7 +7,7 @@
 include '../../koneksi.php';
 $nisn = $_POST['nisn'];
 
-include '../cek-nisn.php';
+// include '../cek-nisn.php';
 
 // pdf_skhun
 if ($_POST['upload']) {
@@ -21,7 +21,7 @@ if ($_POST['upload']) {
     $file_tmp = $_FILES['pdf_skhun']['tmp_name'];
     if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
         if ($ukuran < 544070) {
-            move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_skhun_up.'.pdf');
+            move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-'.$pdf_skhun_up.'.pdf');
         } else {
             echo 'pdf_skhun';
             echo 'UKURAN FILE TERLALU BESAR';
@@ -48,7 +48,7 @@ if ($_POST['upload']) {
       $file_tmp = $_FILES['pdf_surat_dokter']['tmp_name'];
       if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
           if ($ukuran < 544070) {
-              move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_surat_dokter_up.'.pdf');
+              move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-'.$pdf_surat_dokter_up.'.pdf');
           } else {
               echo 'pdf_surat_dokter';
               echo "<br>";
@@ -76,7 +76,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_kk']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_kk_up.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-'.$pdf_kk_up.'.pdf');
             } else {
                 echo 'pdf_kk';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -102,7 +102,7 @@ if ($_POST['upload']) {
           $file_tmp = $_FILES['pdf_akta']['tmp_name'];
           if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
               if ($ukuran < 544070) {
-                  move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_akta_up.'.pdf');
+                  move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-'.$pdf_akta_up.'.pdf');
               } else {
                   echo 'pdf_akta';
                   echo 'UKURAN FILE TERLALU BESAR';
@@ -128,7 +128,7 @@ if ($_POST['upload']) {
       $file_tmp = $_FILES['pdf_photo']['tmp_name'];
       if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
           if ($ukuran < 544070) {
-              move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_photo_up.'.pdf');
+              move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-'.$pdf_photo_up.'.pdf');
           } else {
               echo 'pdf_photo';
               echo 'UKURAN FILE TERLALU BESAR';
@@ -154,7 +154,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_swa_kk']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-'.$pdf_swa_kk_up.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-'.$pdf_swa_kk_up.'.pdf');
             } else {
                 echo 'pdf_swa_kk';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -179,7 +179,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor2']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_2'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-rapor_2'.'.pdf');
             } else {
                 echo 'pdf_rapor2';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -203,7 +203,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor3']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_3'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-rapor_3'.'.pdf');
             } else {
                 echo 'pdf_rapor3';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -227,7 +227,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor4']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_4'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-rapor_4'.'.pdf');
             } else {
                 echo 'pdf_rapor4';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -251,7 +251,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor5']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_5'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-rapor_5'.'.pdf');
             } else {
                 echo 'pdf_rapor5';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -275,7 +275,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_rapor6']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-rapor_6'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-rapor_6'.'.pdf');
             } else {
                 echo 'pdf_rapor6';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -300,7 +300,7 @@ if ($_POST['upload']) {
         $file_tmp = $_FILES['pdf_kip']['tmp_name'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 544070) {
-                move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-kip'.'.pdf');
+                move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-kip'.'.pdf');
             } else {
                 echo 'pdf_kip';
                 echo 'UKURAN FILE TERLALU BESAR';
@@ -317,7 +317,7 @@ if ($_POST['upload']) {
       if ($_POST['upload']) {
           $ekstensi_diperbolehkan    = array('pdf','');
           $waktu = date('d-m-Y');
-          // $pdf_piagam1_up = "pdf_piagam1";
+          $pdf_piagam1_up = "pdf_piagam1";
           $pdf_piagam1 = $_FILES['pdf_piagam1']['name'];
           $x = explode('.', $pdf_piagam1);
           $ekstensi = strtolower(end($x));
@@ -325,7 +325,7 @@ if ($_POST['upload']) {
           $file_tmp = $_FILES['pdf_piagam1']['tmp_name'];
           if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
               if ($ukuran < 544070) {
-                  move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-piagam1'.'.pdf');
+                  move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-'.$pdf_piagam1_up.'.pdf');
               } else {
                   echo 'pdf_piagam1';
                   echo 'UKURAN FILE TERLALU BESAR';
@@ -352,7 +352,7 @@ if ($_POST['upload']) {
             $file_tmp = $_FILES['pdf_piagam2']['tmp_name'];
             if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
                 if ($ukuran < 544070) {
-                    move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'-piagam2'.'.pdf');
+                    move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-'.$pdf_piagam2_up.'.pdf');
                 } else {
                     echo 'pdf_piagam2';
                     echo 'UKURAN FILE TERLALU BESAR';
@@ -378,7 +378,7 @@ if ($_POST['upload']) {
               $file_tmp = $_FILES['pdf_piagam3']['tmp_name'];
               if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
                   if ($ukuran < 544070) {
-                      move_uploaded_file($file_tmp, '../../assets/file_upload/akl/'.$nisn.'piagam1'.'.pdf');
+                      move_uploaded_file($file_tmp, '../../assets/file_upload/tkj/'.$nisn.'-'.$pdf_piagam3_up.'.pdf');
                   } else {
                       echo 'pdf_piagam3';
                       echo 'UKURAN FILE TERLALU BESAR';
@@ -392,8 +392,7 @@ if ($_POST['upload']) {
               }
           }
 
-$tgl_pendaftaran = $_POST['tgl_pendfataran'];
-$kompetensi_keahlian = $_POST['kompetensi_keahlian'];
+$id = $_POST['id'];
 $asal_sekolah = $_POST['asal_sekolah'];
 $npsn_sekolah = $_POST['npsn_sekolah'];
 $nisn = $_POST['nisn'];
@@ -432,139 +431,60 @@ $buta_warna = $_POST['buta_warna'];
 $kompetensi_keahlian_2 = $_POST['kompetensi_keahlian_2'];
 
 
-
-//username dan password
-function pass_acak($panjang)
-{
-    $karakter= 'abcdefghijklmnopqrstuvwxyz';
-    $string = '';
-    for ($i = 0; $i < $panjang; $i++) {
-        $pos = rand(0, strlen($karakter)-1);
-        $string .= $karakter[$pos];
-    }
-    return $string;
-}
-
-function user_acak($panjang)
-{
-    $karakter= '123456789';
-    $string = '';
-    for ($i = 0; $i < $panjang; $i++) {
-        $pos = rand(0, strlen($karakter)-1);
-        $string .= $karakter[$pos];
-    }
-    return $string;
-}
-
-//cara memanggilnya
-$password = pass_acak(5);
-
-//akhir pembuatan password
-
-//awal Enkripsi
-// $A = $nama_siswa;
-// $B = $tgl_lahir;
-// $C = $A.$B;
-
-$enk = md5($tgl_lahir);
-
-// akhir enkripsi
-
-// nomor pendaftaran
-// 01 = akl
-// 02 = otkp
-// 03 = tkj
-// 04 = rpl
-// 05 = tkr
-// 06 = tpm
-$kode_jurusan = '01';
-$cek_max = mysqli_query($koneksi, "SELECT max(id) FROM f_siswa_akl");
-while ($row = mysqli_fetch_assoc($cek_max)) {
-    $max = $row['max(id)'];
-    $no_urut = $max+1;
-}
-$kode_urut =  sprintf("%04s", $no_urut);
-$no_p = "$kode_jurusan-$tgl_pendaftaran-$nisn-$kode_urut";
-
-mysqli_query($koneksi, "INSERT INTO f_siswa_akl VALUES (
-                          '',
-                          '$no_p',
-                          '$tgl_pendaftaran',
-                          '$kompetensi_keahlian',
-                          '$kompetensi_keahlian_2',
-                          '$asal_sekolah',
-                          '$npsn_sekolah',
-                          '$nisn',
-                          '$nama_siswa',
-                          '$jenis_kelamin',
-                          '$tempat_lahir',
-                          '$tgl_lahir',
-                          '$tahun_lulus',
-                          '$no_hp',
-                          '$nik',
-                          '$no_kk',
-                          '$tgl_kk',
-                          '$kota',
-                          '$kecamatan',
-                          '$kelurahan',
-                          '$kode_pos',
-                          '$alamat',
-                          '$rt',
-                          '$rw',
-                          '$jarak_kesekolah',
-                          '$nama_org_tua',
-                          '$no_hp_org_tua',
-                          '$pekerjaan_org_tua',
-                          '$kip',
-                          '$nisn-$pdf_skhun_up.pdf',
-                          '$nisn-$pdf_surat_dokter_up.pdf',
-                          '$nisn-$pdf_kk_up.pdf',
-                          '$nisn-$pdf_akta_up.pdf',
-                          '$nisn-$pdf_photo_up.pdf',
-                          '$nisn-$pdf_swa_kk_up.pdf',
-                          '$nisn-$pdf_kip_up.pdf',
-                          '$nisn-rapor_2.pdf',
-                          '$nisn-rapor_3.pdf',
-                          '$nisn-rapor_4.pdf',
-                          '$nisn-rapor_5.pdf',
-                          '$nisn-rapor_6.pdf',
-                          '$nisn-piagam1.pdf',
-                          '$nisn-piagam2.pdf',
-                          '$nisn-piagam3.pdf',
-                          '$rapor_2',
-                          '$rapor_3',
-                          '$rapor_4',
-                          '$rapor_5',
-                          '$rapor_6',
-                          '$bertindik',
-                          '$perokok',
-                          '$psikotropika',
-                          '$bertato',
-                          '$peminum',
-                          '$buta_warna',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '',
-                          '$nisn',
-                          '$password',
-                          '',
-                          '$enk',
-                          ''
-                        );
-             ");
-
+mysqli_query($koneksi, "UPDATE f_siswa_tkj SET
+             asal_sekolah='$asal_sekolah',
+             npsn_sekolah='$npsn_sekolah',
+             nisn='$nisn',
+             nama_siswa='$nama_siswa',
+             jenis_kelamin='$jenis_kelamin',
+             tempat_lahir='$tempat_lahir',
+             tgl_lahir='$tgl_lahir',
+             tahun_lulus='$tahun_lulus',
+             no_hp='$no_hp',
+             nik='$nik',
+             no_kk='$no_kk',
+             tgl_kk='$tgl_kk',
+             kota='$kota',
+             kecamatan='$kecamatan',
+             kelurahan='$kelurahan',
+             kode_pos='$kode_pos',
+             alamat='$alamat',
+             rt='$rt',
+             rw='$rw',
+             jarak_kesekolah='$jarak_kesekolah',
+             nama_org_tua='$nama_org_tua',
+             no_hp_org_tua='$no_hp_org_tua',
+             kip='$kip',
+             pdf_skhun='$nisn-$pdf_skhun_up.pdf',
+             pdf_surat_dokter='$nisn-$pdf_surat_dokter_up.pdf',
+             pdf_kk='$nisn-$pdf_kk_up.pdf',
+             pdf_akta='$nisn-$pdf_akta_up.pdf',
+             pdf_photo='$nisn-$pdf_photo_up.pdf',
+             pdf_swa_kk='$nisn-$pdf_swa_kk_up.pdf',
+             pdf_piagam1='$nisn-pdf_piagam1.pdf',
+             pdf_piagam2='$nisn-pdf_piagam2.pdf',
+             pdf_piagam3='$nisn-pdf_piagam3.pdf',
+             pdf_kip='$nisn-$pdf_kip_up.pdf',
+             pdf_rapor_2='$nisn-rapor_2.pdf',
+             pdf_rapor_3='$nisn-rapor_3.pdf',
+             pdf_rapor_4='$nisn-rapor_4.pdf',
+             pdf_rapor_5='$nisn-rapor_5.pdf',
+             pdf_rapor_6='$nisn-rapor_6.pdf',
+             rapor_2='$rapor_2',
+             rapor_3='$rapor_3',
+             rapor_4='$rapor_4',
+             rapor_5='$rapor_5',
+             rapor_6='$rapor_6',
+             pekerjaan_org_tua='$pekerjaan_org_tua',
+             bertindik='$bertindik',
+             perokok='$perokok',
+             psikotropika='$psikotropika',
+             bertato='$bertato',
+             peminum='$peminum',
+             buta_warna='$buta_warna',
+             kompetensi_keahlian_2='$kompetensi_keahlian_2'
+             where id='$id'
+             ")  or die(mysqli_error($koneksi));
 
 // node_id=<?php echo $d['node_id'];
- header("location:cetak.php?nik=$nik");
+ header("location:dashboard.php?nik=$nik");
