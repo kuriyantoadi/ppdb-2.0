@@ -24,7 +24,7 @@ include '../header.php';
             <h5><b>Tahun Pelajaran 2021/2022</b></h4>
           </center>
           <center>
-            <h4><b>Program Studi Otomatisasi dan Tata Kelola Perkantoran</b></h4>
+            <h4><b>Program Studi Teknik Pemesinan</b></h4>
           </center><br>
           <!-- font ganti jenis -->
         </div>
@@ -48,7 +48,7 @@ include '../header.php';
       <div class="form-group">
         <label class="control-label col-sm-2" for="email">Kompetensi Keahlian :</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" name="kompetensi_keahlian" value="Otomatisasi dan Tata Kelola Perkantoran" readonly>
+          <input type="text" class="form-control" name="kompetensi_keahlian" value="Teknik Pemesinan" readonly>
         </div>
       </div>
       <div class="form-group">

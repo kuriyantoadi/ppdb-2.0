@@ -52,7 +52,7 @@ include '../header.php';
       <div class="form-group">
         <label class="control-label col-sm-2" for="email">Kompetensi Keahlian :</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" name="kompetensi_keahlian" value="Akuntansi dan Keuangan Lembaga" readonly>
+          <input type="text" class="form-control" name="kompetensi_keahlian" value="Rekayasa Perangkat Lunak" readonly>
         </div>
       </div>
       <div class="form-group">

@@ -46,7 +46,7 @@
                 ?>
 
           <h4 style="margin-top:  40px;">Login PPDB SMK Negeri 1 Kragilan</h5>
-          <h4 style="margin-bottom: 40px;">Komptensi Keahlian Otomatisasi dan Tata Kelola Perkantoran</h5>
+          <h4 style="margin-bottom: 40px;">Komptensi Keahlian Teknik Pemesinan</h5>
 
       </div>
 
