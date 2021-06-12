@@ -33,7 +33,7 @@ include '../header.php';
         <a style="margin-right: 10px;" type="button" class="btn btn-danger btn-md" href="index.php">Kembali</a>
         <a style="margin-right: 10px;" type="button" class="btn btn-warning btn-md"
         href="reset.php?id=<?= $d['id'] ?>" onclick="return confirm('Anda yakin Reset data siswa <?php echo $d['nama_siswa']; ?> ?')">Reset Data</a>
-        <a style="margin-right: 10px;" type="button" class="btn btn-primary btn-md" href="../../../daftar/akl/cetak.php?nisn=<?= $d['nisn'] ?>">Cetak Bukti Pendaftaran</a>
+        <a style="margin-right: 10px;" type="button" class="btn btn-primary btn-md" href="../../../daftar/akl/cetak.php?nik=<?= $d['nik'] ?>">Cetak Bukti Pendaftaran</a>
 
         <h5 style="margin-top: 20px"><b>Informasi :</b></h5>
         <ol>
