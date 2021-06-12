@@ -2,27 +2,10 @@
 session_start();
 if ($_SESSION['status']!="tkr") {
     header("location:../../index.php?pesan=belum_login");
-} else {
+}
+
+include '../header.php';
     ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>Operator tkr PPDB SMKN 1 Kragilan</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="../../../css/bootstrap.min.css">
-
-  <script src="../../../js/bootstrap.min.js"></script> -->
-  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
-  <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../../../js/jquery-latest.js"></script>
-  <script type="text/javascript" src="../../../js/jquery.tablesorter.min.js"></script>
-</head>
-
-<body>
-
-
 
   <div class="container">
     <center>
@@ -38,18 +21,18 @@ if ($_SESSION['status']!="tkr") {
     <br><br><br>
 
     <div class="form-group">
+      <?php include '../../../alert.php' ?>
       <div class="col-sm-7">
         <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
         <a href="../../e/tkr/tkr-lap.php" type="button" class="btn btn-success"
-        onclick="return confirm('Download Data PPDB Kompetensi Keahlian Teknik Kendaraan Ringan Otomotif ?')">Download TKR</a>
+        onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi dan Keuangan Lembaga ?')">Download tkr</a>
       </div>
       <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
       <div class="col-sm-3">
         <input type='text' class="form-control" id='input' onkeyup='searchTable()'>
       </div>
-
-
     </div>
+
 
     <table class="table table-bordered table-hover" id="domainsTable">
       <thead>
@@ -57,9 +40,9 @@ if ($_SESSION['status']!="tkr") {
           <th>
             <center>No
           </th>
-          <th>
+          <!-- <th>
             <center>Nomor Pendaftaran
-          </th>
+          </th> -->
           <th>
             <center>Tanggal Pendaftaran
           </th>
@@ -89,43 +72,11 @@ if ($_SESSION['status']!="tkr") {
     $halperpage = 500;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-    $result = mysqli_query($koneksi, "SELECT no_p,
-      tgl_pendaftaran,
-      nisn,nama_siswa,
-      kompetensi_keahlian,
-      asal_sekolah,
-      kondisi,
-      val_skhun,
-      val_surat_dokter,
-      val_kk,
-      val_akta,
-      val_photo,
-      val_swaphoto,
-      val_piagam1,
-      val_piagam2,
-      val_piagam3,
-      id
-         FROM f_siswa_tkr");
+    $result = mysqli_query($koneksi, "SELECT * FROM f_siswa_tkr");
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT no_p,
-      tgl_pendaftaran,
-      nisn,
-      nama_siswa,
-      kompetensi_keahlian,
-      asal_sekolah,kondisi,
-      val_skhun,
-      val_surat_dokter,
-      val_kk,
-      val_akta,
-      val_photo,
-      val_swaphoto,
-      val_piagam1,
-      val_piagam2,
-      val_piagam3,
-      id
-        from f_siswa_tkr LIMIT $mulai, $halperpage ");
+    $data = mysqli_query($koneksi, "SELECT * from f_siswa_tkr LIMIT $mulai, $halperpage ");
     $no = $mulai+1;
 
 
@@ -136,9 +87,9 @@ if ($_SESSION['status']!="tkr") {
           <td>
             <center><?php echo $no++ ?>
           </td>
-          <td>
+          <!-- <td>
             <center><?php echo $d['no_p']; ?>
-          </td>
+          </td> -->
           <td>
             <center><?php echo $d['tgl_pendaftaran']; ?>
           </td>
@@ -156,12 +107,11 @@ if ($_SESSION['status']!="tkr") {
           </td>
           <td>
             <center>
-              <?php
-        include('../../validasi.php'); ?>
+              <?php include('../../tampil-validasi.php'); ?>
           </td>
           <td>
             <center>
-              <a type="button" class="btn btn-info btn-sm" href="tkr-tampil.php?id=<?php echo $d['id']; ?>">Lihat</a>
+              <a type="button"  class="btn btn-info btn-sm" href="tampil.php?id=<?php echo $d['id']; ?>">Lihat</a>
           </td>
         </tr>
 
@@ -179,47 +129,4 @@ if ($_SESSION['status']!="tkr") {
   ?>
     </div>
   </div>
-  <script>
-    $(document).ready(function() {
-      $("#domainsTable").tablesorter({
-        sortList: [
-          [3, 1],
-          [2, 0]
-        ]
-      });
-    });
-
-    function searchTable() {
-      var input;
-      var saring;
-      var status;
-      var tbody;
-      var tr;
-      var td;
-      var i;
-      var j;
-      input = document.getElementById("input");
-      saring = input.value.toUpperCase();
-      tbody = document.getElementsByTagName("tbody")[0];;
-      tr = tbody.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td");
-        for (j = 0; j < td.length; j++) {
-          if (td[j].innerHTML.toUpperCase().indexOf(saring) > -1) {
-            status = true;
-          }
-        }
-        if (status) {
-          tr[i].style.display = "";
-          status = false;
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-  </script>
-  <?php
-} ?>
-</body>
-
-</html>
+  <?php include '../footer.php' ?>

@@ -201,14 +201,14 @@
 <div class="form-group">
   <label class="control-label col-sm-2">SKHUN atau Surat Keterangan Lulus</label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_skhun" accept="application/pdf" class="form-control-file"  required>
+    <input type="file" name="pdf_skhun" accept="application/pdf" class="form-control-file" id="cek_skhu" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Surat Sehat dari Dokter Pemerintah</label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_surat_dokter" accept="application/pdf" class="form-control-file" required>
+    <input type="file" name="pdf_surat_dokter" accept="application/pdf" class="form-control-file" id="cek_surat_dokter" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
@@ -244,35 +244,35 @@
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 2 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_rapor2" accept="application/pdf" class="form-control-file"  required>
+    <input type="file" name="pdf_rapor2" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 3 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_rapor3" accept="application/pdf" class="form-control-file"  required>
+    <input type="file" name="pdf_rapor3" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 4 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_rapor4" accept="application/pdf" class="form-control-file"  required>
+    <input type="file" name="pdf_rapor4" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 5 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_rapor5" accept="application/pdf" class="form-control-file"  required>
+    <input type="file" name="pdf_rapor5" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
 <div class="form-group">
   <label class="control-label col-sm-2">Rapor Semester 6</label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_rapor6" accept="application/pdf" class="form-control-file"  required>
+    <input type="file" name="pdf_rapor6" accept="application/pdf" class="form-control-file" id="cek_piagam1" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
@@ -286,7 +286,7 @@
 <div class="form-group">
   <label class="control-label col-sm-2">Piagam 1 </label>
   <div class="col-sm-6">
-    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" >
+    <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1">
     <h6>Ukuran maksimal 500 Kb, format pdf</h6>
   </div>
 </div>
@@ -353,7 +353,7 @@
   <label class="control-label col-sm-2">Apakah anda bertindik (bagi laki-laki) </label>
   <div class="col-sm-3">
     <select name="bertindik" class="form-control" required>
-      <option value="<?= $d['bertindik'] ?>">Pilihan Awal | <?= $d['bertindik'] ?></option>
+      <option value="">Pilih</option>
       <option value="Ya">Ya</option>
       <option value="Tidak">Tidak</option>
       <option value="Perempuan">Saya Perempuan</option>
@@ -364,7 +364,7 @@
   <label class="control-label col-sm-2">Apakah anda Perokok </label>
   <div class="col-sm-3">
     <select name="perokok" class="form-control"  required>
-      <option value="<?= $d['perokok'] ?>">Pilihan Awal | <?= $d['perokok'] ?></option>
+      <option value="">Pilih</option>
       <option value="Ya">Ya</option>
       <option value="Tidak">Tidak</option>
     </select>
@@ -374,7 +374,7 @@
   <label class="control-label col-sm-2">Apakah anda pemakai Psikotropika<br>(Narkoba, Ganja dan sejenisnya) </label>
   <div class="col-sm-3">
     <select name="psikotropika" class="form-control" required>
-      <option value="<?= $d['psikotropika'] ?>">Pilihan Awal | <?= $d['psikotropika'] ?></option>
+      <option value="">Pilih</option>
       <option value="Ya">Ya</option>
       <option value="Tidak">Tidak</option>
     </select>
@@ -384,7 +384,7 @@
   <label class="control-label col-sm-2">Apakah anda bertato </label>
   <div class="col-sm-3">
     <select name="bertato" class="form-control" required>
-      <option value="<?= $d['bertato'] ?>">Pilihan Awal | <?= $d['bertato'] ?></option>
+      <option value="">Pilih</option>
       <option value="Ya">Ya</option>
       <option value="Tidak">Tidak</option>
     </select>
@@ -394,7 +394,7 @@
   <label class="control-label col-sm-2">Apakah anda peminum-minuman keras </label>
   <div class="col-sm-3">
     <select name="peminum" class="form-control" required>
-      <option value="<?= $d['peminum'] ?>">Pilihan Awal | <?= $d['peminum'] ?></option>
+      <option value="">Pilih</option>
       <option value="Ya">Ya</option>
       <option value="Tidak">Tidak</option>
     </select>
@@ -404,10 +404,16 @@
   <label class="control-label col-sm-2">Apakah anda Buta Warna </label>
   <div class="col-sm-3">
     <select name="buta_warna" class="form-control" required>
-      <option value="<?= $d['buta_warna'] ?>">Pilihan Awal | <?= $d['buta_warna'] ?></option>
+      <option value="">Pilih</option>
       <option value="Ya">Ya</option>
       <option value="Tidak">Tidak</option>
     </select>
   </div>
 </div>
 <br>
+<div class="form-group">
+  <label class="control-label col-sm-2">Tinggi Badan </label>
+  <div class="col-sm-3">
+    <input type="number" name="tinggi_badan" value="<?= $d['tinggi_badan'] ?>" class="form-control" required>
+  </div>
+</div>

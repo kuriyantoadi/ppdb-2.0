@@ -100,75 +100,7 @@ include '../header.php';
           }else{
             include '../form-edit.php';
           }
-          ?>
-
-
-
-      <h4>H. KONDISI FISIK DAN KEBIASAAN</h4>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda bertindik (bagi laki-laki) </label>
-        <div class="col-sm-3">
-          <select name="bertindik" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-            <option value="Perempuan">Saya Perempuan</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda Perokok </label>
-        <div class="col-sm-3">
-          <select name="perokok" class="form-control"  required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda pemakai Psikotropika<br>(Narkoba, Ganja dan sejenisnya) </label>
-        <div class="col-sm-3">
-          <select name="psikotropika" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda bertato </label>
-        <div class="col-sm-3">
-          <select name="bertato" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda peminum-minuman keras </label>
-        <div class="col-sm-3">
-          <select name="peminum" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda Buta Warna </label>
-        <div class="col-sm-3">
-          <select name="buta_warna" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <br>
-
-    <?php } ?>
+       } ?>
 
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">

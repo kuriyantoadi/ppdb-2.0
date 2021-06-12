@@ -325,7 +325,7 @@ if ($_POST['upload']) {
           $file_tmp = $_FILES['pdf_piagam1']['tmp_name'];
           if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
               if ($ukuran < 544070) {
-                  move_uploaded_file($file_tmp, '../../assets/file_upload/rpl/'.$nisn.'-piagam1'.'.pdf');
+                  move_uploaded_file($file_tmp, '../../assets/file_upload/rpl/'.$nisn.'pdf-piagam1.pdf');
               } else {
                   echo 'pdf_piagam1';
                   echo 'UKURAN FILE TERLALU BESAR';
@@ -352,7 +352,7 @@ if ($_POST['upload']) {
             $file_tmp = $_FILES['pdf_piagam2']['tmp_name'];
             if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
                 if ($ukuran < 544070) {
-                    move_uploaded_file($file_tmp, '../../assets/file_upload/rpl/'.$nisn.'-piagam2'.'.pdf');
+                    move_uploaded_file($file_tmp, '../../assets/file_upload/rpl/'.$nisn.'pdf-piagam2.pdf');
                 } else {
                     echo 'pdf_piagam2';
                     echo 'UKURAN FILE TERLALU BESAR';
@@ -378,7 +378,7 @@ if ($_POST['upload']) {
               $file_tmp = $_FILES['pdf_piagam3']['tmp_name'];
               if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
                   if ($ukuran < 544070) {
-                      move_uploaded_file($file_tmp, '../../assets/file_upload/rpl/'.$nisn.'piagam1'.'.pdf');
+                      move_uploaded_file($file_tmp, '../../assets/file_upload/rpl/'.$nisn.'-pdf_piagam3.pdf');
                   } else {
                       echo 'pdf_piagam3';
                       echo 'UKURAN FILE TERLALU BESAR';

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['status']!="tkj") {
+if ($_SESSION['status']!="tpm") {
     header("location:../../index.php?pesan=belum_login");
 }
 
@@ -15,7 +15,7 @@ include '../header.php';
       <h3></h3>
     </center>
     <center>
-      <h3>Kompetensi Keahlian Teknik Komputer dan Jaringan</h3>
+      <h3>Kompetensi Keahlian Teknik Pemesinan</h3>
     </center>
 
     <br><br><br>
@@ -24,8 +24,8 @@ include '../header.php';
       <?php include '../../../alert.php' ?>
       <div class="col-sm-7">
         <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
-        <a href="../../e/tkj/tkj-lap.php" type="button" class="btn btn-success"
-        onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi dan Keuangan Lembaga ?')">Download tkj</a>
+        <a href="../../e/tpm/tpm-lap.php" type="button" class="btn btn-success"
+        onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi dan Keuangan Lembaga ?')">Download tpm</a>
       </div>
       <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
       <div class="col-sm-3">
@@ -72,11 +72,11 @@ include '../header.php';
     $halperpage = 500;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-    $result = mysqli_query($koneksi, "SELECT * FROM f_siswa_tkj");
+    $result = mysqli_query($koneksi, "SELECT * FROM f_siswa_tpm");
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_siswa_tkj LIMIT $mulai, $halperpage ");
+    $data = mysqli_query($koneksi, "SELECT * from f_siswa_tpm LIMIT $mulai, $halperpage ");
     $no = $mulai+1;
 
 
