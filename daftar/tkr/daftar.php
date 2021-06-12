@@ -64,8 +64,8 @@ include '../header.php';
             <option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option>
             <option value="Otomatisasi dan Tata Kelola Perkantoran">Otomatisasi dan Tata Kelola Perkantoran</option>
             <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
-            <option value="Teknik Kendaraan Ringan Otomotif">Teknik Kendaraan Ringan Otomotif</option>
-            <!-- <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option> -->
+            <!-- <option value="Teknik Kendaraan Ringan Otomotif">Teknik Kendaraan Ringan Otomotif</option> -->
+            <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
             <option value="Teknik Pemesinan">Teknik Pemesinan</option>
           </select>
         </div>
