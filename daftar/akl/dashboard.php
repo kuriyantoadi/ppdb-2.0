@@ -46,7 +46,8 @@ include '../header.php';
     id,
     npsn_sekolah,
     nisn,
-    catatan_operator
+    catatan_operator,
+    nik
     from f_siswa_akl where nik='$nik'");
 
     ?>
@@ -64,7 +65,7 @@ include '../header.php';
               $cek_npsn = $d1['npsn_sekolah'];
               if ($cek_npsn) {
                 ?>
-                <a style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="cetak.php?nisn=<?= $d1['nisn']; ?>">Cetak PDF</a>
+                <a style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="cetak.php?nik=<?= $d1['nik']; ?>">Cetak PDF</a>
               <?php
                 }
           ?>

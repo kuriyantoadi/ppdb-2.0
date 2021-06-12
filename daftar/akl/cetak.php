@@ -2,8 +2,10 @@
 
 
 include '../../koneksi.php';
-$nisn = isset($_GET['nisn']) ? abs((int) $_GET['nisn']) : 0;
-$data_siswa = mysqli_query($koneksi, "select nama_siswa from f_siswa_akl where nisn='$nisn'");
+// $nisn = isset($_GET['nisn']) ? abs((int) $_GET['nisn']) : 0;
+$nik = isset($_GET['nik']) ? abs((int) $_GET['nik']) : 0;
+
+$data_siswa = mysqli_query($koneksi, "select nama_siswa from f_siswa_akl where nik='$nik'");
 while ($d_siswa = mysqli_fetch_array($data_siswa)) {
 
   $nama_siswa = $d_siswa['nama_siswa'];
@@ -45,8 +47,10 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
 
     <?php
       include '../../koneksi.php';
-      $nisn = isset($_GET['nisn']) ? abs((int) $_GET['nisn']) : 0;
-      $data = mysqli_query($koneksi, "select * from f_siswa_akl where nisn='$nisn'");
+      // $nisn = isset($_GET['nisn']) ? abs((int) $_GET['nisn']) : 0;
+
+      $nik = isset($_GET['nik']) ? abs((int) $_GET['nik']) : 0;
+      $data = mysqli_query($koneksi, "select * from f_siswa_akl where nik='$nik'");
       while ($d = mysqli_fetch_array($data)) {
           ?>
 
