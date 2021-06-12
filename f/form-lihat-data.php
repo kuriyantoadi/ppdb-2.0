@@ -1,5 +1,6 @@
 
 <table class="table table-bordered">
+    
     <tr>
       <td>Nomor Pendaftaran</td>
       <td><?php echo $d['no_p']; ?></td>

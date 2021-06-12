@@ -3,11 +3,11 @@
 
  $tampil_kondisi = $d['kondisi'];
 if ($tampil_kondisi == "Siswa Lolos Seleksi") {
-  echo "<span class='label label-success'>Lolos</span>";
+  echo "<span class='label label-success'>Lolos, Segera Melakukan Seleksi Administrasi</span>";
 } elseif ($tampil_kondisi == "Siswa Tidak Lolos Seleksi") {
   echo "<span class='label label-danger'>Tidak Lolos</span>";
 } else {
-    echo "";
+  echo "<span class='label label-warning'>Tahap Pengecekan Operator</span>";
 }
 
 //validasi salah

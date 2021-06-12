@@ -1,6 +1,11 @@
 
 <table class="table table-bordered">
-    
+  <tr>
+    <td>Kondisi</td>
+    <td>
+      <?php include('../../f/tampil-validasi.php'); ?>
+    </td>
+  </tr>
     <tr>
       <td>Nomor Pendaftaran</td>
       <td><?php echo $d['no_p']; ?></td>
