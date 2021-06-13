@@ -116,8 +116,8 @@ include '../header.php';
               <div class="col-sm-6">
                 <select class="form-control" name="kompetensi_keahlian_2">
                   <option value="<?= $d['kompetensi_keahlian_2'] ?>">Pilihan Awal | <?= $d['kompetensi_keahlian_2'] ?></option>
-                  <!-- <option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option> -->
-                  <option value="Otomatisasi dan Tata Kelola Perkantoran">Otomatisasi dan Tata Kelola Perkantoran</option>
+                  <option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option>
+                  <!-- <option value="Otomatisasi dan Tata Kelola Perkantoran">Otomatisasi dan Tata Kelola Perkantoran</option> -->
                   <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
                   <option value="Teknik Kendaraan Ringan Otomotif">Teknik Kendaraan Ringan Otomotif</option>
                   <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
