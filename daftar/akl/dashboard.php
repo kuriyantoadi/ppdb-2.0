@@ -90,12 +90,117 @@ include '../header.php';
           //validasi jika npsn kosong
           $cek_npsn = $d['npsn_sekolah'];
           if (!empty($cek_npsn)) {
+              include('../form-lihat-data.php');
           ?>
 
+          <tr>
+            <td>SKHUN</td>
+            <td>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_skhun'] ?>" class="btn btn-primary">Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Surat Sehat dari Dokter</td>
+            <td>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_skhun'] ?>" class="btn btn-primary">Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Kartu Keluarga</td>
+            <td>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_kk'] ?>" class="btn btn-primary">Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Akta Kelahiran</td>
+            <td>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_akta'] ?>" class="btn btn-primary">Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Photo</td>
+            <td>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_photo'] ?>" class="btn btn-primary">Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>SwaPhoto</td>
+            <td>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_swa_kk'] ?>" class="btn btn-primary">Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Rapor Semester 2</td>
+            <td>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_rapor_2'] ?>" class="btn btn-primary">Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Rapor Semester 3</td>
+            <td>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_rapor_3'] ?>" class="btn btn-primary">Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Rapor Semester 4</td>
+            <td>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_rapor_4'] ?>" class="btn btn-primary">Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Rapor Semester 5</td>
+            <td>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_rapor_5'] ?>" class="btn btn-primary">Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Rapor Semester 6</td>
+            <td>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_rapor_6'] ?>" class="btn btn-primary">Download</a>
+            </td>
+          </tr>
+          <tr>
+            <td>KIP</td>
+            <td>
+              <?php if (empty($d['pdf_kip'])) {
+                echo "File tidak ada";
+              }else{ ?>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_kip'] ?>" class="btn btn-primary">Download</a>
+            <?php } ?>
+            </td>
+          </tr>
+          <tr>
+            <td>Piagam 1</td>
+            <td>
+              <?php if (empty($d['pdf_piagam1'])) {
+                echo "File tidak ada";
+              }else{ ?>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_piagam1'] ?>" class="btn btn-primary">Download</a>
+            <?php } ?>
+            </td>
+          </tr>
+          <tr>
+            <td>Piagam 2</td>
+            <td>
+              <?php if (empty($d['pdf_piagam2'])) {
+                echo "File tidak ada";
+              }else{ ?>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_piagam2'] ?>" class="btn btn-primary">Download</a>
+            <?php } ?>
+            </td>
+          </tr>
+          <tr>
+            <td>Piagam 3</td>
+            <td>
+              <?php if (empty($d['pdf_piagam2'])) {
+                echo "File tidak ada";
+              }else{ ?>
+              <a href="../../assets/file_upload/akl/<?= $d['pdf_piagam3'] ?>" class="btn btn-primary">Download</a>
+            <?php } ?>
+            </td>
+          </tr>
 
           <?php
-              include('../form-lihat-data.php');
-              exit;
           }else{
           ?>
 
@@ -134,82 +239,9 @@ include '../header.php';
           <?php
             include '../form-edit.php';
           }
-          ?>
+         }
+         ?>
 
-
-
-      <h4>H. KONDISI FISIK DAN KEBIASAAN</h4>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda bertindik (bagi laki-laki) </label>
-        <div class="col-sm-3">
-          <select name="bertindik" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-            <option value="Perempuan">Saya Perempuan</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda Perokok </label>
-        <div class="col-sm-3">
-          <select name="perokok" class="form-control"  required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda pemakai Psikotropika<br>(Narkoba, Ganja dan sejenisnya) </label>
-        <div class="col-sm-3">
-          <select name="psikotropika" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda bertato </label>
-        <div class="col-sm-3">
-          <select name="bertato" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda peminum-minuman keras </label>
-        <div class="col-sm-3">
-          <select name="peminum" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2">Apakah anda Buta Warna </label>
-        <div class="col-sm-3">
-          <select name="buta_warna" class="form-control" required>
-            <option value="">Pilih</option>
-            <option value="Ya">Ya</option>
-            <option value="Tidak">Tidak</option>
-          </select>
-        </div>
-      </div>
-      <br>
-
-    <?php } ?>
-
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" name="upload" value="upload" class="btn btn-default">Submit</button>
-        </div>
-      </div>
-    </form>
   </div>
 
 <?php include '../footer.php' ?>

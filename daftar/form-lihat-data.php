@@ -19,6 +19,10 @@
       <td><?php echo $d['kompetensi_keahlian']; ?></td>
     </tr>
     <tr>
+      <td>Pilihan Kompetensi Keahlian ke-2</td>
+      <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
+    </tr>
+    <tr>
       <td>Nama Asal Sekolah</td>
       <td><?php echo $d['asal_sekolah']; ?></td>
     </tr>
@@ -162,113 +166,5 @@
       <td>Buta Warna</td>
       <td><?php echo $d['buta_warna']; ?></td>
     </tr>
-    <tr>
-      <td>Pilihan Kompetensi Keahlian ke-2</td>
-      <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
-    </tr>
-    <tr>
-      <td>SKHUN</td>
-      <td>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_skhun'] ?>" class="btn btn-primary">Download</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Surat Sehat dari Dokter</td>
-      <td>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_skhun'] ?>" class="btn btn-primary">Download</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Kartu Keluarga</td>
-      <td>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_kk'] ?>" class="btn btn-primary">Download</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Akta Kelahiran</td>
-      <td>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_akta'] ?>" class="btn btn-primary">Download</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Photo</td>
-      <td>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_photo'] ?>" class="btn btn-primary">Download</a>
-      </td>
-    </tr>
-    <tr>
-      <td>SwaPhoto</td>
-      <td>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_swa_kk'] ?>" class="btn btn-primary">Download</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Rapor Semester 2</td>
-      <td>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_rapor_2'] ?>" class="btn btn-primary">Download</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Rapor Semester 3</td>
-      <td>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_rapor_3'] ?>" class="btn btn-primary">Download</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Rapor Semester 4</td>
-      <td>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_rapor_4'] ?>" class="btn btn-primary">Download</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Rapor Semester 5</td>
-      <td>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_rapor_5'] ?>" class="btn btn-primary">Download</a>
-      </td>
-    </tr>
-    <tr>
-      <td>Rapor Semester 6</td>
-      <td>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_rapor_6'] ?>" class="btn btn-primary">Download</a>
-      </td>
-    </tr>
-    <tr>
-      <td>KIP</td>
-      <td>
-        <?php if (empty($d['pdf_kip'])) {
-          echo "File tidak ada";
-        }else{ ?>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_kip'] ?>" class="btn btn-primary">Download</a>
-      <?php } ?>
-      </td>
-    </tr>
-    <tr>
-      <td>Piagam 1</td>
-      <td>
-        <?php if (empty($d['pdf_piagam1'])) {
-          echo "File tidak ada";
-        }else{ ?>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_piagam1'] ?>" class="btn btn-primary">Download</a>
-      <?php } ?>
-      </td>
-    </tr>
-    <tr>
-      <td>Piagam 2</td>
-      <td>
-        <?php if (empty($d['pdf_piagam2'])) {
-          echo "File tidak ada";
-        }else{ ?>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_piagam2'] ?>" class="btn btn-primary">Download</a>
-      <?php } ?>
-      </td>
-    </tr>
-    <tr>
-      <td>Piagam 3</td>
-      <td>
-        <?php if (empty($d['pdf_piagam2'])) {
-          echo "File tidak ada";
-        }else{ ?>
-        <a href="../../assets/file_upload/akl/<?= $d['pdf_piagam3'] ?>" class="btn btn-primary">Download</a>
-      <?php } ?>
-      </td>
-    </tr>
+
+    
