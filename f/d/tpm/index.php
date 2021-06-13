@@ -25,7 +25,7 @@ include '../header.php';
       <div class="col-sm-7">
         <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
         <a href="../../e/tpm/tpm-lap.php" type="button" class="btn btn-success"
-        onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi dan Keuangan Lembaga ?')">Download tpm</a>
+        onclick="return confirm('Download Data PPDB Kompetensi Keahlian Teknik Pemesinan ?')">Download TPM</a>
       </div>
       <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
       <div class="col-sm-3">

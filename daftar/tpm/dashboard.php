@@ -90,13 +90,43 @@ include '../header.php';
           //validasi jika npsn kosong
           $cek_npsn = $d['npsn_sekolah'];
           if (!empty($cek_npsn)) {
-          ?>
-
-
-          <?php
-              include('../form-lihat-data.php');
+              include('../form-lihat-data-tinggi.php');
               exit;
           }else{
+          ?>
+          <form class="form-horizontal" action="edit_up.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Tanggal Pendaftaran :</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="tgl_pendfataran" value="<?php echo date('d-m-Y'); ?>" required readonly>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Kompetensi Keahlian :</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="kompetensi_keahlian" value="<?= $d['kompetensi_keahlian'] ?>" readonly>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Kompetensi Keahlian Ke-2 :</label>
+            <div class="col-sm-6">
+              <select class="form-control" name="kompetensi_keahlian_2">
+                <option value="<?= $d['kompetensi_keahlian_2'] ?>">Pilihan Awal | <?= $d['kompetensi_keahlian_2'] ?></option>
+                <option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option>
+                <option value="Otomatisasi dan Tata Kelola Perkantoran">Otomatisasi dan Tata Kelola Perkantoran</option>
+                <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                <option value="Teknik Kendaraan Ringan Otomotif">Teknik Kendaraan Ringan Otomotif</option>
+                <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+                <!-- <option value="Teknik Pemesinan">Teknik Pemesinan</option> -->
+              </select>
+            </div>
+          </div>
+
+          <?php
             include '../form-edit-tinggi.php';
           }
        } ?>

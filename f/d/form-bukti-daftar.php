@@ -11,6 +11,10 @@
   <td><?php echo $d['kompetensi_keahlian']; ?></td>
 </tr>
 <tr>
+  <td>Pilihan Kompetensi Keahlian ke-2</td>
+  <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
+</tr>
+<tr>
   <td>Nama Asal Sekolah</td>
   <td><?php echo $d['asal_sekolah']; ?></td>
 </tr>
@@ -153,8 +157,4 @@
 <tr>
   <td>Buta Warna</td>
   <td><?php echo $d['buta_warna']; ?></td>
-</tr>
-<tr>
-  <td>Pilihan Kompetensi Keahlian ke-2</td>
-  <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
 </tr>

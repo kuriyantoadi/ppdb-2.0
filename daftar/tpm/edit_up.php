@@ -428,6 +428,7 @@ $psikotropika = $_POST['psikotropika'];
 $bertato = $_POST['bertato'];
 $peminum = $_POST['peminum'];
 $buta_warna = $_POST['buta_warna'];
+$tinggi_badan = $_POST['tinggi_badan'];
 $kompetensi_keahlian_2 = $_POST['kompetensi_keahlian_2'];
 
 
@@ -482,6 +483,7 @@ mysqli_query($koneksi, "UPDATE f_siswa_tpm SET
              bertato='$bertato',
              peminum='$peminum',
              buta_warna='$buta_warna',
+             tinggi_badan='$tinggi_badan',
              kompetensi_keahlian_2='$kompetensi_keahlian_2'
              where id='$id'
              ")  or die(mysqli_error($koneksi));

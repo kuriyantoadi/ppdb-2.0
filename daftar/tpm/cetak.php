@@ -35,7 +35,7 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
           <center><h5><b>SMK Negeri 1 Kragilan</b></h5></center>
           <center><h6><b>Bukti Pendaftaran Calon Peserta Didik Baru</b></h6></center>
           <center><h6><b>Tahun Pelajaran 2021/2022</b></h6></center>
-          <center><h6><b>Program Studi Otomatisasi dan Tata Kelola Perkantoran</b></h6></center><br>
+          <center><h6><b>Program Studi Teknik Pemesinan</b></h6></center><br>
         </td>
         <td>
           <center><img style="margin-bottom: 0px; margin-top:  0px; margin-left: 70px" src="../../assets/images/logo-smkn1-cetak.png" />
@@ -66,6 +66,10 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
       <tr>
         <td>Kompetensi Keahlian</td>
         <td><?php echo $d['kompetensi_keahlian']; ?></td>
+      </tr>
+      <tr>
+        <td>Pilihan Kompetensi Keahlian ke-2</td>
+        <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
       </tr>
       <tr>
         <td>Nama Asal Sekolah</td>
@@ -212,8 +216,8 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
         <td><?php echo $d['buta_warna']; ?></td>
       </tr>
       <tr>
-        <td>Pilihan Kompetensi Keahlian ke-2</td>
-        <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
+        <td>Tinggi Badan</td>
+        <td><?php echo $d['tinggi_badan']; ?></td>
       </tr>
       <tr>
         <td colspan="2">
@@ -233,7 +237,7 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
         </td>
       </tr>
     </table>
-    <img height="100px" align="right" src="../../assets/images/stampel.png" style="margin-right:  80px;"/>
+    <img height="80px" align="right" src="../../assets/images/stampel.png" style="margin-right:  80px;"/>
     <center>
   <?php
       } ?>

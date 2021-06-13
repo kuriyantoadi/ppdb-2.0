@@ -1,4 +1,4 @@
-<form class="form-horizontal" action="" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
+<!-- <form class="form-horizontal" action="" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
 
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Tanggal Pendaftaran :</label>
@@ -9,7 +9,7 @@
 <div class="form-group">
   <label class="control-label col-sm-2" for="email">Kompetensi Keahlian :</label>
   <div class="col-sm-6">
-    <input type="text" class="form-control" name="kompetensi_keahlian" value="Akuntansi dan Keuangan Lembaga" readonly>
+    <input type="text" class="form-control" name="kompetensi_keahlian" value="<?= $d['kompetensi_keahlian'] ?>" readonly>
   </div>
 </div>
 
@@ -27,7 +27,7 @@
       <option value="Teknik Pemesinan">Teknik Pemesinan</option>
     </select>
   </div>
-</div>
+</div> -->
 
 <h4>A. DATA ASAL SEKOLAH CALON PESERTA DIDIK</h4>
 <div class="form-group">

@@ -153,7 +153,7 @@
 			<td><?= $d['kota'] ?></td>
 			<td><?= $d['kecamatan'] ?></td>
 			<td><?= $d['kelurahan'] ?></td>
-			<td><?= $d['kode_pos '] ?></td>
+			<td><?= $d['kode_pos'] ?></td>
 			<td><?= $d['alamat'] ?></td>
 			<td><?= $d['rt'] ?></td>
 			<td><?= $d['rw'] ?></td>
@@ -201,7 +201,7 @@
 			<td><?= $d['val_rapor_6'] ?></td>
 			<td><?= $d['val_kip'] ?></td>
 			<td><?= $d['val_piagam1'] ?></td>
-			<td><?= $d['al_piagam2'] ?></td>
+			<td><?= $d['val_piagam2'] ?></td>
 			<td><?= $d['val_piagam3'] ?></td>
 			<td><?= $d['username'] ?></td>
 			<td><?= $d['password'] ?></td>

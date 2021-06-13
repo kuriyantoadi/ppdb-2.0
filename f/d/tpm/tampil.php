@@ -15,7 +15,7 @@ include '../header.php';
 		</div>
 		<div class="col-md-8">
       <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
-      <center><h3>Kompetensi Keahlian Akuntansi Keuangan Lembaga</h3></center>
+      <center><h3>Kompetensi Keahlian Teknik Pemesinan</h3></center>
 		</div>
 		<div class="col-md-2">
 		</div>
@@ -25,7 +25,7 @@ include '../header.php';
     <?php
       include '../../../koneksi.php';
       $id = $_GET['id'];
-      $data = mysqli_query($koneksi, "select * from f_siswa_akl where id='$id'");
+      $data = mysqli_query($koneksi, "select * from f_siswa_tpm where id='$id'");
       while ($d = mysqli_fetch_array($data)) {
         ?>
 
@@ -33,7 +33,7 @@ include '../header.php';
         <a style="margin-right: 10px;" type="button" class="btn btn-danger btn-md" href="index.php">Kembali</a>
         <a style="margin-right: 10px;" type="button" class="btn btn-warning btn-md"
         href="reset.php?id=<?= $d['id'] ?>" onclick="return confirm('Anda yakin Reset data siswa <?php echo $d['nama_siswa']; ?> ?')">Reset Data</a>
-        <a style="margin-right: 10px;" type="button" class="btn btn-primary btn-md" href="../../../daftar/akl/cetak.php?nik=<?= $d['nik'] ?>">Cetak Bukti Pendaftaran</a>
+        <a style="margin-right: 10px;" type="button" class="btn btn-primary btn-md" href="../../../daftar/tpm/cetak.php?nik=<?= $d['nik'] ?>">Cetak Bukti Pendaftaran</a>
 
         <h5 style="margin-top: 20px"><b>Informasi :</b></h5>
         <ol>
@@ -49,6 +49,10 @@ include '../header.php';
             <?php include '../form-bukti-daftar.php' ?>
             <input type="hidden" name="id" value="<?= $d['id'] ?>">
             <tr>
+              <td>Tinggi Badan</td>
+              <td><?php echo $d['tinggi_badan']; ?> cm</td>
+            </tr>
+            <tr>
               <td>
                 SKHUN <?= $d['pdf_skhun'] ?>
                 <br>
@@ -60,7 +64,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_skhun'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_skhun']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_skhun']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -68,7 +72,7 @@ include '../header.php';
             </tr>
             <tr>
               <td>Surat Sehat dari Dokter
-                <h5>Tinggi Badan</h5><br>
+                <h5><b>Tinggi Badan : <?= $d['tinggi_badan'] ?> cm</b></h5><br>
                 <select name="val_surat_dokter" class="form-control" required>
                   <option value="<?= $d['val_surat_dokter']; ?>">Pilih Kondisi <?= $d['val_surat_dokter']; ?></option>
                   <option value="Data Sesuai">Data Sesuai</option>
@@ -77,7 +81,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_surat_dokter'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_surat_dokter']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_surat_dokter']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -97,7 +101,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_kk'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_kk']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_kk']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -113,7 +117,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_akta'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_akta']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_akta']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -129,7 +133,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_photo'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_photo']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_photo']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -145,7 +149,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_swa_kk'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_swa_kk']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_swa_kk']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -162,7 +166,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_rapor_2'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_rapor_2']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_rapor_2']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -179,7 +183,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_rapor_3'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_rapor_3']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_rapor_3']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -196,7 +200,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_rapor_4'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_rapor_4']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_rapor_4']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -213,7 +217,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_rapor_5'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_rapor_5']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_rapor_5']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -230,7 +234,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_rapor_6'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_rapor_6']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_rapor_6']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -246,7 +250,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_kip'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_kip']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_kip']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -262,7 +266,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_piagam1'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_piagam1']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_piagam1']; ?>" type="application/pdf" width="100%" height="500px">
                <?php }else{ ?>
                  <h5>File Tidak Ada</h5>
                <?php } ?>
@@ -278,7 +282,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_piagam2'])) { ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_piagam2']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_piagam2']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php  }else{ ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>
@@ -294,7 +298,7 @@ include '../header.php';
               </td>
               <td>
                 <?php if (!empty($d['pdf_piagam3'])){ ?>
-                  <embed src="../../../assets/file_upload/akl/<?= $d['pdf_piagam3']; ?>" type="application/pdf" width="100%" height="500px">
+                  <embed src="../../../assets/file_upload/tpm/<?= $d['pdf_piagam3']; ?>" type="application/pdf" width="100%" height="500px">
                 <?php }else { ?>
                   <h5>File Tidak Ada</h5>
                 <?php } ?>

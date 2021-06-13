@@ -49,10 +49,10 @@ if ($cek > 0) {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "tkr";
         header("location:d/tkr/index.php");
-    } elseif ($login['level']=="mesin") {
+    } elseif ($login['level']=="tpm") {
         $_SESSION['username'] = $username;
-        $_SESSION['status'] = "mesin";
-        header("location:d/mesin/index.php");
+        $_SESSION['status'] = "tpm";
+        header("location:d/tpm/index.php");
     } else {
         // echo "gagal1";
         header("location:index.php?pesan=gagal1");

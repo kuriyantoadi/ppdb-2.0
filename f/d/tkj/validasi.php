@@ -30,7 +30,7 @@ if ($_SESSION['status']!="tkj") {
 
     // UPDATE `upload` SET `id_file`=[value-1],`nama_file`=[value-2] WHERE 1
 
-    mysqli_query($koneksi, "UPDATE f_siswa_rpl SET
+    mysqli_query($koneksi, "UPDATE f_siswa_tkj SET
                id='$id',
                val_skhun='$val_skhun',
                val_surat_dokter='$val_surat_dokter',
@@ -51,7 +51,7 @@ if ($_SESSION['status']!="tkj") {
                kondisi='$kondisi'
 
                where id='$id'
-               ");
+               ") or die(mysqli_error($koneksi));
 
     header("location:index.php?pesan=val_berhasil");
 }

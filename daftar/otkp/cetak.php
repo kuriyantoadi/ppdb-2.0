@@ -68,6 +68,10 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
         <td><?php echo $d['kompetensi_keahlian']; ?></td>
       </tr>
       <tr>
+        <td>Pilihan Kompetensi Keahlian ke-2</td>
+        <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
+      </tr>
+      <tr>
         <td>Nama Asal Sekolah</td>
         <td><?php echo $d['asal_sekolah']; ?></td>
       </tr>
@@ -212,8 +216,8 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
         <td><?php echo $d['buta_warna']; ?></td>
       </tr>
       <tr>
-        <td>Pilihan Kompetensi Keahlian ke-2</td>
-        <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
+        <td>Tinggi Badan</td>
+        <td><?php echo $d['tinggi_badan']; ?></td>
       </tr>
       <tr>
         <td colspan="2">
@@ -233,7 +237,7 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
         </td>
       </tr>
     </table>
-    <img height="100px" align="right" src="../../assets/images/stampel.png" style="margin-right:  80px;"/>
+    <img height="80px" align="right" src="../../assets/images/stampel.png" style="margin-right:  80px;"/>
     <center>
   <?php
       } ?>
