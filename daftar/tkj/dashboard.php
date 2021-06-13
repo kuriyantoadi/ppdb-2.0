@@ -238,12 +238,12 @@ include '../header.php';
             include '../form-edit.php';
           }
        } ?>
-
+<!--
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" name="upload" value="upload" class="btn btn-default">Submit</button>
         </div>
-      </div>
+      </div> -->
     </form>
   </div>
 
