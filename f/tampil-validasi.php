@@ -3,7 +3,7 @@
 
  $tampil_kondisi = $d['kondisi'];
 if ($tampil_kondisi == "Siswa Lolos Seleksi") {
-  echo "<span class='label label-success'>Lolos, Segera Melakukan Seleksi Administrasi</span>";
+  echo "<span class='label label-success'>Data Sesuai</span>";
 } elseif ($tampil_kondisi == "Siswa Tidak Lolos Seleksi") {
   echo "<span class='label label-danger'>Tidak Lolos</span>";
 } else {
