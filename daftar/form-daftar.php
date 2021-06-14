@@ -242,7 +242,7 @@
   <div class="col-sm-6">
     <input type="file" name="pdf_rapor6" accept="application/pdf" class="form-control-file" required>
     <h6>Tidak Boleh Kosong, ukuran maksimal 300 Kb, format pdf</h6>
-    <h6>Jika rapor semester 6 tidak ada, maka digantikan semester 1</h6>
+    <h6><b>Jika rapor semester 6 tidak ada, maka digantikan semester 1</b></h6>
   </div>
 </div>
 <div class="form-group">
@@ -313,7 +313,7 @@
   <label class="control-label col-sm-2">Rata-rata Rapor Semester 6</label>
   <div class="col-sm-3">
     <input type="number" class="form-control" placeholder="Semester 6" name="rapor_6"  required>
-    <h6>Jika rapor semester 6 tidak ada, maka digantikan semester 1</h6>
+    <h6><b>Jika rapor semester 6 tidak ada, maka digantikan semester 1</b></h6>
   </div>
 </div>
 <br>
