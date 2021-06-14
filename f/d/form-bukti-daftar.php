@@ -99,6 +99,10 @@
   <td><?php echo $d['nama_org_tua']; ?></td>
 </tr>
 <tr>
+  <td>Nomor HP Orang Tua</td>
+  <td><?php echo $d['no_hp_org_tua']; ?></td>
+</tr>
+<tr>
   <td>Pekerjaan Orang Tua</td>
   <td><?php echo $d['pekerjaan_org_tua']; ?></td>
 </tr>
