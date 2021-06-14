@@ -5,7 +5,7 @@
 if ($tampil_kondisi == "Siswa Lolos Seleksi") {
   echo "<span class='label label-success'>Data Sesuai</span>";
 } elseif ($tampil_kondisi == "Siswa Tidak Lolos Seleksi") {
-  echo "<span class='label label-danger'>Tidak Lolos</span>";
+  echo "<span class='label label-danger'>Data Tidak Sesuai</span>";
 } else {
   echo "<span class='label label-warning'>Tahap Pengecekan Operator</span>";
 }
