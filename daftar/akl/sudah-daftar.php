@@ -14,14 +14,22 @@ include '../header.php';
       <h4>Kompetensi Keahlian Akuntansi dan Keuangan Lembaga</h4>
     </center>
 
-    <br><br><br>
+    <br>
+    <div class='alert alert-danger alert-dismissible' role='alert'>
+      <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+        <div class='alert-message'>
+          Mohon maaf, untuk berkas dapat dikumpulkan disekolah jika kondisi siswa sudah <b>Data Sesuai</b>. Jika masih proses mohon ditunggu
+        </div>
+    </div>
 
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
       <div class="col-sm-3">
         <input type='text' class="form-control" id='input' onkeyup='searchTable()'>
       </div>
+
     </div>
+
 
 
     <table class="table table-bordered table-hover" id="domainsTable">
