@@ -1,27 +1,39 @@
-<?php include('../../header.php') ?>
+<?php
+session_start();
+if ($_SESSION['status']!="admin") {
+    header("location:../../index.php?pesan=belum_login");
+}
+
+include '../header.php';
+    ?>
+
   <div class="container">
     <center>
-      <h2>Daftar Pendaftaran Calon Peserta Didik</h2>
+      <h2>Tampilan Admin PPDB SMKN 1 Kragilan</h2>
     </center>
     <center>
-      <h2>SMKN 1 Kragilan</h2>
+      <h3></h3>
+    </center>
+    <center>
+      <h3>Kompetensi Keahlian Rekayasa Perangkat Lunak</h3>
     </center>
 
     <br><br><br>
 
     <div class="form-group">
+      <?php include '../../../alert.php' ?>
       <div class="col-sm-7">
         <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
-        <a href="akl-lap.php" type="button" class="btn btn-success" onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi Keuangan Lembaga ?')">Download AKL</a>
-        <?php include('../menu.php'); ?>
+        <a href="../../e/rpl/rpl-lap.php" type="button" class="btn btn-success"
+        onclick="return confirm('Download Data PPDB Kompetensi Keahlian Rekayasa Perangkat Lunak ?')">Download RPL</a>
+        <?php include '../menu.php' ?>
       </div>
       <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
       <div class="col-sm-3">
         <input type='text' class="form-control" id='input' onkeyup='searchTable()'>
       </div>
-
-
     </div>
+
 
     <table class="table table-bordered table-hover" id="domainsTable">
       <thead>
@@ -29,11 +41,11 @@
           <th>
             <center>No
           </th>
+          <!-- <th>
+            <center>Nomor Pendaftaran
+          </th> -->
           <th>
             <center>Tanggal Pendaftaran
-          </th>
-          <th>
-            <center>Nomor Pendaftaran
           </th>
           <th>
             <center>NISN Siswa
@@ -54,9 +66,6 @@
             <center>Lihat
           </th>
           <th>
-            <center>Edit
-          </th>
-          <th>
             <center>Hapus
           </th>
         </tr>
@@ -64,39 +73,29 @@
       <tbody>
         <?php
       include '../../../koneksi.php';
-      $halperpage = 300;
-      $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
-      $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-      $result = mysqli_query($koneksi, "SELECT
+    $halperpage = 500;
+    $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+    $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
+    $result = mysqli_query($koneksi, "SELECT * FROM f_siswa_rpl");
+    $total = mysqli_num_rows($result);
+    $pages = ceil($total/$halperpage);
 
-        id,
-        no_p,
-        tgl_pendaftaran,
-        kompetensi_keahlian,
-        asal_sekolah,
-        nisn
-
-         FROM f_siswa_akl");
-      $total = mysqli_num_rows($result);
-      $pages = ceil($total/$halperpage);
-
-      $data = mysqli_query($koneksi, "SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id,tgl_pendaftaran
-        from f_siswa_akl LIMIT $mulai, $halperpage ");
-      $no = $mulai+1;
+    $data = mysqli_query($koneksi, "SELECT * from f_siswa_rpl LIMIT $mulai, $halperpage ");
+    $no = $mulai+1;
 
 
-      while ($d = mysqli_fetch_array($data)) {
-          ?>
+    while ($d = mysqli_fetch_array($data)) {
+        ?>
 
         <tr>
           <td>
             <center><?php echo $no++ ?>
           </td>
+          <!-- <td>
+            <center><?php echo $d['no_p']; ?>
+          </td> -->
           <td>
             <center><?php echo $d['tgl_pendaftaran']; ?>
-          </td>
-          <td>
-            <center><?php echo $d['no_p']; ?>
           </td>
           <td>
             <center><?php echo $d['nisn']; ?>
@@ -111,34 +110,33 @@
             <center><?php echo $d['asal_sekolah']; ?>
           </td>
           <td>
-            <center><?php echo $d['kondisi']; ?>
+            <center>
+              <?php include('../../tampil-validasi.php'); ?>
           </td>
           <td>
             <center>
-              <a type="button" class="btn btn-info btn-sm" href="akl-lihat.php?id=<?php echo $d['id']; ?>">Lihat</a>
+              <a type="button"   onclick="return confirm('Download Data PPDB Kompetensi Keahlian Rekayasa Perangkat LUnak ?')"
+              class="btn btn-danger btn-sm" href="hapus.php?id=<?php echo $d['id']; ?>">Hapus</a>
           </td>
           <td>
             <center>
-              <a type="button" class="btn btn-warning btn-sm" href="edit-siswa.php?id=<?php echo $d['id']; ?>">Edit</a>
+              <a type="button"  class="btn btn-info btn-sm" href="tampil.php?id=<?php echo $d['id']; ?>">Lihat</a>
           </td>
-          <td>
-            <center>
-              <a type="button" class="btn btn-danger btn-sm" href="akl-hapus.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin Hapus data siswa <?php echo $d['nama_siswa']; ?> ?')">Hapus</a>
-          </td>
+
         </tr>
 
-
         <?php
-      } ?>
+    } ?>
       </tbody>
     </table>
     <div>
       <?php for ($i=1; $i<=$pages ; $i++) {
-          ?>
+        ?>
       <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
       <?php
-      } ?>
+    } // database
+
+  ?>
     </div>
   </div>
-
-<?php include '../footer.php' ?>
+  <?php include '../footer.php' ?>
