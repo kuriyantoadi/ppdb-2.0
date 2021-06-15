@@ -7,7 +7,7 @@
 include '../../koneksi.php';
 $nisn = $_POST['nisn'];
 
-include '../cek-nisn.php';
+// include '../cek-nisn.php';
 
 // pdf_skhun
 if ($_POST['upload']) {
