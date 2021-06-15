@@ -438,7 +438,6 @@ $peminum = $_POST['peminum'];
 $buta_warna = $_POST['buta_warna'];
 $kompetensi_keahlian_2 = $_POST['kompetensi_keahlian_2'];
 
-
 mysqli_query($koneksi, "UPDATE f_siswa_tkj SET
              asal_sekolah='$asal_sekolah',
              npsn_sekolah='$npsn_sekolah',
@@ -492,7 +491,7 @@ mysqli_query($koneksi, "UPDATE f_siswa_tkj SET
              buta_warna='$buta_warna',
              kompetensi_keahlian_2='$kompetensi_keahlian_2'
              where id='$id'
-             ")  or die(mysqli_error($koneksi));
+             ")  or die(mysqli_error($koneksi) );
 
 // node_id=<?php echo $d['node_id'];
- header("location:dashboard.php?nik=$nik");
+ // header("location:dashboard.php?nik=$nik");
