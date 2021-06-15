@@ -8,13 +8,13 @@ include '../../koneksi.php';
 $nisn = $_POST['nisn'];
 
 // include '../cek-nisn.php';
-$cek_nisn_tkj = mysqli_query($koneksi, "SELECT nisn FROM f_siswa_tkj where nisn='$nisn'");
-$row_tkj = mysqli_fetch_array($cek_nisn_tkj);
-// echo $row['nisn'];
-if (!empty($row_tkj)) {
-  echo "Maaf nisn anda sudah cocok dengan data disistem kami di kompetensi keahlian Teknik Komputer dan jaringan";
-  exit;
-}
+// $cek_nisn_tkj = mysqli_query($koneksi, "SELECT nisn FROM f_siswa_tkj where nisn='$nisn'");
+// $row_tkj = mysqli_fetch_array($cek_nisn_tkj);
+// // echo $row['nisn'];
+// if (!empty($row_tkj)) {
+//   echo "Maaf nisn anda sudah cocok dengan data disistem kami di kompetensi keahlian Teknik Komputer dan jaringan";
+//   exit;
+// }
 
 
 // pdf_skhun
