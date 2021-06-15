@@ -8,6 +8,13 @@ include '../../koneksi.php';
 $nisn = $_POST['nisn'];
 
 // include '../cek-nisn.php';
+$cek_nisn_tpm = mysqli_query($koneksi, "SELECT nisn FROM f_siswa_tpm where nisn='$nisn'");
+$row_tpm = mysqli_fetch_array($cek_nisn_tpm);
+// echo $row['nisn'];
+if (!empty($row_tpm)) {
+  echo "Maaf nisn anda sudah cocok dengan data disistem kami di kompetensi keahlian Teknik Pemesinan";
+  exit;
+}
 
 // pdf_skhun
 if ($_POST['upload']) {

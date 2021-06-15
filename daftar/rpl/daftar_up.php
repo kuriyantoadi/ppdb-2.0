@@ -8,6 +8,13 @@ include '../../koneksi.php';
 $nisn = $_POST['nisn'];
 
 // include '../cek-nisn.php';
+$cek_nisn_rpl = mysqli_query($koneksi, "SELECT nisn FROM f_siswa_rpl where nisn='$nisn'");
+$row_rpl = mysqli_fetch_array($cek_nisn_rpl);
+// echo $row['nisn'];
+if (!empty($row_rpl)) {
+  echo "Maaf nisn anda sudah cocok dengan data disistem kami di kompetensi keahlian Rekayasa Perangkat Lunak";
+  exit;
+}
 
 // pdf_skhun
 if ($_POST['upload']) {

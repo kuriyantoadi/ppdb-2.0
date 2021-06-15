@@ -8,6 +8,13 @@ include '../../koneksi.php';
 $nisn = $_POST['nisn'];
 
 // include '../cek-nisn.php';
+$cek_nisn_akl = mysqli_query($koneksi, "SELECT nisn FROM f_siswa_akl where nisn='$nisn'");
+$row_akl = mysqli_fetch_array($cek_nisn_akl);
+// echo $row['nisn'];
+if (!empty($row_akl)) {
+  echo "Maaf nisn anda sudah cocok dengan data di sistem kami di kompetensi keahlian Akuntasi dan Keuangan Lembaga";
+  exit;
+}
 
 // pdf_skhun
 if ($_POST['upload']) {

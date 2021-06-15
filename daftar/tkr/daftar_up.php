@@ -8,6 +8,13 @@ include '../../koneksi.php';
 $nisn = $_POST['nisn'];
 
 // include '../cek-nisn.php';
+$cek_nisn_tkr = mysqli_query($koneksi, "SELECT nisn FROM f_siswa_tkr where nisn='$nisn'");
+$row_tkr = mysqli_fetch_array($cek_nisn_tkr);
+// echo $row['nisn'];
+if (!empty($row_rpl)) {
+  echo "Maaf nisn anda sudah cocok dengan data disistem kami di kompetensi keahlian Teknik Kendaraan Ringan Otomotif";
+  exit;
+}
 
 // pdf_skhun
 if ($_POST['upload']) {

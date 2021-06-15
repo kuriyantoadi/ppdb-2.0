@@ -8,6 +8,14 @@ include '../../koneksi.php';
 $nisn = $_POST['nisn'];
 
 // include '../cek-nisn.php';
+$cek_nisn_otkp = mysqli_query($koneksi, "SELECT nisn FROM f_siswa_otkp where nisn='$nisn'");
+$row_otkp = mysqli_fetch_array($cek_nisn_otkp);
+// echo $row['nisn'];
+if (!empty($row_otkp)) {
+  echo "Maaf nisn anda sudah cocok dengan data disistem kami di kompetensi keahlian Otomatisasi dan Tata Kelola Perkantoran";
+  exit;
+}
+
 
 // pdf_skhun
 if ($_POST['upload']) {
