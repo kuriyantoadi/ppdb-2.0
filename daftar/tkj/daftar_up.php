@@ -562,8 +562,7 @@ mysqli_query($koneksi, "INSERT INTO f_siswa_tkj VALUES (
                           '',
                           '$enk',
                           ''
-                        );
-             ");
+                        )  ");
 
 
 // node_id=<?php echo $d['node_id'];
