@@ -36,7 +36,10 @@
     </tr>
     <tr>
       <td>Nama Calon Peserta Didik</td>
-      <td><?php echo $d['nama_siswa']; ?></td>
+      <!-- htmlentities([$nama],ENT_QUOTES) -->
+
+      <!-- echo htmlentities([$nama],ENT_QUOTES); -->
+      <td><?php echo htmlentities($d['nama_siswa'],ENT_QUOTES); ?></td>
     </tr>
     <tr>
       <td>Jenis Kelamin</td>
@@ -166,5 +169,3 @@
       <td>Buta Warna</td>
       <td><?php echo $d['buta_warna']; ?></td>
     </tr>
-
-    
