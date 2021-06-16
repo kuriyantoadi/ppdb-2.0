@@ -12,7 +12,7 @@
           <h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2>
         </center>
         <center>
-          <h4><b>Form Pendaftaran</b></h4>
+          <h4><b>Rekap Pendaftaran</b></h4>
         </center>
         <center>
           <h4><b>Calon Peserta Didik Baru</b></h4>
@@ -20,9 +20,7 @@
         <center>
           <h5><b>Tahun Pelajaran 2021/2022</b></h4>
         </center>
-        <center>
-          <h4><b>Program Studi Akuntansi dan Keuangan Lembaga</b></h4>
-        </center><br>
+
         <!-- font ganti jenis -->
       </div>
       <div class="col-md-3">
@@ -162,9 +160,15 @@
       <th>
         <center><?= $jml_tkr_p ?>
       </th>
+      <th>
+        <center>
+          <?php
+            $jml_semua = $jml_h1 + $jml_h2 + $jml_h3 + $jml_h4 + $jml_h5;
+            echo $jml_semua;
+           ?>
+      </th>
     </tr>
   </table>
-
 
 </div>
 

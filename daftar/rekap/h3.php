@@ -50,4 +50,13 @@
     <center>
       <?= $jml_tkr_h3_p ?>
   </td>
+  <td>
+    <center>
+      <?php
+      $jml_h3 = $jml_akl_h3_l + $jml_akl_h3_p + $jml_otkp_h3_l + $jml_otkp_h3_p + $jml_tkj_h3_l + $jml_tkj_h3_p
+      + $jml_rpl_h3_l + $jml_rpl_h3_p + $jml_tpm_h3_l + $jml_tpm_h3_p + $jml_tkr_h3_l + $jml_tkr_h3_p;
+
+      echo $jml_h3;
+       ?>
+  </td>
 </tr>

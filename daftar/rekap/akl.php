@@ -40,4 +40,6 @@ $jml_akl_h5_p = mysqli_num_rows($data_akl_h5);
 $jml_akl_l = $jml_akl_h1_l+$jml_akl_h2_l+$jml_akl_h3_l+$jml_akl_h4_l+$jml_akl_h5_l;
 $jml_akl_p = $jml_akl_h1_p + $jml_akl_h2_p + $jml_akl_h3_p + $jml_akl_h4_p + $jml_akl_h5_p;
 
+$total_akl = $jml_akl_l + $jml_akl_p
+
  ?>
