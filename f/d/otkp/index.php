@@ -62,6 +62,9 @@ include '../header.php';
             <center>Kondisi
           </th>
           <th>
+            <center>Hapus
+          </th>
+          <th>
             <center>Lihat
           </th>
         </tr>
@@ -108,6 +111,10 @@ include '../header.php';
           <td>
             <center>
               <?php include('../../tampil-validasi.php'); ?>
+          </td>
+          <td>
+            <a type="button"   onclick="return confirm('Hapus Data Siswa <?= $d['nama_siswa'] ?> ?')"
+            class="btn btn-danger btn-sm" href="hapus.php?id=<?php echo $d['id']; ?>">Hapus</a>
           </td>
           <td>
             <center>
