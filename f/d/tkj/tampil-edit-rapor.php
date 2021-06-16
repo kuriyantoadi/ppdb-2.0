@@ -28,7 +28,7 @@ include '../header.php';
             <h5><b>Tahun Pelajaran 2021/2022</b></h4>
           </center>
           <center>
-            <h4><b>Program Studi Teknik Komputer dan Jaringan/b></h4>
+            <h4><b>Program Studi Teknik Komputer dan Jaringan</b></h4>
           </center><br>
           <!-- font ganti jenis -->
         </div>
