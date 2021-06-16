@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['status']!="siswa" && $_SESSION['status']!="admin" && $_SESSION['status']!="akl") {
+if ($_SESSION['status']!="admin" && $_SESSION['status']!="otkp") {
     header("location:index.php?pesan=belum_login");
 }
 
@@ -28,7 +28,7 @@ include '../header.php';
             <h5><b>Tahun Pelajaran 2021/2022</b></h4>
           </center>
           <center>
-            <h4><b>Program Studi Akuntansi dan Keuangan Lembaga</b></h4>
+            <h4><b>Program Studi Otomatisasi dan Tata Kelola Perkantoran</b></h4>
           </center><br>
           <!-- font ganti jenis -->
         </div>
@@ -42,7 +42,7 @@ include '../header.php';
 include '../header.php';
 include '../../../koneksi.php';
 $id = $_GET['id'];
-$data = mysqli_query($koneksi, "select * from f_siswa_akl where id='$id'");
+$data = mysqli_query($koneksi, "select * from f_siswa_otkp where id='$id'");
 
 include '../edit-rapor.php';
 include '../footer.php';

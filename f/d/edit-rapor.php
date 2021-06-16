@@ -1,16 +1,7 @@
 <?php
-// session_start();
-// if ($_SESSION['status']!="siswa") {
-//     header("location:../../login/akl/index.php?pesan=belum_login");
-// }
-
-include '../header.php';
-include '../../../koneksi.php';
-$id = $_GET['id'];
-$data = mysqli_query($koneksi, "select * from f_siswa_akl where id='$id'");
 while ($d = mysqli_fetch_array($data)) {
 
-?>
+ ?>
 
   <div class="container">
       <form class="form-horizontal" action="edit-rapor_up.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
@@ -121,7 +112,7 @@ while ($d = mysqli_fetch_array($data)) {
             </td>
           <?php } ?>
         </table>
-        <center><button class="" style="margin-bottom: 50px" type="submit" name="submit">Submit</button>
+        <center><button class="btn btn-success" style="margin-bottom: 50px" type="submit" name="submit">Submit</button>
     </form>
   </div>
 

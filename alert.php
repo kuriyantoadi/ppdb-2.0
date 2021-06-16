@@ -30,7 +30,6 @@ if (isset($_GET['pesan'])) {
         </div>
       </div>
       ";
-    }
 
   }elseif ($_GET['pesan'] == "edit_rapor") {
      echo "
@@ -41,5 +40,6 @@ if (isset($_GET['pesan'])) {
        </div>
      </div>
      ";
+   }
 }
 ?>

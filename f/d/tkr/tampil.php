@@ -153,6 +153,7 @@ include '../header.php';
             <tr>
               <td>Rapor Semester 2
                 <br>Rata-rata Rapor = <b><?= $d['rapor_2'] ?></b>
+                <br><a class="btn btn-info" style="margin-top: 10px; margin-bottom: 10px" href="tampil-edit-rapor.php?id=<?= $d['id'] ?>" >Edit Rapor</a>
                 <select name="val_rapor_2" class="form-control" required>
                   <option value="<?= $d['val_rapor_2']; ?>">Pilih Kondisi  <?= $d['val_rapor_2']; ?></option>
                   <option value="Data Sesuai">Data Sesuai</option>
