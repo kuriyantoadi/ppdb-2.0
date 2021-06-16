@@ -52,7 +52,7 @@ while ($d = mysqli_fetch_array($data)) {
           <tr>
             <td><b>Rapor Semester 2
               <br>Rata-rata Rapor = <b><?= $d['rapor_2'] ?></b>
-              <br><br>Edit Rata-rata Rapor</b>
+              <br><br>Edit Rata-rata Rapor Semester 2</b>
               <input class="form-control" type="hidden" name="id" value="<?= $d['id'] ?>">
               <input class="form-control" type="number" name="rapor_2" value="<?= $d['rapor_2'] ?>" required>
             </td>
@@ -67,7 +67,7 @@ while ($d = mysqli_fetch_array($data)) {
           <tr>
             <td><b>Rapor Semester 3
               <br>Rata-rata Rapor = <b><?= $d['rapor_3'] ?></b>
-              <br><br>Edit Rata-rata Rapor</b>
+              <br><br>Edit Rata-rata Rapor Semester 3</b>
               <input class="form-control" type="number" name="rapor_3" value="<?= $d['rapor_3'] ?>" required>
             </td>
             <td>
@@ -81,7 +81,7 @@ while ($d = mysqli_fetch_array($data)) {
           <tr>
             <td><b>Rapor Semester 4
               <br>Rata-rata Rapor = <b><?= $d['rapor_4'] ?></b>
-              <br><br>Edit Rata-rata Rapor</b>
+              <br><br>Edit Rata-rata Rapor Semester 4</b>
               <input class="form-control" type="number" name="rapor_4" value="<?= $d['rapor_4'] ?>" required>
             </td>
             <td>
@@ -95,7 +95,7 @@ while ($d = mysqli_fetch_array($data)) {
           <tr>
             <td><b>Rapor Semester 5
               <br>Rata-rata Rapor = <b><?= $d['rapor_5'] ?></b>
-              <br><br>Edit Rata-rata Rapor</b>
+              <br><br>Edit Rata-rata Rapor Semester 5</b>
               <input class="form-control" type="number" name="rapor_5" value="<?= $d['rapor_5'] ?>" required>
             </td>
             <td>
@@ -109,7 +109,7 @@ while ($d = mysqli_fetch_array($data)) {
           <tr>
             <td><b>Rapor Semester 6
               <br>Rata-rata Rapor = <b><?= $d['rapor_6'] ?></b>
-              <br><br>Edit Rata-rata Rapor</b>
+              <br><br>Edit Rata-rata Rapor Semester 6</b>
               <input class="form-control" type="number" name="rapor_6" value="<?= $d['rapor_6'] ?>" required>
             </td>
             <td>
