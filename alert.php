@@ -31,5 +31,15 @@ if (isset($_GET['pesan'])) {
       </div>
       ";
     }
+
+  }elseif ($_GET['pesan'] == "edit_rapor") {
+     echo "
+     <div class='alert alert-success alert-dismissible' role='alert'>
+     <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+       <div class='alert-message'>
+        Edit Rapor Berhasil
+       </div>
+     </div>
+     ";
 }
 ?>
