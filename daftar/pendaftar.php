@@ -73,6 +73,11 @@
   $data_akl_h5 = mysqli_query($koneksi, "SELECT * FROM f_siswa_akl where tgl_pendaftaran='18-06-2021' and jenis_kelamin='Perempuan'");
   $jml_akl_h5_p = mysqli_num_rows($data_akl_h5);
 
+  $jml_akl_l = $jml_akl_h1_l+$jml_akl_h2_l+$jml_akl_h3_l+$jml_akl_h4_l+$jml_akl_h5_l;
+  $jml_akl_p = $jml_akl_h1_p + $jml_akl_h2_p + $jml_akl_h3_p + $jml_akl_h4_p + $jml_akl_h5_p;
+
+  
+
   ?>
 
 
@@ -216,6 +221,17 @@
           <!-- AKL h3 laki-perempuan -->
           <?= $jml_akl_h5_p ?>
       </td>
+    </tr>
+    <tr>
+      <th>
+        <center>Jumlah
+      </th>
+      <th>
+        <center><?= $jml_akl_l ?>
+      </th>
+      <th>
+        <center><?= $jml_akl_p ?>
+      </th>
     </tr>
   </table>
 
