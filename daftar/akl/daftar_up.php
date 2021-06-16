@@ -401,7 +401,7 @@ if ($_POST['upload']) {
 
 $tgl_pendaftaran = $_POST['tgl_pendfataran'];
 $kompetensi_keahlian = $_POST['kompetensi_keahlian'];
-$asal_sekolah = $_POST['asal_sekolah'];
+$asal_sekolah = addslashes($_POST['asal_sekolah']);
 $npsn_sekolah = $_POST['npsn_sekolah'];
 $nisn = $_POST['nisn'];
 $nama_siswa = addslashes($_POST['nama_siswa']);

@@ -81,7 +81,7 @@
   ?>
 
 
-  <table class="table table-bordered">
+  <table class="table table-bordered table-hover">
     <tr>
       <th rowspan="2">
         <center>Tanggal
