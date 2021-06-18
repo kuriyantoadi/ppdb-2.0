@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+if ($_SESSION['status']!="hoTe7Iqu1raaci2mi3ei") {
+    header("location:../../404/index.php");
+}
 include '../header.php';
 ?>
 

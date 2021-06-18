@@ -1,8 +1,8 @@
 <?php
-// session_start();
-// if ($_SESSION['status']!="siswa") {
-//     header("location:../../login/akl/index.php?pesan=belum_login");
-// }
+session_start();
+if ($_SESSION['status']!="ahfepeeW1phooDi0shie") {
+    header("location:../../404/index.php");
+}
 
 include '../header.php';
 ?>
