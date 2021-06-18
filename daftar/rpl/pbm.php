@@ -8,10 +8,10 @@ include '../header.php';
       <h3>Penerimaan Peserta Didik Baru SMKN 1 Kragilan</h3>
     </center>
     <center>
-      <h4>Daftar Siswa Berhasil Mendaftar</h4>
+      <h4>Dapat Mengikuti Seleksi Penerimaan Minat dan Bakat</h4>
     </center>
     <center>
-      <h4>Kompetensi Keahlian Teknik Komputer dan Jaringan</h4>
+      <h4>Kompetensi Keahlian Rekayasa Perangkat Lunak</h4>
     </center>
 
     <br>
@@ -21,6 +21,7 @@ include '../header.php';
           Mohon maaf, untuk berkas dapat dikumpulkan disekolah jika kondisi siswa sudah <b>Data Sesuai</b>. Jika masih proses mohon ditunggu
         </div>
     </div>
+
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
       <div class="col-sm-3">
@@ -62,11 +63,11 @@ include '../header.php';
     $halperpage = 500;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-    $result = mysqli_query($koneksi, "SELECT * FROM f_siswa_tkj");
+    $result = mysqli_query($koneksi, "SELECT * FROM f_siswa_rpl");
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_siswa_tkj LIMIT $mulai, $halperpage ");
+    $data = mysqli_query($koneksi, "SELECT * from f_siswa_rpl LIMIT $mulai, $halperpage ");
     $no = $mulai+1;
 
 

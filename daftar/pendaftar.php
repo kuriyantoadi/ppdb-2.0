@@ -12,7 +12,7 @@
           <h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2>
         </center>
         <center>
-          <h4><b>Rekap Pendaftaran</b></h4>
+          <h4><b>Jumlah Calon Peserta Ujian Penelusuran Bakat Minat</b></h4>
         </center>
         <center>
           <h4><b>Calon Peserta Didik Baru</b></h4>

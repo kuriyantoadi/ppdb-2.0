@@ -8,7 +8,7 @@ include '../header.php';
       <h3>Penerimaan Peserta Didik Baru SMKN 1 Kragilan</h3>
     </center>
     <center>
-      <h4>Daftar Siswa Berhasil Mendaftar</h4>
+      <h4>Dapat Mengikuti Seleksi Penerimaan Minat dan Bakat</h4>
     </center>
     <center>
       <h4>Kompetensi Keahlian Akuntansi dan Keuangan Lembaga</h4>
