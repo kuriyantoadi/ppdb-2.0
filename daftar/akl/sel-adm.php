@@ -8,7 +8,7 @@ include '../header.php';
       <h3>Penerimaan Peserta Didik Baru SMKN 1 Kragilan</h3>
     </center>
     <center>
-      <h4>Dapat Mengikuti Seleksi Penerimaan Minat dan Bakat</h4>
+      <h4>Daftar Siswa Lolos Seleksi Administrasi</h4>
     </center>
     <center>
       <h4>Kompetensi Keahlian Akuntansi dan Keuangan Lembaga</h4>
@@ -18,7 +18,7 @@ include '../header.php';
     <div class='alert alert-danger alert-dismissible' role='alert'>
       <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
         <div class='alert-message'>
-          Mohon maaf, untuk berkas dapat dikumpulkan disekolah jika kondisi siswa sudah <b>Data Sesuai</b>. Jika masih proses mohon ditunggu
+          Jangan Lupa untuk Melakukan <b>Seleksi Penelusuran Bakat dan Minat Secara Online dirumah masing-masing | Cek Jadwal jangan Lupa :)</b>
         </div>
     </div>
 

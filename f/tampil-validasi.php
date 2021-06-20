@@ -6,6 +6,13 @@ if ($tampil_kondisi == "Siswa Lolos Seleksi") {
   echo "<span class='label label-success'>Data Sesuai</span>";
 } elseif ($tampil_kondisi == "Siswa Tidak Lolos Seleksi") {
   echo "<span class='label label-danger'>Data Tidak Sesuai</span>";
+
+//seleksi adm
+} elseif ($tampil_kondisi == "Lolos Seleksi Adm") {
+  echo "<span class='label label-primary'>Lolos Seleksi Administrasi</span>";
+} elseif ($tampil_kondisi == "Tidak Lolos Seleksi Adm") {
+  echo "<span class='label label-danger'>Tidak Lolos Seleksi Administrasi</span>";
+
 } else {
   echo "<span class='label label-warning'>Tahap Pengecekan Operator</span>";
 }

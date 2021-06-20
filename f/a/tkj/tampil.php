@@ -34,6 +34,7 @@ include '../header.php';
         <a style="margin-right: 10px;" type="button" class="btn btn-warning btn-md"
         href="reset.php?id=<?= $d['id'] ?>" onclick="return confirm('Anda yakin Reset data siswa <?php echo $d['nama_siswa']; ?> ?')">Reset Data</a>
         <a style="margin-right: 10px;" type="button" class="btn btn-primary btn-md" href="../../../daftar/tkj/cetak.php?nik=<?= $d['nik'] ?>">Cetak Bukti Pendaftaran</a>
+        <a style="margin-right: 10px;" type="button" class="btn btn-info btn-md" href="seleksi-administrasi.php?id=<?= $d['id'] ?>">Seleksi Administrasi</a>
 
         <h5 style="margin-top: 20px"><b>Informasi :</b></h5>
         <ol>
