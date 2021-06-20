@@ -3,13 +3,13 @@
 
  $tampil_kondisi = $d['kondisi'];
 if ($tampil_kondisi == "Siswa Lolos Seleksi") {
-  echo "<span class='label label-success'>Data Sesuai</span>";
+  echo "<span class='label label-success'>Data Sesuai dan Lolos Seleksi Administrasi</span>";
 } elseif ($tampil_kondisi == "Siswa Tidak Lolos Seleksi") {
   echo "<span class='label label-danger'>Data Tidak Sesuai</span>";
 
 //seleksi adm
 } elseif ($tampil_kondisi == "Lolos Seleksi Adm") {
-  echo "<span class='label label-primary'>Lolos Seleksi Administrasi</span>";
+  echo "<span class='label label-success'>Data Sesuai dan Lolos Seleksi Administrasi</span>";
 } elseif ($tampil_kondisi == "Tidak Lolos Seleksi Adm") {
   echo "<span class='label label-danger'>Tidak Lolos Seleksi Administrasi</span>";
 
