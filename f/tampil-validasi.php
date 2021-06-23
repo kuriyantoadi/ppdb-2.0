@@ -17,6 +17,8 @@ if ($tampil_kondisi == "Siswa Lolos Seleksi") {
   echo "<span class='label label-warning'>Tahap Pengecekan Operator</span>";
 }
 
+
+
 //validasi salah
 $t_val_skhun = $d['val_skhun'];
 if ($t_val_skhun == "Data Tidak Sesuai") {
