@@ -61,7 +61,7 @@ include 'header.php';
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman");
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman  where kompetensi_keahlian='Rekayasa Perangkat Lunak'");
     $no = $mulai+1;
 
     while ($d = mysqli_fetch_array($data)) {

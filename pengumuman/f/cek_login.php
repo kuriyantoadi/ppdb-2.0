@@ -36,33 +36,43 @@ if ($cek > 0) {
     } elseif ($login['level']=="rpl") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "op";
-        $_SESSION['kode_jur'] = "Rekayasa Perangkat Lunak";
+        $_SESSION['jur'] = "Rekayasa Perangkat Lunak";
+        $_SESSION['kode_jur'] = "rpl";
         header("location:dashboard.php");
 
     } elseif ($login['level']=="otkp") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "op";
-        header("location:d/otkp/index.php");
+        $_SESSION['jur'] = "Otomatisasi dan Tata Kelola Perkantoran";
+        $_SESSION['kode_jur'] = "otkp";
+        header("location:dashboard.php");
 
     } elseif ($login['level']=="akl") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "op";
-        header("location:d/akl/index.php");
+        $_SESSION['jur'] = "Akuntansi dan Lembaga Keuangan";
+        $_SESSION['kode_jur'] = "akl";
+        header("location:dashboard.php");
 
     } elseif ($login['level']=="tkr") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "op";
-        header("location:d/tkr/index.php");
+        $_SESSION['jur'] = "Teknik Kendaraan Ringan Otomotif";
+        $_SESSION['kode_jur'] = "tkr";
+        header("location:dashboard.php");
 
     } elseif ($login['level']=="tpm") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "tpm";
-        header("location:d/tpm/index.php");
+        $_SESSION['jur'] = "Teknik Pemesinan";
+        $_SESSION['kode_jur'] = "tpm";
+        header("location:dashboard.php");
 
-    // } elseif ($login['level']=="pos3") {
-    //     $_SESSION['username'] = $username;
-    //     $_SESSION['status'] = "pos3";
-    //     header("location:r/index.php");
+    } elseif ($login['level']=="pos3") {
+        $_SESSION['username'] = $username;
+        $_SESSION['status'] = "pos3";
+        header("location:r/index.php");
+        
     } else {
         // echo "gagal1";
         header("location:index.php?pesan=gagal1");

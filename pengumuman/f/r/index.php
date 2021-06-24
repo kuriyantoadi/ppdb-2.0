@@ -3,11 +3,11 @@ include 'header.php';
     ?>
 
     <div class="form-group">
-      <?php include '../../../alert.php' ?>
+      <?php include '../../alert.php' ?>
       <div class="col-sm-7">
         <a href="logout.php" type="button" class="btn btn-danger">Logout</a>
-        <?php include 'menu.php' ?>
-
+        <!-- <a href="../../e/akl/akl-lap.php" type="button" class="btn btn-success"
+        onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi dan Keuangan Lembaga ?')">Download AKL</a> -->
       </div>
       <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
       <div class="col-sm-3">
@@ -53,15 +53,15 @@ include 'header.php';
       </thead>
       <tbody>
         <?php
-      include '../../../koneksi.php';
-    $halperpage = 100;
+      include '../../koneksi.php';
+    $halperpage = 500;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
     $result = mysqli_query($koneksi, "SELECT * FROM f_pengumuman ");
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman");
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman where kompetensi_keahlian='$jur'");
     $no = $mulai+1;
 
     while ($d = mysqli_fetch_array($data)) {
@@ -91,7 +91,7 @@ include 'header.php';
           </td>
           <td>
             <center>
-              <?php include('../val.php'); ?>
+              <?php include('val.php'); ?>
           </td>
           <td>
             <center>

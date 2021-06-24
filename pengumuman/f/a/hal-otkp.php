@@ -1,32 +1,13 @@
 <?php
-session_start();
-if ($_SESSION['status']!="admin") {
-    header("location:../../index.php?pesan=belum_login");
-}
-
-include '../header.php';
+include 'header.php';
     ?>
-
-  <div class="container">
-    <center>
-      <h2>Tampilan Admin PPDB SMKN 1 Kragilan</h2>
-    </center>
-    <center>
-      <h3></h3>
-    </center>
-    <center>
-      <h3>Kompetensi Keahlian Akuntansi Keuangan Lembaga</h3>
-    </center>
-
-    <br><br><br>
 
     <div class="form-group">
       <?php include '../../../alert.php' ?>
       <div class="col-sm-7">
-        <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
-        <a href="../../e/akl/akl-lap.php" type="button" class="btn btn-success"
-        onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi dan Keuangan Lembaga ?')">Download AKL</a>
-        <?php include '../menu.php' ?>
+        <a href="logout.php" type="button" class="btn btn-danger">Logout</a>
+        <?php include 'menu.php' ?>
+
       </div>
       <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
       <div class="col-sm-3">
@@ -45,7 +26,7 @@ include '../header.php';
             <center>Nomor Pendaftaran
           </th> -->
           <th>
-            <center>Tanggal Pendaftaran
+            <center>Tanggal Daftar Ulang
           </th>
           <th>
             <center>NISN Siswa
@@ -63,26 +44,25 @@ include '../header.php';
             <center>Kondisi
           </th>
           <th>
-            <center>Lihat
+            <center>Hapus
           </th>
           <th>
-            <center>Hapus
+            <center>Lihat
           </th>
         </tr>
       </thead>
       <tbody>
         <?php
       include '../../../koneksi.php';
-    $halperpage = 500;
+    $halperpage = 100;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-    $result = mysqli_query($koneksi, "SELECT * FROM f_siswa_akl");
+    $result = mysqli_query($koneksi, "SELECT * FROM f_pengumuman ");
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_siswa_akl LIMIT $mulai, $halperpage ");
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman  where kompetensi_keahlian='Otomatisasi dan Tata Kelola Perkantoran'");
     $no = $mulai+1;
-
 
     while ($d = mysqli_fetch_array($data)) {
         ?>
@@ -98,7 +78,7 @@ include '../header.php';
             <center><?php echo $d['tgl_pendaftaran']; ?>
           </td>
           <td>
-            <center><?php echo $d['nisn']; ?>
+            <center><?php echo $d['nisn_siswa']; ?>
           </td>
           <td>
             <center><?php echo $d['nama_siswa']; ?>
@@ -111,22 +91,21 @@ include '../header.php';
           </td>
           <td>
             <center>
-              <?php include('../../tampil-validasi.php'); ?>
+              <?php include('../val.php'); ?>
           </td>
           <td>
             <center>
-              <a type="button"   onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi dan Keuangan Lembaga ?')"
+              <a type="button" onclick="return confirm('Hapus Data Siswa <?= $d['nama_siswa'] ?> ?')"
               class="btn btn-danger btn-sm" href="hapus.php?id=<?php echo $d['id']; ?>">Hapus</a>
           </td>
           <td>
             <center>
-              <a type="button"  class="btn btn-info btn-sm" href="tampil.php?id=<?php echo $d['id']; ?>">Lihat</a>
+              <a type="button"  class="btn btn-info btn-sm" href="lihat.php?id=<?php echo $d['id']; ?>">Lihat</a>
           </td>
 
         </tr>
 
-        <?php
-    } ?>
+      <?php } ?>
       </tbody>
     </table>
     <div>
@@ -139,4 +118,4 @@ include '../header.php';
   ?>
     </div>
   </div>
-  <?php include '../footer.php' ?>
+  <?php include 'footer.php' ?>
