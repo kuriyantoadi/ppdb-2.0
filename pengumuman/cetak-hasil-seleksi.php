@@ -22,13 +22,15 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/watermark.css">
   <!-- <script src="../../assets/js/bootstrap.min.js"></script> -->
 
 </head>
 <body>
 
 <div class="container">
-
+  <!-- <div id="image_watermark"> -->
+  <!-- <img src="../assets/images/smk-watermark.png" /> -->
     <center><img style="margin-bottom: 0px; margin-top:  10px; margin-left: 0px" src="../assets/images/kop-surat.png" /><center>
 
       <h3><b>SURAT KETERANGAN</b></h3>
@@ -76,7 +78,7 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
         <?php if ($d['kondisi'] == "DITERIMA") { ?>
           <tr>
             <td>DI KOMPETENSI KEAHLIAN</td>
-            <td>: <?= "TEKNIK KOMPUTER JARINGAN" ?></td>
+            <td>: <?= $d['kompetensi_keahlian'] ?></td>
           </tr>
         <?php } ?>
 
@@ -88,8 +90,9 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
       </p>
 
 <!-- tanda tanggan kepala sekolah -->
-    <img height="130px" align="right" src="../assets/images/stampel.png" style="margin-right:  80px;"/>
+    <img height="130px" align="right" src="../assets/images/ttd-kepsek.png" style="margin-right:  80px;"/>
 
+  <?php if ($d['kondisi'] == "DITERIMA") { ?>
     <p style="text-align: justify; margin-top: 180px">
       *)  Catatan :
       <ol style="text-align: justify;">
@@ -97,13 +100,17 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
           <br>(Siswa yang tidak mendaftar ulang dianggap mengundurkan diri);</li>
         <li>Siswa yang diterima, wajib mengikuti kegiatan MPLS, pada tanggal 12 s.d 14 Juli 2021.</li>
       </ol>
-
-
     </p>
-  <?php
-      } ?>
+    <img height="70px" align="right" src="../assets/images/smk-bisa.png" style="float: left;"/>
 
-  </div>
+  <?php }else{ ?>
+
+  <img height="70px" align="right" src="../assets/images/smk-bisa.png" style="float: left; margin-top: 200px"/>
+
+  <?php } ?>
+
+  <?php } ?>
+</div>
 
 
 <script>

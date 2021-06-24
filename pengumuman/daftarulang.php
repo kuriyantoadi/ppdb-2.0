@@ -23,11 +23,10 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
 
               ?>
 
-        <br><br>
         <table>
           <tr>
             <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-danger btn-md" href="dashboard.php?nik=<?php echo $d['nik']; ?>">Kembali</a></td>
-            <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="cetak-form.php?nik=<?php echo $d['nik'] ?>">Formulir Dapodik</a></td>
+            <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="../assets/file/F-PESERTA_DIDIK.pdf">Formulir Dapodik</a></td>
             <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="cetak-form.php?nik=<?php echo $d['nik'] ?>">Pakta Integritas</a></td>
           </tr>
         </table>
@@ -37,7 +36,11 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
           <table class="table table-bordered">
 
             <tr>
-              <td>Sudah Daftar Ulang?</td>
+              <td>Catatan dari Operator</td>
+              <td><h3><?php echo $d['catatan_operator']; ?></h3></td>
+            </tr>
+            <tr>
+              <td>Tanggal Daftar Ulang</td>
               <td><?php echo $d['tgl_daftarulang']; ?></td>
             </tr>
             <tr>

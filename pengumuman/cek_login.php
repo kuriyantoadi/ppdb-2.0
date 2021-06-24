@@ -33,6 +33,12 @@ if ($cek > 0) {
       $_SESSION['status'] = "siswa";
       $_SESSION['kode_jur'] = "otkp";
       header("location:dashboard.php?nik=$nik");
+
+    } elseif ($login['kompetensi_keahlian']=="Teknik Komputer dan Jaringan") {
+      $_SESSION['nisn_siswa'] = $nisn_siswa;
+      $_SESSION['status'] = "siswa";
+      $_SESSION['kode_jur'] = "tkj";
+      header("location:dashboard.php?nik=$nik");
       // echo "cek 1";
     } else {
         echo "gagal1";

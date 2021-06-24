@@ -8,7 +8,8 @@ include '../koneksi.php';
 $nisn_siswa = $_POST['nisn_siswa'];
 $kode_jur = $_POST['kode_jur'];
 
-echo $kode_jur;
+// echo $kode_jur;
+
 
 // exit;
 // pdf_swa_pakta
@@ -92,9 +93,11 @@ if ($_POST['upload']) {
 }
 
 $nik = $_POST['nik'];
+$tgl = date('d-m-Y  H:i' );
+
 
 mysqli_query($koneksi, "UPDATE f_pengumuman SET
-
+            tgl_daftarulang='$tgl',
              pdf_pakta='$nisn_siswa-$pdf_pakta_up.pdf',
              pdf_swa_pakta='$nisn_siswa-$pdf_swa_pakta_up.pdf',
              pdf_dapodik='$nisn_siswa-$pdf_dapodik_up.pdf'

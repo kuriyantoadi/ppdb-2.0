@@ -9,8 +9,9 @@
   <table>
     <tr>
       <td><a type="button" style="margin-right: 10px; " class="btn btn-danger " href="logout.php">Keluar</a></td>
+      <td><a type="button" style="margin-right: 10px;" class="btn btn-primary " href="cetak-hasil-seleksi.php?nik=<?php echo $d['nik'] ?>">Download Hasil Seleksi</a></td>
+
       <?php if ($d['kondisi'] == "DITERIMA"): ?>
-        <td><a type="button" style="margin-right: 10px;" class="btn btn-primary " href="cetak-hasil-seleksi.php?nik=<?php echo $d['nik'] ?>">Download Hasil Seleksi</a></td>
         <td><a type="button" style="margin-right: 10px;" class="btn btn-success " href="daftarulang.php?nik=<?php echo $d['nik'] ?>">Daftar Ulang</a></td>
 
       <?php endif; ?>
