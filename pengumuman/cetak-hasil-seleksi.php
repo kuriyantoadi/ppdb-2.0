@@ -34,7 +34,7 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
     <center><img style="margin-bottom: 0px; margin-top:  10px; margin-left: 0px" src="../assets/images/kop-surat.png" /><center>
 
       <h3><b>SURAT KETERANGAN</b></h3>
-      <p>Nomor : 442/../Adm.Sekolah (revisi)</p>
+      <p>Nomor : 442/583/Adm.Sekolah</p>
       <p style="margin-top: 10px; margin-bottom: 10px">Tentang :</p>
       <p style="margin-bottom: 20px"><b>PENGUMUMAN HASIL SELEKSI
       <br>PENERIMAAN PESERTA DIDIK BARU (PPBD)
@@ -77,27 +77,29 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
 
         <?php if ($d['kondisi'] == "DITERIMA") { ?>
           <tr>
-            <td>DI KOMPETENSI KEAHLIAN</td>
-            <td>: <?= $d['kompetensi_keahlian'] ?></td>
+            <td>Pada Kompetensi Keahlian</td>
+            <td>: <b><?= $d['kompetensi_keahlian'] ?></b></td>
+          </tr>
+        <?php }else{ ?>
+          <tr>
+            <td><h4 style="margin-bottom: 80px"><b>Di SMK Negeri 1 Kragilan<b></h4></td>
           </tr>
         <?php } ?>
 
       </table>
 
-      <p style="text-align: justify; margin-top: 10px" >
-        Syarat yang harus dipenuhi	 :
-        <br>Demikian Surat Keterangan ini kami sampaikan.
-      </p>
+
 
 <!-- tanda tanggan kepala sekolah -->
     <img height="130px" align="right" src="../assets/images/ttd-kepsek.png" style="margin-right:  80px;"/>
 
   <?php if ($d['kondisi'] == "DITERIMA") { ?>
-    <p style="text-align: justify; margin-top: 180px">
+    <p style="text-align: justify; margin-top: 150px">
       *)  Catatan :
       <ol style="text-align: justify;">
         <li>Daftar Ulang tanggal 1 s.d 9 Juli 2021,
           <br>(Siswa yang tidak mendaftar ulang dianggap mengundurkan diri);</li>
+        <li>Berkas Daftar ulang terdiri dari Surat Keterangan Diterima, Pakta Integritas Siswa, Bukti Upload Berkas dan Form Dapodik dimenu <b>Daftar Ulang</b>. Berkas dimasukkan pada map snelhekter plastik sesuai warna kompetensi keahlian</li>
         <li>Siswa yang diterima, wajib mengikuti kegiatan MPLS, pada tanggal 12 s.d 14 Juli 2021.</li>
       </ol>
     </p>
@@ -105,7 +107,7 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
 
   <?php }else{ ?>
 
-  <img height="70px" align="right" src="../assets/images/smk-bisa.png" style="float: left; margin-top: 200px"/>
+  <img height="70px" align="right" src="../assets/images/smk-bisa.png" style="float: left; margin-top: 150px"/>
 
   <?php } ?>
 

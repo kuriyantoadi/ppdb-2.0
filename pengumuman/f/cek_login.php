@@ -63,7 +63,7 @@ if ($cek > 0) {
 
     } elseif ($login['level']=="tpm") {
         $_SESSION['username'] = $username;
-        $_SESSION['status'] = "tpm";
+        $_SESSION['status'] = "op";
         $_SESSION['jur'] = "Teknik Pemesinan";
         $_SESSION['kode_jur'] = "tpm";
         header("location:dashboard.php");
@@ -72,7 +72,7 @@ if ($cek > 0) {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "pos3";
         header("location:r/index.php");
-        
+
     } else {
         // echo "gagal1";
         header("location:index.php?pesan=gagal1");

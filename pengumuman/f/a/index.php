@@ -5,9 +5,7 @@ include 'header.php';
     <div class="form-group">
       <?php include '../../../alert.php' ?>
       <div class="col-sm-7">
-        <a href="logout.php" type="button" class="btn btn-danger">Logout</a>
         <?php include 'menu.php' ?>
-
       </div>
       <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
       <div class="col-sm-3">
@@ -41,10 +39,13 @@ include 'header.php';
             <center>Asal Sekolah
           </th>
           <th>
-            <center>Kondisi
+            <center>Diterima
           </th>
           <th>
-            <center>Hapus
+            <center>Upload
+          </th>
+          <th>
+            <center>Daftar Ulang
           </th>
           <th>
             <center>Lihat
@@ -61,7 +62,7 @@ include 'header.php';
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman");
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman ORDER BY kompetensi_keahlian ASC, nama_siswa ASC");
     $no = $mulai+1;
 
     while ($d = mysqli_fetch_array($data)) {
@@ -91,16 +92,24 @@ include 'header.php';
           </td>
           <td>
             <center>
-              <?php include('../val.php'); ?>
+              <?php include('label-diterima.php'); ?>
           </td>
           <td>
+            <center>
+              <?php include('label-upload.php'); ?>
+          </td>
+          <td>
+            <center>
+              <?php include('label-daftarulang.php'); ?>
+          </td>
+          <!-- <td>
             <center>
               <a type="button" onclick="return confirm('Hapus Data Siswa <?= $d['nama_siswa'] ?> ?')"
               class="btn btn-danger btn-sm" href="hapus.php?id=<?php echo $d['id']; ?>">Hapus</a>
-          </td>
+          </td> -->
           <td>
             <center>
-              <a type="button"  class="btn btn-info btn-sm" href="lihat.php?id=<?php echo $d['id']; ?>">Lihat</a>
+              <a type="button"  class="btn btn-info btn-sm" href="val-diterima.php?id=<?php echo $d['id']; ?>">Lihat</a>
           </td>
 
         </tr>

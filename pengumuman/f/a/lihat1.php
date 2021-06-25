@@ -45,38 +45,6 @@ include 'header.php';
         <td>Asal Sekolah</td>
         <td><?php echo $d['asal_sekolah']; ?></td>
       </tr>
-      <tr>
-        <td>NPSN Sekolah SMP</td>
-        <td><?php echo $d['npsn_sekolah']; ?></td>
-      </tr>
-      <tr>
-        <td>Alamat</td>
-        <td><?php echo $d['alamat']; ?></td>
-      </tr>
-      <tr>
-        <td>RT</td>
-        <td><?php echo $d['rt']; ?></td>
-      </tr>
-      <tr>
-        <td>RW</td>
-        <td><?php echo $d['rw']; ?></td>
-      </tr>
-      <tr>
-        <td>Kelurahan</td>
-        <td><?php echo $d['kelurahan']; ?></td>
-      </tr>
-      <tr>
-        <td>Kecamatan</td>
-        <td><?php echo $d['kecamatan']; ?></td>
-      </tr>
-      <tr>
-        <td>Kota</td>
-        <td><?php echo $d['kota']; ?></td>
-      </tr>
-      <tr>
-        <td>NIK</td>
-        <td><?php echo $d['nik']; ?></td>
-      </tr>
 
 
       <tr>

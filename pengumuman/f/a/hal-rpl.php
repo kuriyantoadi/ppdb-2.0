@@ -5,7 +5,6 @@ include 'header.php';
     <div class="form-group">
       <?php include '../../../alert.php' ?>
       <div class="col-sm-7">
-        <a href="logout.php" type="button" class="btn btn-danger">Logout</a>
         <?php include 'menu.php' ?>
 
       </div>

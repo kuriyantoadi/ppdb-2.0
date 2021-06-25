@@ -26,8 +26,8 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
         <table>
           <tr>
             <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-danger btn-md" href="dashboard.php?nik=<?php echo $d['nik']; ?>">Kembali</a></td>
-            <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="../assets/file/F-PESERTA_DIDIK.pdf">Formulir Dapodik</a></td>
-            <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="cetak-form.php?nik=<?php echo $d['nik'] ?>">Pakta Integritas</a></td>
+            <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-success btn-md" href="../assets/file/F-PESERTA_DIDIK.pdf">Formulir Dapodik</a></td>
+            <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-success btn-md" href="cetak-pakta.php?nik=<?php echo $d['nik'] ?>">Pakta Integritas</a></td>
           </tr>
         </table>
 
@@ -109,9 +109,9 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
             </tr>
 
             <tr>
-              <td>Bukti Daftar Ulang</td>
+              <td>Bukti Upload Berkas</td>
               <td>
-                <a class="btn btn-primary" href="">Download</a>
+                <a class="btn btn-primary" href="cetak-bukti.php?nik=<?= $d['nik'] ?>">Download Bukti Upload Berkas</a>
               </td>
             </tr>
 
@@ -144,7 +144,7 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
 
             <tr>
               <td colspan="2">
-                <center><input type="submit" style="margin-top: 25px; " class="btn btn-success" name="upload" value="upload"></center>
+                <center><input type="submit" style="margin-top: 25px; " class="btn" name="upload" value="Submit"></center>
               </td>
             </tr>
             </form>

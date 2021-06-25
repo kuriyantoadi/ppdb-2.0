@@ -39,7 +39,25 @@ if ($cek > 0) {
       $_SESSION['status'] = "siswa";
       $_SESSION['kode_jur'] = "tkj";
       header("location:dashboard.php?nik=$nik");
+
+    } elseif ($login['kompetensi_keahlian']=="Rekayasa Perangkat Lunak") {
+      $_SESSION['nisn_siswa'] = $nisn_siswa;
+      $_SESSION['status'] = "siswa";
+      $_SESSION['kode_jur'] = "rpl";
+      header("location:dashboard.php?nik=$nik");
+
+    } elseif ($login['kompetensi_keahlian']=="Teknik Pemesinan") {
+      $_SESSION['nisn_siswa'] = $nisn_siswa;
+      $_SESSION['status'] = "siswa";
+      $_SESSION['kode_jur'] = "tpm";
+      header("location:dashboard.php?nik=$nik");
       // echo "cek 1";
+    } elseif ($login['kompetensi_keahlian']=="Teknik Kendaraan Ringan Otomotif") {
+      $_SESSION['nisn_siswa'] = $nisn_siswa;
+      $_SESSION['status'] = "siswa";
+      $_SESSION['kode_jur'] = "rpl";
+      header("location:dashboard.php?nik=$nik");
+
     } else {
         echo "gagal1";
         // header("location:index.php?pesan=gagal1");

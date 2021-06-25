@@ -5,7 +5,6 @@ include 'header.php';
     <div class="form-group">
       <?php include '../../../alert.php' ?>
       <div class="col-sm-7">
-        <a href="logout.php" type="button" class="btn btn-danger">Logout</a>
         <?php include 'menu.php' ?>
 
       </div>
@@ -61,7 +60,7 @@ include 'header.php';
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman  where kompetensi_keahlian='Teknik Kendaraan Ringan'");
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman  where kompetensi_keahlian='Teknik Kendaraan Ringan Otomotif'");
     $no = $mulai+1;
 
     while ($d = mysqli_fetch_array($data)) {
