@@ -35,12 +35,30 @@ include 'header.php';
         <td><?php echo $d['no_p']; ?></td>
       </tr>
       <tr>
+        <td>NISN</td>
+        <td><?php echo $d['nisn_siswa']; ?></td>
+      </tr>
+      <tr>
+        <td>NIK</td>
+        <td><?php echo $d['nik']; ?></td>
+      </tr>
+      <tr>
         <td>Nama Siswa</td>
         <td><?php echo $d['nama_siswa']; ?></td>
       </tr>
       <tr>
         <td>Kompetensi Keahlian</td>
-        <td><?php echo $d['kompetensi_keahlian']; ?></td>
+        <td>
+          <select class="form-control" name="kompetensi_keahlian">
+            <option value="<?= $d['kompetensi_keahlian']; ?>">Pilihan Pertama <?= $d['kompetensi_keahlian']; ?></option>
+            <option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option>
+            <option value="Otomatisasi dan Tata Kelola Perkantoran">Otomatisasi dan Tata Kelola Perkantoran</option>
+            <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+            <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+            <option value="Teknik Pemesinan">Teknik Pemesinan</option>
+            <option value="Teknik Kendaraan Ringan Otomotif">Teknik Kendaraan Ringan Otomotif</option>
+          </select>
+        </td>
       </tr>
       <tr>
         <td>Asal Sekolah</td>

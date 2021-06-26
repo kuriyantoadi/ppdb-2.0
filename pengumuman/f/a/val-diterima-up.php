@@ -9,9 +9,11 @@ if ($_SESSION['status']!="admin" && $_SESSION['status']!="op") {
 } else {
     $id = $_POST['id'];
     $kondisi = $_POST['kondisi'];
+    $kompetensi_keahlian = $_POST['kompetensi_keahlian'];
 
     mysqli_query($koneksi, "UPDATE f_pengumuman SET
-               kondisi='$kondisi'
+               kondisi='$kondisi',
+               kompetensi_keahlian='$kompetensi_keahlian'
 
                where id='$id'
                ") or die(mysqli_error($koneksi));

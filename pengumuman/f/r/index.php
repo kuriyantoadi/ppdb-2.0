@@ -67,7 +67,7 @@
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman ");
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman order by nama_siswa asc");
     $no = $mulai+1;
 
     while ($d = mysqli_fetch_array($data)) {

@@ -30,7 +30,8 @@ if ($_SESSION['status']!="admin" && $_SESSION['status']!="op") {
                val_pakta='',
                val_swa_pakta='',
                catatan_operator='',
-               kondisi_upload_berkas=''
+               kondisi_upload_berkas='',
+               kondisi_daftarulang=''
 
                where id='$id'
                ") or die(mysqli_error($koneksi));

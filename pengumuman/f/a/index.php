@@ -22,7 +22,7 @@ include 'header.php';
     </div>
 
 
-    <table class="table table-bordered table-hover" id="domainsTable">
+    <table class="table table-bordered table-hover" id="">
       <thead>
         <tr>
           <th>
@@ -63,7 +63,7 @@ include 'header.php';
       <tbody>
         <?php
       include '../../../koneksi.php';
-    $halperpage = 100;
+    $halperpage = 500;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
     $result = mysqli_query($koneksi, "SELECT * FROM f_pengumuman ");
@@ -110,7 +110,7 @@ include 'header.php';
             <center>
               <?php include('../../label-daftarulang.php'); ?>
           </td>
-          
+
           <td>
             <center>
               <a type="button"  class="btn btn-info btn-sm" href="val-diterima.php?id=<?php echo $d['id']; ?>">Lihat</a>

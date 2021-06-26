@@ -72,6 +72,10 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
               <td><?php echo $d['no_p']; ?></td>
             </tr>
             <tr>
+              <td>NISN Siswa</td>
+              <td><?php echo $d['nisn_siswa']; ?></td>
+            </tr>
+            <tr>
               <td>Nama Siswa</td>
               <td><?php echo $d['nama_siswa']; ?></td>
             </tr>

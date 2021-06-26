@@ -2,10 +2,7 @@
 
 include 'header.php';
 ?>
-<center>
-  <h3 style="margin-top: 40px; margin-bottom: 10px">Tampilan Admin PPDB SMKN 1 Kragilan</h3>
-  <h3 style="margin-top: 0px; margin-bottom: 40px">Tampilan Daftar Ulang</h3>
-</center>
+
 
 <table class="table table-bordered">
   <?php
@@ -16,6 +13,7 @@ include 'header.php';
         include 'jurusan.php';
       ?>
 
+    <a type="button" style="margin-right: 10px; margin-bottom: 0px;" class="btn btn-danger btn-md" href="index.php">Kembali</a>
 
   <?php include '../../../alert.php'; ?>
   <form class="form-horizontal" action="val-daftarulang-up.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">

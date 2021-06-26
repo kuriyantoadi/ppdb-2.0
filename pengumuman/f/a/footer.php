@@ -1,6 +1,10 @@
 <script src="../../../assets/datepicker/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 <script src="../../../assets/datepicker/js/custom.js"></script>
 
+<!-- <script src="../../../assets/dataTable/jquery.js"></script>
+<script src="../../../assets/dataTable/jquery.dataTables.min.js"></script>
+<script src="../../../assets/dataTable/dataTables.bootstrap4.min.js"></script> -->
+
 <script>
 $(document).ready(function(){
     setDatePicker()
@@ -54,6 +58,9 @@ function searchTable() {
   }
 }
 
+// $(document).ready(function() {
+//   $('#example').DataTable();
+// });
 
 $('#myStateButton').on('click', function () {
    $(this).button('complete') // button text will be "finished!"

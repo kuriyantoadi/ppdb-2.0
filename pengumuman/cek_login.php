@@ -59,10 +59,10 @@ if ($cek > 0) {
       header("location:dashboard.php?nik=$nik");
 
     } else {
-        echo "gagal1";
-        // header("location:index.php?pesan=gagal1");
+        // echo "gagal1";
+        header("location:index.php?pesan=gagal1");
     }
 } else {
-    echo "gagal2";
-    // header("location:index.php?pesan=gagal");
+    // echo "gagal2";
+    header("location:index.php?pesan=gagal");
 }
