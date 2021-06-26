@@ -41,10 +41,13 @@ include 'header.php';
             <center>Asal Sekolah
           </th>
           <th>
-            <center>Kondisi
+            <center>Diterima
           </th>
           <th>
-            <center>Hapus
+            <center>Upload Berkas
+          </th>
+          <th>
+            <center>Daftar Ulang
           </th>
           <th>
             <center>Lihat
@@ -91,13 +94,17 @@ include 'header.php';
           </td>
           <td>
             <center>
-              <?php include('val.php'); ?>
+              <?php include('../label-diterima.php'); ?>
           </td>
           <td>
             <center>
-              <a type="button" onclick="return confirm('Hapus Data Siswa <?= $d['nama_siswa'] ?> ?')"
-              class="btn btn-danger btn-sm" href="hapus.php?id=<?php echo $d['id']; ?>">Hapus</a>
+              <?php include('../label-upload.php'); ?>
           </td>
+          <td>
+            <center>
+              <?php include('../label-daftarulang.php'); ?>
+          </td>
+
           <td>
             <center>
               <a type="button"  class="btn btn-info btn-sm" href="lihat.php?id=<?php echo $d['id']; ?>">Lihat</a>

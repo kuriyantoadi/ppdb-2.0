@@ -14,7 +14,6 @@ include 'header.php';
       $data = mysqli_query($koneksi, "select *  from f_pengumuman where id='$id'");
       while ($d = mysqli_fetch_array($data)) {
         include 'jurusan.php';
-        include 'menu-val.php';
       ?>
 
 
@@ -81,10 +80,10 @@ include 'header.php';
 <center><input type="submit" style="margin-bottom: 50px; " class="btn btn-default" name="upload" value="submit"></center>
 </form>
 
-<?php
-      }
-      include 'footer.php'
-      ?>
+  <?php
+  }
+  include 'footer.php'
+  ?>
 
 
 

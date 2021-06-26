@@ -2,7 +2,10 @@
 
 include 'header.php';
 ?>
-
+<center>
+  <h3 style="margin-top: 40px; margin-bottom: 10px">Tampilan Admin PPDB SMKN 1 Kragilan</h3>
+  <h3 style="margin-top: 0px; margin-bottom: 40px">Tampilan Upload Berkas</h3>
+</center>
 
 <table class="table table-bordered">
   <?php
@@ -14,15 +17,14 @@ include 'header.php';
         include 'menu-val.php';
         include '../../../alert.php';
     ?>
+
   <form class="form-horizontal" action="val-upload-up.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
     <table class="table table-bordered">
+
       <tr>
-        <td colspan='2'><h3><center>Validasi Upload Berkas</h3></td>
-      </tr>
-      <tr>
-        <td>Kondisi</td>
+        <td>Kondisi validasi</td>
         <td>
-          <?php include 'label-diterima.php' ?>
+          <?php include '../../label-upload.php' ?>
         </td>
       </tr>
       <tr>
@@ -48,6 +50,12 @@ include 'header.php';
 
       <tr>
         <td>Scan Pakta Integritas
+          <br>
+          <?php if (empty($d['val_pakta'])) { ?>
+            <b>Belum di validasi</b>
+          <?php }else{ ?>
+            <b>Pilihan Sebelumnya <?= $d['val_pakta'] ?> </b>
+          <?php } ?>
           <div class="radio">
             <label>
               <input type="hidden" name="id" value="<?= $d['id'] ?>">
@@ -73,6 +81,13 @@ include 'header.php';
 
       <tr>
         <td>Swa Photo Pakta Integritas
+          <br>
+          <?php if (empty($d['val_swa_pakta'])) { ?>
+            <b>Belum di validasi</b>
+          <?php }else{ ?>
+            <b>Pilihan Sebelumnya <?= $d['val_swa_pakta'] ?> </b>
+          <?php } ?>
+
           <div class="radio">
             <label>
               <input type="hidden" name="id" value="<?= $d['id'] ?>">
@@ -98,6 +113,12 @@ include 'header.php';
 
       <tr>
         <td>Fomulir Dapodik
+          <br>
+          <?php if (empty($d['val_dapodik'])) { ?>
+            <b>Belum di validasi</b>
+          <?php }else{ ?>
+            <b>Pilihan Sebelumnya <?= $d['val_dapodik'] ?> </b>
+          <?php } ?>
           <div class="radio">
             <label>
               <input type="hidden" name="id" value="<?= $d['id'] ?>">
@@ -130,19 +151,26 @@ include 'header.php';
       </tr>
 
       <tr>
-        <td>Kondisi Diterima / Tidak Diterima </td>
+        <td>Kondisi Diterima / Tidak Diterima
+          <br>
+          <?php if (empty($d['kondisi_upload_berkas'])) { ?>
+            <b>Belum di validasi</b>
+          <?php }else{ ?>
+            <b>Pilihan Sebelumnya <?= $d['kondisi_upload_berkas'] ?> </b>
+          <?php } ?>
+        </td>
         <td>
           <div class="radio">
             <label>
               <input type="hidden" name="id" value="<?= $d['id'] ?>">
-              <input type="radio" name="kondisi_validasi" id="optionsRadios1" value="DITERIMA" required>
-              <span class='label label-success label-md'>DITERIMA</span><br>
+              <input type="radio" name="kondisi_upload_berkas" id="optionsRadios1" value="Data Sesuai" required>
+              <span class='label label-success label-md'>Data Sesuai</span><br>
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="kondisi_validasi" id="optionsRadios2" value="TIDAK DITERIMA" required>
-              <span class='label label-danger'>TIDAK DITERIMA</span><br>
+              <input type="radio" name="kondisi_upload_berkas" id="optionsRadios2" value="Data Tidak Sesuai" required>
+              <span class='label label-danger'>Data Tidak Sesuai</span><br>
             </label>
           </div>
 

@@ -106,4 +106,4 @@ mysqli_query($koneksi, "UPDATE f_pengumuman SET
              ")  or die(mysqli_error($koneksi));
 
 // node_id=<?php echo $d['node_id'];
- header("location:daftarulang.php?nik=$nik&pesan=daftarulang_berhasil");
+ header("location:upload-berkas.php?nik=$nik&pesan=daftarulang_berhasil");

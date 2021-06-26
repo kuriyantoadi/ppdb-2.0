@@ -1,18 +1,18 @@
 <?php
 session_start();
-if ($_SESSION['status']!="admin" && $_SESSION['status']!="siswa") {
+if ($_SESSION['status']!="admin" && $_SESSION['status']!="siswa" && $_SESSION['status']!="op") {
     header("location:index.php?pesan=belum_login");
 }
 
-$nisn_siswa = $_SESSION['nisn_siswa'];
-$kode_jur = $_SESSION['kode_jur'];
-
+$nik = $_GET['nik'];
 
 
 include '../koneksi.php';
-$cek_id = mysqli_query($koneksi, "SELECT * from f_pengumuman where nisn_siswa='$nisn_siswa' ");
+$cek_id = mysqli_query($koneksi, "SELECT * from f_pengumuman where nik='$nik' ");
 while ($d_id = mysqli_fetch_array($cek_id)) {
   $nama_jurusan =  $d_id['kompetensi_keahlian'];
+  $nisn_siswa =  $d_id['nisn_siswa'];
+
 }
 ?>
 <!DOCTYPE html>

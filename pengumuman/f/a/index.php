@@ -2,6 +2,14 @@
 include 'header.php';
     ?>
 
+    <center>
+      <h2 style="margin-top: 40px; margin-bottom: 0px">Tampilan Admin PPDB SMKN 1 Kragilan</h2>
+      <h2 style="margin-top: 0px; margin-bottom: 0px">Halaman Daftar Ulang</h2>
+    </center>
+
+    <div class="box" style="margin-top :20px">
+    </div>
+
     <div class="form-group">
       <?php include '../../../alert.php' ?>
       <div class="col-sm-7">
@@ -92,21 +100,17 @@ include 'header.php';
           </td>
           <td>
             <center>
-              <?php include('label-diterima.php'); ?>
+              <?php include('../../label-diterima.php'); ?>
           </td>
           <td>
             <center>
-              <?php include('label-upload.php'); ?>
+              <?php include('../../label-upload.php'); ?>
           </td>
           <td>
             <center>
-              <?php include('label-daftarulang.php'); ?>
+              <?php include('../../label-daftarulang.php'); ?>
           </td>
-          <!-- <td>
-            <center>
-              <a type="button" onclick="return confirm('Hapus Data Siswa <?= $d['nama_siswa'] ?> ?')"
-              class="btn btn-danger btn-sm" href="hapus.php?id=<?php echo $d['id']; ?>">Hapus</a>
-          </td> -->
+          
           <td>
             <center>
               <a type="button"  class="btn btn-info btn-sm" href="val-diterima.php?id=<?php echo $d['id']; ?>">Lihat</a>

@@ -9,12 +9,22 @@
   <table>
     <tr>
       <td><a type="button" style="margin-right: 10px; " class="btn btn-danger " href="logout.php">Keluar</a></td>
-      <td><a type="button" style="margin-right: 10px;" class="btn btn-primary " href="cetak-hasil-seleksi.php?nik=<?php echo $d['nik'] ?>">Download Hasil Seleksi</a></td>
+      <!-- <td><a type="button" style="margin-right: 10px;" class="btn btn-primary " href="cetak-hasil-seleksi.php?nik=<?php echo $d['nik'] ?>">Download Hasil Seleksi</a></td> -->
 
-      <?php if ($d['kondisi'] == "DITERIMA"): ?>
-        <td><a type="button" style="margin-right: 10px;" class="btn btn-success " href="daftarulang.php?nik=<?php echo $d['nik'] ?>">Daftar Ulang</a></td>
+      <?php if ($d['kondisi'] == "DITERIMA") { ?>
+        <td><a type="button" style="margin-right: 10px;" class="btn btn-primary " href="cetak-hasil-seleksi.php?nik=<?php echo $d['nik'] ?>">
+          Hasil Seleksi     <span class="glyphicon glyphicon-print" aria-hidden="true"></span></a>
+        </td>
+        <td><a type="button" style="margin-right: 10px;" class="btn btn-success " href="upload-berkas.php?nik=<?php echo $d['nik'] ?>">
+          Form Upload Berkas      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+        </td>
+      <?php }elseif  ($d['kondisi'] == "TIDAK DITERIMA") {  ?>
+        <td><a type="button" style="margin-right: 10px;" class="btn btn-primary " href="cetak-hasil-seleksi.php?nik=<?php echo $d['nik'] ?>">Download Hasil Seleksi</a></td>
+      <?php }else{  ?>
+        <td><h4>Hasil Belum Dikonfirmasi Admin</h4></td>
+      <?php } ?>
 
-      <?php endif; ?>
+
     </tr>
   </table>
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['status']!="admin" && $_SESSION['status']!="siswa") {
+if ($_SESSION['status']!="admin" && $_SESSION['status']!="siswa" && $_SESSION['status']!="op") {
     header("location:index.php?pesan=belum_login");
 }
 
@@ -52,7 +52,11 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
           <td>: <?= $d['nisn_siswa'] ?></td>
         </tr>
         <tr>
-          <td>Sekolah</td>
+          <td>Kompetensi Keahlian</td>
+          <td>: <?= $d['kompetensi_keahlian'] ?></td>
+        </tr>
+        <tr>
+          <td>Asal Sekolah</td>
           <td>: <?= $d['asal_sekolah'] ?></td>
         </tr>
         <tr>

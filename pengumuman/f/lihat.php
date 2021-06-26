@@ -10,14 +10,21 @@ include 'header.php';
       $id = isset($_GET['id']) ? abs((int) $_GET['id']) : 0;
       $data = mysqli_query($koneksi, "select *  from f_pengumuman where id='$id'");
       while ($d = mysqli_fetch_array($data)) {
-
-              ?>
+  ?>
 
   <table>
     <tr>
       <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-danger btn-md" href="dashboard.php">Kembali</a></td>
-      <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="../../assets/file/F-PESERTA_DIDIK.pdf">Formulir Dapodik</a></td>
-      <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="cetak-form.php?nik=<?php echo $d['nik'] ?>">Pakta Integritas</a></td>
+
+      <?php if ($d['kondisi'] == 'DITERIMA'): ?>
+        <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="../../assets/file/F-PESERTA_DIDIK.pdf">Formulir Dapodik</a></td>
+        <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="../cetak-pakta.php?nik=<?php echo $d['nik'] ?>">Pakta Integritas</a></td>
+      <?php endif; ?>
+
+      <?php if (!empty($d['pdf_pakta'])): ?>
+        <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="../cetak-upload-berkas.php?nik=<?php echo $d['nik'] ?>">Bukti Upload Berkas</a></td>
+      <?php endif; ?>
+
     </tr>
   </table>
 
@@ -141,8 +148,8 @@ include 'header.php';
 
       <tr>
         <td colspan="2"><center>
-          <select style="margin-top: 5px;  width: 30%;" name="kondisi_validasi" class="form-control" required>
-            <option value="<?= $d['kondisi_validasi']; ?>">Pilih Kondisi <?= $d['kondisi_validasi']; ?></option>
+          <select style="margin-top: 5px;  width: 30%;" name="kondisi_upload_berkas" class="form-control" required>
+            <option value="<?= $d['kondisi_upload_berkas']; ?>">Pilih Kondisi <?= $d['kondisi_upload_berkas']; ?></option>
             <option value="Data Sesuai">Data Sesuai</option>
             <option value="Data Tidak Sesuai">Data Tidak Sesuai</option>
           </select>

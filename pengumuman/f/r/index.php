@@ -1,13 +1,16 @@
-<?php
-include 'header.php';
-    ?>
+<?php include 'header.php'; ?>
+
+
+
 
     <div class="form-group">
-      <?php include '../../alert.php' ?>
+      <?php include '../../../alert.php' ?>
       <div class="col-sm-7">
-        <a href="logout.php" type="button" class="btn btn-danger">Logout</a>
-        <!-- <a href="../../e/akl/akl-lap.php" type="button" class="btn btn-success"
-        onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi dan Keuangan Lembaga ?')">Download AKL</a> -->
+      <?php include 'menu.php'; ?>
+
+    <div class='box5'>
+    </div>
+
       </div>
       <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
       <div class="col-sm-3">
@@ -41,10 +44,13 @@ include 'header.php';
             <center>Asal Sekolah
           </th>
           <th>
-            <center>Kondisi
+            <center>Diterima
           </th>
           <th>
-            <center>Hapus
+            <center>Upload Berkas
+          </th>
+          <th>
+            <center>Daftar Ulang
           </th>
           <th>
             <center>Lihat
@@ -53,7 +59,7 @@ include 'header.php';
       </thead>
       <tbody>
         <?php
-      include '../../koneksi.php';
+      include '../../../koneksi.php';
     $halperpage = 500;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
@@ -61,7 +67,7 @@ include 'header.php';
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman where kompetensi_keahlian='$jur'");
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman ");
     $no = $mulai+1;
 
     while ($d = mysqli_fetch_array($data)) {
@@ -91,16 +97,20 @@ include 'header.php';
           </td>
           <td>
             <center>
-              <?php include('val.php'); ?>
+              <?php include('../../label-diterima.php'); ?>
           </td>
           <td>
             <center>
-              <a type="button" onclick="return confirm('Hapus Data Siswa <?= $d['nama_siswa'] ?> ?')"
-              class="btn btn-danger btn-sm" href="hapus.php?id=<?php echo $d['id']; ?>">Hapus</a>
+              <?php include('../../label-upload.php'); ?>
           </td>
           <td>
             <center>
-              <a type="button"  class="btn btn-info btn-sm" href="lihat.php?id=<?php echo $d['id']; ?>">Lihat</a>
+              <?php include('../../label-daftarulang.php'); ?>
+          </td>
+
+          <td>
+            <center>
+              <a type="button"  class="btn btn-info btn-sm" href="val-daftarulang.php?id=<?php echo $d['id']; ?>">Lihat</a>
           </td>
 
         </tr>

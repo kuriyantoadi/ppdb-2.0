@@ -1,5 +1,4 @@
 
-
 <a href="../logout.php" type="button" class="btn btn-danger">Logout</a>
 <a href="index.php" type="button" class="btn btn-primary" role="button">Semua</a>
 <a href="hal-jurusan.php?hal_jur=tkj" type="button" class="btn btn-primary" role="button">TKJ</a>

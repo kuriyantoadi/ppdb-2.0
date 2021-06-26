@@ -2,7 +2,10 @@
 
 include 'header.php';
 ?>
-
+<center>
+  <h3 style="margin-top: 40px; margin-bottom: 10px">Tampilan Admin PPDB SMKN 1 Kragilan</h3>
+  <h3 style="margin-top: 0px; margin-bottom: 40px">Tampilan Siswa Diterima</h3>
+</center>
 
 <table class="table table-bordered">
   <?php
@@ -16,13 +19,11 @@ include 'header.php';
     ?>
   <form class="form-horizontal" action="val-diterima-up.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
     <table class="table table-bordered">
-      <tr>
-        <td colspan='2'><h3><center>Validasi Diterima</h3></td>
-      </tr>
+
       <tr>
         <td>Kondisi</td>
         <td>
-          <?php include 'label-diterima.php' ?>
+          <?php include '../../label-diterima.php' ?>
         </td>
       </tr>
       <tr>

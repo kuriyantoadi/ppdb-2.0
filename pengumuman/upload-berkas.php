@@ -13,7 +13,6 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
 }
 ?>
 
-
       <table class="table table-bordered">
         <?php
       include '../koneksi.php';
@@ -26,18 +25,43 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
         <table>
           <tr>
             <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-danger btn-md" href="dashboard.php?nik=<?php echo $d['nik']; ?>">Kembali</a></td>
-            <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-success btn-md" href="../assets/file/F-PESERTA_DIDIK.pdf">Formulir Dapodik</a></td>
-            <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-success btn-md" href="cetak-pakta.php?nik=<?php echo $d['nik'] ?>">Pakta Integritas</a></td>
+            <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="../assets/file/F-PESERTA_DIDIK.pdf">
+                Formulir Dapodik  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+              </a>
+            </td>
+            <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="cetak-pakta.php?nik=<?php echo $d['nik'] ?>">
+              Pakta Integritas   <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+              </a>
+            </td>
+            <td>
+              <?php if (!empty($d['pdf_pakta'])): ?>
+                <a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="cetak-upload-berkas.php?nik=<?php echo $d['nik'] ?>">
+                  Butki Upload Berkas <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+                </a>
+              <?php endif; ?>
+            </td>
           </tr>
         </table>
 
         <?php include '../alert.php'; ?>
-        <form class="form-horizontal" action="daftarulang_up.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
+        <form class="form-horizontal" action="upload-berkas-up.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
           <table class="table table-bordered">
 
             <tr>
               <td>Catatan dari Operator</td>
-              <td><h3><?php echo $d['catatan_operator']; ?></h3></td>
+              <td><b><?php echo $d['catatan_operator']; ?></b></td>
+            </tr>
+            <tr>
+              <td>Status Siswa Diterima</td>
+              <td><?php include 'label-diterima.php' ?></td>
+            </tr>
+            <tr>
+              <td>Status Upload Berkas</td>
+              <td><?php include 'label-upload.php'; ?></td>
+            </tr>
+            <tr>
+              <td>Status Daftar Ulang</td>
+              <td><?php include 'label-daftarulang.php' ?></td>
             </tr>
             <tr>
               <td>Tanggal Daftar Ulang</td>
@@ -94,26 +118,22 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
 
 
             <?php if (!empty($d['pdf_pakta'])) { ?>
-            <tr>
+            <!-- <tr>
               <td>Kondisi Validasi</td>
               <td>
                 <?php include 'val.php' ?>
               </td>
             </tr>
+
             <tr>
               <td>Kondisi Berkas Diberikan ke Sekolah</td>
               <td>
                 <?= $d['kondisi_berkas'] ?>
                 <p>Berkas diberikan jika kondisi validasi sudah hijau</p>
               </td>
-            </tr>
+            </tr> -->
 
-            <tr>
-              <td>Bukti Upload Berkas</td>
-              <td>
-                <a class="btn btn-primary" href="cetak-bukti.php?nik=<?= $d['nik'] ?>">Download Bukti Upload Berkas</a>
-              </td>
-            </tr>
+
 
             <?php }else{ ?>
 
@@ -142,17 +162,17 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
               </td>
             </tr>
 
-            <tr>
-              <td colspan="2">
-                <center><input type="submit" style="margin-top: 25px; " class="btn" name="upload" value="Submit"></center>
-              </td>
-            </tr>
+
+              </table>
+              <center><input type="submit" style="margin-top: 10px; margin-bottom: 60px" class="btn btn-default" name="upload" value="Submit"></center>
+
             </form>
+
           <?php } ?>
 
 
 
-      </table><br><br><br>
+
       <?php
       }
       include 'footer.php'
