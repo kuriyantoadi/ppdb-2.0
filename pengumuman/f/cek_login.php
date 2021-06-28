@@ -50,7 +50,7 @@ if ($cek > 0) {
     } elseif ($login['level']=="akl") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "op";
-        $_SESSION['jur'] = "Akuntansi dan Lembaga Keuangan";
+        $_SESSION['jur'] = "Akuntansi dan Keuangan Lembaga";
         $_SESSION['kode_jur'] = "akl";
         header("location:dashboard.php");
 

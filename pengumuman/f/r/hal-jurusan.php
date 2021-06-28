@@ -59,7 +59,7 @@ include 'header.php';
     include '../../../koneksi.php';
     $hal_jur = $_GET['hal_jur'];
     include 'menu-jur.php';
-    $halperpage = 100;
+    $halperpage = 900;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
     $result = mysqli_query($koneksi, "SELECT * FROM f_pengumuman ");

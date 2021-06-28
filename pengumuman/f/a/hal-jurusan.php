@@ -65,14 +65,14 @@ include 'header.php';
     include '../../../koneksi.php';
     $hal_jur = $_GET['hal_jur'];
     include 'menu-jur.php';
-    $halperpage = 500;
+    $halperpage = 9000;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
     $result = mysqli_query($koneksi, "SELECT * FROM f_pengumuman ");
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman where kompetensi_keahlian='$tampil_jur'");
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman where kompetensi_keahlian='$tampil_jur' ORDER BY nama_siswa ASC");
     $no = $mulai+1;
 
     while ($d = mysqli_fetch_array($data)) {

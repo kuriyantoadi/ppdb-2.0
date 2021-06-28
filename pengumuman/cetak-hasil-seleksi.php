@@ -8,10 +8,18 @@ include '../koneksi.php';
 // $nisn = isset($_GET['nisn']) ? abs((int) $_GET['nisn']) : 0;
 $nik = isset($_GET['nik']) ? abs((int) $_GET['nik']) : 0;
 
-$data_siswa = mysqli_query($koneksi, "select nama_siswa from f_pengumuman where nik='$nik'");
+$data_siswa = mysqli_query($koneksi, "select nama_siswa, kondisi from f_pengumuman where nik='$nik'");
 while ($d_siswa = mysqli_fetch_array($data_siswa)) {
 
   $nama_siswa = $d_siswa['nama_siswa'];
+
+  if ($d_siswa['kondisi'] == "DITERIMA") {
+    $no_surat = '581';
+  }elseif($d_siswa['kondisi'] == 'TIDAK DITERIMA') {
+    $no_surat = '582';
+
+  }
+
 }
 ?>
 <!DOCTYPE html>
@@ -34,7 +42,7 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
     <center><img style="margin-bottom: 0px; margin-top:  10px; margin-left: 0px" src="../assets/images/kop-surat.png" /><center>
 
       <h3><b>SURAT KETERANGAN</b></h3>
-      <p>Nomor : 442/583/Adm.Sekolah</p>
+      <p>Nomor : 442/<?= $no_surat ?>/Adm.Sekolah</p>
       <p style="margin-top: 10px; margin-bottom: 10px">Tentang :</p>
       <p style="margin-bottom: 20px"><b>PENGUMUMAN HASIL SELEKSI
       <br>PENERIMAAN PESERTA DIDIK BARU (PPBD)
@@ -64,7 +72,7 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
         </tr>
 
       </table>
-      <p style="margin-top: 20px">Berdasarkan hasil rapat pleno panitia PPDB SMK Negeri 1 Kragilan tanggal 289 Juni 2021,
+      <p style="margin-top: 20px">Berdasarkan hasil rapat pleno panitia PPDB SMK Negeri 1 Kragilan tanggal 29 Juni 2021,
         dengan memperhatikan Nilai Raport dan Tes Bakat dan Minat/Uji Kompetensi, maka siswa tersebut dinyatakan:</p>
 
       <table>

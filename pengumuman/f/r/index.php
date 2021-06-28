@@ -60,7 +60,7 @@
       <tbody>
         <?php
       include '../../../koneksi.php';
-    $halperpage = 500;
+    $halperpage = 900;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
     $result = mysqli_query($koneksi, "SELECT * FROM f_pengumuman ");
