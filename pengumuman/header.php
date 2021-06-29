@@ -37,7 +37,7 @@ while ($d_id = mysqli_fetch_array($cek_id)) {
 		<div class="col-md-2">
 		</div>
 		<div class="col-md-8">
-      <center style="margin-top: 30px"><h3>halaman Daftar Ulang</h3></center>
+      <center style="margin-top: 30px"><h3>Halaman Daftar Ulang</h3></center>
       <center style="margin-top: 10px"><h3>Peserta Didik SMK Negeri 1 Kragilan</h3></center>
       <center style="margin-bottom: 50px"><h3>Kompetensi Keahlian <?= $nama_jurusan ?></h3></center>
 		</div>
