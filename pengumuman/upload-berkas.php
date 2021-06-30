@@ -13,6 +13,21 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
 }
 ?>
 
+<div class='alert alert-danger alert-dismissible' role='alert'>
+<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+  <div class='alert-message'>
+    Info Penting:
+    <br>1. Daftar Ulang tanggal 1 s.d 9 Juli 2021,
+    <br>(Siswa yang tidak mendaftar ulang dianggap mengundurkan diri);
+    <br>2. Berkas Surat Keterangan Diterima, Pakta Integritas Siswa, Bukti Upload Berkas dan Form Dapodik Wajib diprint.
+    <br>3. Berkas Pakta Integritas, Swa Pakta Integritas dan Form Dapodik(di isi dulu dengan dengan lengkap) harus diupload untuk mendapatkan <b>"Bukti Upload Berkas".</b>
+    <br>4. Tombol Bukti Upload Berkas akan tampil secara otomatis ketika berkas sudah diupload.
+    <br>5. Berkas Daftar ulang terdiri dari Surat Keterangan Diterima, Pakta Integritas Siswa, Bukti Upload Berkas dan Form Dapodik dimenu Daftar Ulang. Berkas dimasukkan pada map snelhekter plastik sesuai warna kompetensi keahlian.
+    <br>6. Siswa yang diterima, wajib mengikuti kegiatan MPLS, pada tanggal 12 s.d 14 Juli 2021.
+
+  </div>
+</div>
+
       <table class="table table-bordered">
         <?php
       include '../koneksi.php';
@@ -25,6 +40,9 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
         <table>
           <tr>
             <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-danger btn-md" href="dashboard.php?nik=<?php echo $d['nik']; ?>">Kembali</a></td>
+            <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary " href="cetak-hasil-seleksi.php?nik=<?php echo $d['nik'] ?>">
+              Hasil Seleksi     <span class="glyphicon glyphicon-print" aria-hidden="true"></span></a>
+            </td>
             <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="../assets/file/F-PESERTA_DIDIK.pdf">
                 Formulir Dapodik  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
               </a>

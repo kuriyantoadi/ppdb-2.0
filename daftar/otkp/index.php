@@ -1,3 +1,11 @@
+<?php
+session_start();
+if ($_SESSION['status']!="admin" && $_SESSION['status']!="siswa") {
+    header("location:https://smkn1kragilan.sch.id/0/ppdb2021/pengumuman/");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
