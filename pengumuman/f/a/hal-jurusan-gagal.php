@@ -72,7 +72,7 @@ include 'header.php';
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman where kompetensi_keahlian='$tampil_jur' and kondisi='DITERIMA' ORDER BY nama_siswa ASC");
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman where kondisi='TIDAK DITERIMA' ORDER BY nama_siswa ASC");
     $no = $mulai+1;
 
     while ($d = mysqli_fetch_array($data)) {

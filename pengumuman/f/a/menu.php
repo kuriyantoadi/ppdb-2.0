@@ -8,3 +8,4 @@
 <a href="hal-jurusan.php?hal_jur=otkp" type="button" class="btn btn-primary" role="button">OTKP</a>
 <a href="hal-jurusan.php?hal_jur=tpm" type="button" class="btn btn-primary" role="button">Mesin</a>
 <a href="hal-jurusan.php?hal_jur=tkr" type="button" class="btn btn-primary" role="button">TKR</a>
+<a href="hal-jurusan-gagal.php" type="button" class="btn btn-primary" role="button">Tidak Diterima</a>
