@@ -63,8 +63,6 @@ include 'header.php';
   <tbody>
     <?php
     include '../../../koneksi.php';
-    $hal_jur = $_GET['hal_jur'];
-    include 'menu-jur.php';
     $halperpage = 9000;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
@@ -72,7 +70,7 @@ include 'header.php';
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman where kompetensi_keahlian='$tampil_jur' and kondisi='TIDAK DITERIMA' ORDER BY nama_siswa ASC");
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman where kondisi='TIDAK DITERIMA' ORDER BY nama_siswa ASC");
     $no = $mulai+1;
 
     while ($d = mysqli_fetch_array($data)) {
