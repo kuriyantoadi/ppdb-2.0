@@ -56,6 +56,9 @@ include 'header.php';
             <center>Daftar Ulang
           </th>
           <th>
+            <center>Hapus
+          </th>
+          <th>
             <center>Lihat
           </th>
         </tr>
@@ -110,7 +113,15 @@ include 'header.php';
             <center>
               <?php include('../../label-daftarulang.php'); ?>
           </td>
-
+          <td>
+            <center>
+              <?php include('../../label-daftarulang.php'); ?>
+          </td>
+          <td>
+            <center>
+              <a type="button"  onclick="return confirm('Hapus data siswa <?= $d['nama_siswa'] ?>?')"
+              class="btn btn-danger btn-sm" href="hapus.php?id=<?php echo $d['id']; ?>">Hapus</a>
+          </td>
           <td>
             <center>
               <a type="button"  class="btn btn-info btn-sm" href="val-diterima.php?id=<?php echo $d['id']; ?>">Lihat</a>
