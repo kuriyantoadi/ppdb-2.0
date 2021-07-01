@@ -76,7 +76,7 @@ if ($_POST['upload']) {
     $ukuran    = $_FILES['pdf_dapodik']['size'];
     $file_tmp = $_FILES['pdf_dapodik']['tmp_name'];
     if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
-        if ($ukuran < 544070) {
+        if ($ukuran < 1204070) {
             move_uploaded_file($file_tmp, '../assets/file_upload/'.$kode_jur.'/'.$nisn_siswa.'-'.$pdf_dapodik_up.'.pdf');
         } else {
             echo 'pdf_dapodik';

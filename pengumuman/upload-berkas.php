@@ -167,7 +167,9 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
               </td>
             </tr>
             <tr>
-              <td>Swa Photo Pakta Integritas</td>
+              <td>Swa Photo Pakta Integritas
+                <br><img src="../assets/images/contoh-swa-pakta.png" alt="">
+              </td>
               <td>
                 <p>File Harus PDF dan Maksimal 500kb</p>
                 <input type="hidden" name="nisn_siswa" value="<?php echo $d['nisn_siswa']; ?>">
@@ -179,7 +181,7 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
             <tr>
               <td>Fomulir Dapodik</td>
               <td>
-                <p>File Harus PDF dan Maksimal 500kb</p>
+                <p>File Harus PDF dan Maksimal 1 MB</p>
                 <input type="file" name="pdf_dapodik" accept="application/pdf" class="form-control-file" id="pdf_fakta" required>
               </td>
             </tr>
