@@ -80,7 +80,7 @@ while ($d_siswa = mysqli_fetch_array($data_siswa)) {
           <td>: <?= $d['kota'] ?></td>
         </tr>
         <tr>
-          <td>Kabupaten / Kota</td>
+          <td>Nomor HP</td>
           <td>: <?= $d['no_hp'] ?></td>
         </tr>
 
