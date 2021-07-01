@@ -18,7 +18,6 @@ include 'header.php';
         include '../../../alert.php';
     ?>
 
-<?= $d['pdf_pakta']; ?>
   <form class="form-horizontal" action="val-upload-up.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
     <table class="table table-bordered">
 
@@ -72,10 +71,8 @@ include 'header.php';
           </div>
         </td>
         <td>
-          <?= $d['pdf_pakta']; ?>
-          <embed src="../../../assets/file_upload/<?= $kode_jur ?>/<?= $d['pdf_pakta']; ?>" type="application/pdf" width="100%" height="500px">
-
           <?php if (!empty($d['pdf_pakta'])) { ?>
+            <embed src="../../../assets/file_upload/<?= $kode_jur ?>/<?= $d['pdf_pakta']; ?>" type="application/pdf" width="100%" height="500px">
           <?php }else{ ?>
             <h5>File Tidak Ada</h5>
           <?php } ?>

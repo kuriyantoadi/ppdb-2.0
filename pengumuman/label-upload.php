@@ -10,7 +10,7 @@ if ($kondisi_upload_berkas == "Data Sesuai") {
 } elseif ($d['pdf_pakta'] == "") {
  echo "<span class='label label-default'>Data Belum Di upload</span>";
 
-} elseif ($d['pdf_pakta'] =! "" && $kondisi_upload_berkas == "" ){
+} elseif (!empty($d['pdf_pakta']) && (empty($kondisi_upload_berkas)) ){
  echo "<span class='label label-warning'>Tahap Pengecekan Operator</span>";
 
 } else {
