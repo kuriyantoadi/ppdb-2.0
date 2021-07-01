@@ -107,7 +107,7 @@ include 'header.php';
         </td>
         <td>
           <?php if (!empty($d['pdf_swa_pakta'])) { ?>
-            <embed src="../../../assets/file_upload/<?= $kode_jur ?>/<?= $d['pdf_pakta']; ?>" type="application/pdf" width="100%" height="500px">
+            <embed src="../../../assets/file_upload/<?= $kode_jur ?>/<?= $d['pdf_swa_pakta']; ?>" type="application/pdf" width="100%" height="500px">
           <?php }else{ ?>
             <h5>File Tidak Ada</h5>
           <?php } ?>
