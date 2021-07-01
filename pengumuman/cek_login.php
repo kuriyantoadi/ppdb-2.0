@@ -55,7 +55,7 @@ if ($cek > 0) {
     } elseif ($login['kompetensi_keahlian']=="Teknik Kendaraan Ringan Otomotif") {
       $_SESSION['nisn_siswa'] = $nisn_siswa;
       $_SESSION['status'] = "siswa";
-      $_SESSION['kode_jur'] = "rpl";
+      $_SESSION['kode_jur'] = "tkr";
       header("location:dashboard.php?nik=$nik");
 
     } else {
