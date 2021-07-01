@@ -186,7 +186,7 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
                   <br>2. Formulir di isi dari halaman 1 sampai halaman 5.
                   <br>3. File diupload 5 lembar dalam bentuk PDF.
                   <br>4. Untuk scan dengan HP bisa pakai aplikasi Camscanner (Download di playstore).
-                  <br>5. No peserta ujian nasional, noo Ijazah dan no SKHUN tidak perlu diisi jika belum ada.
+                  <br>5. No peserta ujian nasional, no Ijazah dan no SKHUN tidak perlu diisi jika belum ada.
                 </b>
               </td>
               <td>
