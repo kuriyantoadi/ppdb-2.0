@@ -24,6 +24,7 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
     <br>4. Tombol Bukti Upload Berkas akan tampil secara otomatis ketika berkas sudah diupload.
     <br>5. Berkas Daftar ulang terdiri dari Surat Keterangan Diterima, Pakta Integritas Siswa, Bukti Upload Berkas dan Form Dapodik dimenu Daftar Ulang. Berkas dimasukkan pada map snelhekter plastik sesuai warna kompetensi keahlian.
     <br>6. Siswa yang diterima, wajib mengikuti kegiatan MPLS, pada tanggal 12 s.d 14 Juli 2021.
+    <br><b>7. Daftar Ulang dilakukan 1 hari setelah upload berkas, dan pastikan Status Berkas "Data Sesuai". </b>
 
   </div>
 </div>
@@ -179,7 +180,14 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
               </td>
             </tr>
             <tr>
-              <td>Fomulir Dapodik</td>
+              <td>Fomulir Dapodik
+                <b>
+                  <br>1. Formulir Dapodik Harus di isi dengan tulis tangan sebelum di upload
+                  <br>2. Formulir di isi dari halaman 1 sampai halaman 5
+                  <br>3. File diupload 5 lembar dalam bentuk PDF
+                  <br>4. Untuk scan dengan HP bisa pakai aplikasi Camscanner (Download diplaystore)
+                </b>
+              </td>
               <td>
                 <p>File Harus PDF dan Maksimal 1 MB</p>
                 <input type="file" name="pdf_dapodik" accept="application/pdf" class="form-control-file" id="pdf_fakta" required>
