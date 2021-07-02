@@ -38,6 +38,10 @@ include 'header.php';
         <td><?php echo $d['nama_siswa']; ?></td>
       </tr>
       <tr>
+        <td>No Hp Siswa</td>
+        <td><?php echo $d['no_hp']; ?></td>
+      </tr>
+      <tr>
         <td>Kompetensi Keahlian</td>
         <td><?php echo $d['kompetensi_keahlian']; ?></td>
       </tr>

@@ -59,6 +59,10 @@ include 'header.php';
         <td><?php echo $d['kompetensi_keahlian']; ?></td>
       </tr>
       <tr>
+        <td>No Hp</td>
+        <td><?php echo $d['no_hp']; ?></td>
+      </tr>
+      <tr>
         <td>Asal Sekolah</td>
         <td><?php echo $d['asal_sekolah']; ?></td>
       </tr>
