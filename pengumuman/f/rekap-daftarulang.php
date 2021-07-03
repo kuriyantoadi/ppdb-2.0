@@ -101,15 +101,10 @@ include 'rekap-jml.php';
       <tr>
         <td colspan="2">Jumlah</td>
         <td>
-          <?php
-            $jml_diterima = tampil_diterima('Akuntansi dan Lembaga Keuangan')+
-                            tampil_diterima('Otomatisasi dan Tata Kelola Perkantoran')+
-                            tampil_diterima('Teknik Komputer dan Jaringan')+
-                            tampil_diterima('Rekayasa Perangkat Lunak')+
-                            tampil_diterima('Teknik Pemesinan')+
-                            tampil_diterima('Teknik Kendaraan Ringan Otomotif');
-            echo $jml_diterima;
-           ?>
+          <?= jml_diterima() ?>
+        </td>
+        <td>
+          <?= jml_blm_upload() ?>
         </td>
       </tr>
     </table>
