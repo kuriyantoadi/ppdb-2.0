@@ -29,6 +29,42 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
   </div>
 </div>
 
+<div class='alert alert-info alert-dismissible' role='alert'>
+<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+  <div class='alert-message'>
+    <b>Info Pengisian Formulir Dapodik :
+    Data Form dapodik yg tdk wajib di isi/Boleh dikosongkan:</b>
+    <h5>
+    <br><b>Data Pribadi</b>
+    <br>- Berkebutuhan Khusus
+    <br>- Nama Dusun
+    <br>- Lintang dan Bujur
+    <br>- Apakah punya KIP (jika tidak memiliki KIP)
+
+    <br><br><b>Data Ayah Kandung dan Ibu Kandung</b>
+    <br>- Berkebutuhan khusus
+    <br>- Data wali boleh di kosongkan
+
+    <br><br><b>Kontak</b>
+    <br>- No Telepon Rumah
+
+    <br><br><b>Data Rincian Peserta Didik</b>
+    <br>- Prestasi (jika tdk memliki prestasi)
+    <br>- Beasiswa
+    <br>- kesejahteraan peserta didik
+
+    <br><br><b>Registrasi Peserta Didik</b>
+    <br>- No Peserta UN SMP/MTs
+    <br>- No Seri Ijazah SMP/MTs
+    <br>- No SKHUN SMP/MTs
+    <br>- Pendaftaran Keluar (dikosongkan semua)
+
+    <br><br><b>Note: Tanda tangan Orang tua/wali harap di isi sebagai pertanggung jawaban data isian</b>
+    </h5>
+  </div>
+</div>
+
+
       <table class="table table-bordered">
         <?php
       include '../koneksi.php';
@@ -161,7 +197,10 @@ while ($d_kondisi = mysqli_fetch_array($cek_kondisi)) {
             <?php }else{ ?>
 
             <tr>
-              <td>Scan Pakta Integritas</td>
+              <td>
+                Scan Pakta Integritas
+                <br><img src="../assets/images/contoh-pakta.png" alt="">
+              </td>
               <td>
                 <p>File Harus PDF dan Maksimal 300kb</p>
                 <input type="file" name="pdf_pakta" accept="application/pdf" class="form-control-file" id="pdf_fakta" required>
