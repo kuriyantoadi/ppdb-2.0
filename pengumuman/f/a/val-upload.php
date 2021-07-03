@@ -18,7 +18,6 @@ include 'header.php';
         include '../../../alert.php';
     ?>
 
-<?= $d['pdf_pakta']; ?>
   <form class="form-horizontal" action="val-upload-up.php" name="input" method="POST" enctype="multipart/form-data" onSubmit="return validasi()">
     <table class="table table-bordered">
 
