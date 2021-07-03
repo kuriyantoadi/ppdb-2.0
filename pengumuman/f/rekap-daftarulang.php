@@ -46,13 +46,13 @@
       </tr>
       <tr>
         <td><center><?= $no++ ?></td>
-        <td><center>Otomatisai dan Tata Kelola Perkantoran</td>
-        <td><center><?= tampil_diterima('Otomatisai dan Tata Kelola Perkantoran') ?></td>
-        <td><center><?=  tampil_blm_upload('Otomatisai dan Tata Kelola Perkantoran') ?></td>
-        <td><center><?=  tampil_sdh_upload('Otomatisai dan Tata Kelola Perkantoran') ?></td>
-        <td><center><?= tampil_val('Otomatisai dan Tata Kelola Perkantoran') ?></td>
-        <td><center><?= tampil_datasesuai('Otomatisai dan Tata Kelola Perkantoran') ?></td>
-        <td><center><?= tampil_daftarulang('Otomatisai dan Tata Kelola Perkantoran') ?></td>
+        <td><center>Otomatisasi dan Tata Kelola Perkantoran</td>
+        <td><center><?= tampil_diterima('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
+        <td><center><?=  tampil_blm_upload('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
+        <td><center><?=  tampil_sdh_upload('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
+        <td><center><?= tampil_val('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
+        <td><center><?= tampil_datasesuai('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
+        <td><center><?= tampil_daftarulang('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
       </tr>
       <tr>
         <td><center><?= $no++ ?></td>
@@ -84,16 +84,7 @@
         <td><center><?= tampil_datasesuai('Teknik Pemesinan') ?></td>
         <td><center><?= tampil_daftarulang('Teknik Pemesinan') ?></td>
       </tr>
-      <tr>
-        <td><center><?= $no++ ?></td>
-        <td><center>Teknik Pemesinan</td>
-        <td><center><?= tampil_diterima('Teknik Pemesinan') ?></td>
-        <td><center><?=  tampil_blm_upload('Teknik Pemesinan') ?></td>
-        <td><center><?=  tampil_sdh_upload('Teknik Pemesinan') ?></td>
-        <td><center><?= tampil_val('Teknik Pemesinan') ?></td>
-        <td><center><?= tampil_datasesuai('Teknik Pemesinan') ?></td>
-        <td><center><?= tampil_daftarulang('Teknik Pemesinan') ?></td>
-      </tr>
+
       <tr>
         <td><center><?= $no++ ?></td>
         <td><center>Teknik Kendaraan Ringan Otomotif</td>
@@ -104,7 +95,20 @@
         <td><center><?= tampil_datasesuai('Teknik Kendaraan Ringan Otomotif') ?></td>
         <td><center><?= tampil_daftarulang('Teknik Kendaraan Ringan Otomotif') ?></td>
       </tr>
-
+      <tr>
+        <td colspan="2">Jumlah</td>
+        <td>
+          <?php
+            $jml_diterima = tampil_diterima('Akuntansi dan Lembaga Keuangan')+
+                            tampil_diterima('Otomatisasi dan Tata Kelola Perkantoran')+
+                            tampil_diterima('Teknik Komputer dan Jaringan')+
+                            tampil_diterima('Rekayasa Perangkat Lunak')+
+                            tampil_diterima('Teknik Pemesinan')+
+                            tampil_diterima('Teknik Kendaraan Ringan Otomotif');
+            echo $jml_diterima;
+           ?>
+        </td>
+      </tr>
     </table>
 
 
