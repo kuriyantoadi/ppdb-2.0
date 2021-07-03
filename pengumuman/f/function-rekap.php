@@ -22,7 +22,7 @@
   function tampil_val($nama_jur){
     include '../../koneksi.php';
     $data = mysqli_query($koneksi, "SELECT *  from f_pengumuman where kompetensi_keahlian='$nama_jur'
-      AND kondisi='DITERIMA' AND kondisi_upload_berkas='' AND pdf_pakta IS NOT NULL ");
+      AND kondisi='DITERIMA' AND kondisi_upload_berkas NULL AND pdf_pakta IS NOT NULL ");
     $rekap_val = mysqli_num_rows($data);
     // result($rekap_diterima);
     echo $rekap_val;
