@@ -34,6 +34,7 @@ include 'rekap-jml.php';
         <th><center>Siswa Belum Upload Berkas</th>
         <th><center>Siswa Sudah Upload Berkas</th>
         <th><center>Berkas Sudah Divalidasi</th>
+        <th><center>Berkas Belum Divalidasi</th>
         <th><center>Upload Data Sesuai</th>
         <th><center>Siswa Daftar Ulang</th>
       </tr>
@@ -44,6 +45,7 @@ include 'rekap-jml.php';
         <td><center><?=  tampil_blm_upload('Akuntansi dan Keuangan Lembaga') ?></td>
         <td><center><?=  tampil_sdh_upload('Akuntansi dan Keuangan Lembaga') ?></td>
         <td><center><?= tampil_val('Akuntansi dan Keuangan Lembaga') ?></td>
+        <td><center><?= tampil_blm_val('Akuntansi dan Keuangan Lembaga') ?></td>
         <td><center><?= tampil_datasesuai('Akuntansi dan Keuangan Lembaga') ?></td>
         <td><center><?= tampil_daftarulang('Akuntansi dan Keuangan Lembaga') ?></td>
       </tr>
@@ -54,6 +56,7 @@ include 'rekap-jml.php';
         <td><center><?=  tampil_blm_upload('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
         <td><center><?=  tampil_sdh_upload('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
         <td><center><?= tampil_val('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
+        <td><center><?= tampil_blm_val('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
         <td><center><?= tampil_datasesuai('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
         <td><center><?= tampil_daftarulang('Otomatisasi dan Tata Kelola Perkantoran') ?></td>
       </tr>
@@ -64,6 +67,7 @@ include 'rekap-jml.php';
         <td><center><?=  tampil_blm_upload('Teknik Komputer dan Jaringan') ?></td>
         <td><center><?=  tampil_sdh_upload('Teknik Komputer dan Jaringan') ?></td>
         <td><center><?= tampil_val('Teknik Komputer dan Jaringan') ?></td>
+        <td><center><?= tampil_blm_val('Teknik Komputer dan Jaringan') ?></td>
         <td><center><?= tampil_datasesuai('Teknik Komputer dan Jaringan') ?></td>
         <td><center><?= tampil_daftarulang('Teknik Komputer dan Jaringan') ?></td>
       </tr>
@@ -74,6 +78,7 @@ include 'rekap-jml.php';
         <td><center><?=  tampil_blm_upload('Rekayasa Perangkat Lunak') ?></td>
         <td><center><?=  tampil_sdh_upload('Rekayasa Perangkat Lunak') ?></td>
         <td><center><?= tampil_val('Rekayasa Perangkat Lunak') ?></td>
+        <td><center><?= tampil_blm_val('Rekayasa Perangkat Lunak') ?></td>
         <td><center><?= tampil_datasesuai('Rekayasa Perangkat Lunak') ?></td>
         <td><center><?= tampil_daftarulang('Rekayasa Perangkat Lunak') ?></td>
       </tr>
@@ -84,6 +89,7 @@ include 'rekap-jml.php';
         <td><center><?=  tampil_blm_upload('Teknik Pemesinan') ?></td>
         <td><center><?=  tampil_sdh_upload('Teknik Pemesinan') ?></td>
         <td><center><?= tampil_val('Teknik Pemesinan') ?></td>
+        <td><center><?= tampil_blm_val('Teknik Pemesinan') ?></td>
         <td><center><?= tampil_datasesuai('Teknik Pemesinan') ?></td>
         <td><center><?= tampil_daftarulang('Teknik Pemesinan') ?></td>
       </tr>
@@ -95,6 +101,7 @@ include 'rekap-jml.php';
         <td><center><?=  tampil_blm_upload('Teknik Kendaraan Ringan Otomotif') ?></td>
         <td><center><?=  tampil_sdh_upload('Teknik Kendaraan Ringan Otomotif') ?></td>
         <td><center><?= tampil_val('Teknik Kendaraan Ringan Otomotif') ?></td>
+        <td><center><?= tampil_blm_val('Teknik Kendaraan Ringan Otomotif') ?></td>
         <td><center><?= tampil_datasesuai('Teknik Kendaraan Ringan Otomotif') ?></td>
         <td><center><?= tampil_daftarulang('Teknik Kendaraan Ringan Otomotif') ?></td>
       </tr>

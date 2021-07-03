@@ -39,6 +39,14 @@
     echo $rekap_datasesuai;
   }
 
+  function tampil_blm_val($nama_jur){
+    include '../../koneksi.php';
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman where kompetensi_keahlian='$nama_jur' AND kondisi='DITERIMA' AND pdf_pakta != '' AND kondisi_upload_berkas = ''");
+    $rekap_datasesuai = mysqli_num_rows($data);
+    // result($rekap_diterima);
+    echo $rekap_datasesuai;
+  }
+
   function tampil_datasesuai($nama_jur){
     include '../../koneksi.php';
     $data = mysqli_query($koneksi, "SELECT *  from f_pengumuman where kompetensi_keahlian='$nama_jur'
