@@ -1,4 +1,7 @@
-<?php include 'function-rekap.php' ?>
+<?php
+include 'rekap-tampil.php';
+include 'rekap-jml.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
