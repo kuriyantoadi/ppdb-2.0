@@ -120,6 +120,9 @@ include 'rekap-jml.php';
           <?= jml_val() ?>
         </td>
         <td><center>
+          <?= jml_blm_val() ?>
+        </td>
+        <td><center>
           <?= jml_datasesuai() ?>
         </td>
         <td><center>

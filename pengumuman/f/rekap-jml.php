@@ -39,6 +39,14 @@
     echo $rekap_datasesuai;
   }
 
+  function jml_blm_val(){
+    include '../../koneksi.php';
+    $data = mysqli_query($koneksi, "SELECT * from f_pengumuman where kondisi='DITERIMA' AND pdf_pakta != '' AND kondisi_upload_berkas = ''");
+    $rekap_datasesuai = mysqli_num_rows($data);
+    // result($rekap_diterima);
+    echo $rekap_datasesuai;
+  }
+
   function jml_datasesuai(){
     include '../../koneksi.php';
     $data = mysqli_query($koneksi, "SELECT *  from f_pengumuman where
