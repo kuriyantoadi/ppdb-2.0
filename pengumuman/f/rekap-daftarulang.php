@@ -100,11 +100,23 @@ include 'rekap-jml.php';
       </tr>
       <tr>
         <td colspan="2">Jumlah</td>
-        <td>
+        <td><center>
           <?= jml_diterima() ?>
         </td>
-        <td>
+        <td><center>
           <?= jml_blm_upload() ?>
+        </td>
+        <td><center>
+          <?= jml_sdh_upload() ?>
+        </td>
+        <td><center>
+          <?= jml_val() ?>
+        </td>
+        <td><center>
+          <?= jml_datasesuai() ?>
+        </td>
+        <td><center>
+          <?= jml_daftarulang() ?>
         </td>
       </tr>
     </table>
