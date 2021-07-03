@@ -29,6 +29,7 @@
         <td><center>Jurusan</td>
         <td><center>Siswa Diterima</td>
         <td><center>Siswa Sudah Upload Berkas</td>
+        <td><center>Berkas Belum Divalidasi</td>
         <td><center>Siswa Daftar Ulang</td>
       </tr>
       <tr>
@@ -36,6 +37,7 @@
         <td><center>Akuntansi dan Keuangan Lembaga</td>
         <td><center><?= tampil_diterima('Akuntansi dan Keuangan Lembaga') ?></td>
         <td><center><?= tampil_upload('Akuntansi dan Keuangan Lembaga') ?></td>
+        <td><center><?= tampil_val('Akuntansi dan Keuangan Lembaga') ?></td>
         <td><center><?= tampil_daftarulang('Akuntansi dan Keuangan Lembaga') ?></td>
       </tr>
     </table>
