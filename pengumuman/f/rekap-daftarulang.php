@@ -25,14 +25,14 @@
 
     <table class="table table-bordered table-hover">
       <tr>
-        <td><center>No</td>
-        <td><center>Jurusan</td>
-        <td><center>Siswa Diterima</td>
-        <td><center>Siswa Belum Upload Berkas</td>
-        <td><center>Siswa Sudah Upload Berkas</td>
-        <td><center>Berkas Sudah Divalidasi</td>
-        <td><center>Upload Data Sesuai</td>
-        <td><center>Siswa Daftar Ulang</td>
+        <th><center>No</th>
+        <th><center>Jurusan</th>
+        <th><center>Siswa Diterima</th>
+        <th><center>Siswa Belum Upload Berkas</th>
+        <th><center>Siswa Sudah Upload Berkas</th>
+        <th><center>Berkas Sudah Divalidasi</th>
+        <th><center>Upload Data Sesuai</th>
+        <th><center>Siswa Daftar Ulang</th>
       </tr>
       <tr>
         <td><center><?= $no++ ?></td>
@@ -44,6 +44,67 @@
         <td><center><?= tampil_datasesuai('Akuntansi dan Keuangan Lembaga') ?></td>
         <td><center><?= tampil_daftarulang('Akuntansi dan Keuangan Lembaga') ?></td>
       </tr>
+      <tr>
+        <td><center><?= $no++ ?></td>
+        <td><center>Otomatisai dan Tata Kelola Perkantoran</td>
+        <td><center><?= tampil_diterima('Otomatisai dan Tata Kelola Perkantoran') ?></td>
+        <td><center><?=  tampil_blm_upload('Otomatisai dan Tata Kelola Perkantoran') ?></td>
+        <td><center><?=  tampil_sdh_upload('Otomatisai dan Tata Kelola Perkantoran') ?></td>
+        <td><center><?= tampil_val('Otomatisai dan Tata Kelola Perkantoran') ?></td>
+        <td><center><?= tampil_datasesuai('Otomatisai dan Tata Kelola Perkantoran') ?></td>
+        <td><center><?= tampil_daftarulang('Otomatisai dan Tata Kelola Perkantoran') ?></td>
+      </tr>
+      <tr>
+        <td><center><?= $no++ ?></td>
+        <td><center>Teknik Komputer dan Jaringan</td>
+        <td><center><?= tampil_diterima('Teknik Komputer dan Jaringan') ?></td>
+        <td><center><?=  tampil_blm_upload('Teknik Komputer dan Jaringan') ?></td>
+        <td><center><?=  tampil_sdh_upload('Teknik Komputer dan Jaringan') ?></td>
+        <td><center><?= tampil_val('Teknik Komputer dan Jaringan') ?></td>
+        <td><center><?= tampil_datasesuai('Teknik Komputer dan Jaringan') ?></td>
+        <td><center><?= tampil_daftarulang('Teknik Komputer dan Jaringan') ?></td>
+      </tr>
+      <tr>
+        <td><center><?= $no++ ?></td>
+        <td><center>Rekayasa Perangkat Lunak</td>
+        <td><center><?= tampil_diterima('Rekayasa Perangkat Lunak') ?></td>
+        <td><center><?=  tampil_blm_upload('Rekayasa Perangkat Lunak') ?></td>
+        <td><center><?=  tampil_sdh_upload('Rekayasa Perangkat Lunak') ?></td>
+        <td><center><?= tampil_val('Rekayasa Perangkat Lunak') ?></td>
+        <td><center><?= tampil_datasesuai('Rekayasa Perangkat Lunak') ?></td>
+        <td><center><?= tampil_daftarulang('Rekayasa Perangkat Lunak') ?></td>
+      </tr>
+      <tr>
+        <td><center><?= $no++ ?></td>
+        <td><center>Teknik Pemesinan</td>
+        <td><center><?= tampil_diterima('Teknik Pemesinan') ?></td>
+        <td><center><?=  tampil_blm_upload('Teknik Pemesinan') ?></td>
+        <td><center><?=  tampil_sdh_upload('Teknik Pemesinan') ?></td>
+        <td><center><?= tampil_val('Teknik Pemesinan') ?></td>
+        <td><center><?= tampil_datasesuai('Teknik Pemesinan') ?></td>
+        <td><center><?= tampil_daftarulang('Teknik Pemesinan') ?></td>
+      </tr>
+      <tr>
+        <td><center><?= $no++ ?></td>
+        <td><center>Teknik Pemesinan</td>
+        <td><center><?= tampil_diterima('Teknik Pemesinan') ?></td>
+        <td><center><?=  tampil_blm_upload('Teknik Pemesinan') ?></td>
+        <td><center><?=  tampil_sdh_upload('Teknik Pemesinan') ?></td>
+        <td><center><?= tampil_val('Teknik Pemesinan') ?></td>
+        <td><center><?= tampil_datasesuai('Teknik Pemesinan') ?></td>
+        <td><center><?= tampil_daftarulang('Teknik Pemesinan') ?></td>
+      </tr>
+      <tr>
+        <td><center><?= $no++ ?></td>
+        <td><center>Teknik Kendaraan Ringan Otomotif</td>
+        <td><center><?= tampil_diterima('Teknik Kendaraan Ringan Otomotif') ?></td>
+        <td><center><?=  tampil_blm_upload('Teknik Kendaraan Ringan Otomotif') ?></td>
+        <td><center><?=  tampil_sdh_upload('Teknik Kendaraan Ringan Otomotif') ?></td>
+        <td><center><?= tampil_val('Teknik Kendaraan Ringan Otomotif') ?></td>
+        <td><center><?= tampil_datasesuai('Teknik Kendaraan Ringan Otomotif') ?></td>
+        <td><center><?= tampil_daftarulang('Teknik Kendaraan Ringan Otomotif') ?></td>
+      </tr>
+
     </table>
 
 
