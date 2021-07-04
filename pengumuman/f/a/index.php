@@ -11,6 +11,10 @@ include 'header.php';
     </div>
 
     <div class="form-group">
+      <a href="../rekap-daftarulang.php" type="button" class="btn btn-success">Rekap Daftar Ulang</a>
+    </div>
+
+    <div class="form-group">
       <?php include '../../../alert.php' ?>
       <div class="col-sm-7">
         <?php include 'menu.php' ?>

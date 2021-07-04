@@ -6,6 +6,8 @@ include 'header.php';
       <?php include '../../alert.php' ?>
       <div class="col-sm-7">
         <a href="logout.php" type="button" class="btn btn-danger">Logout</a>
+        <a href="rekap-daftarulang.php" type="button" class="btn btn-success">Rekap Daftar Ulang</a>
+
         <!-- <a href="../../e/akl/akl-lap.php" type="button" class="btn btn-success"
         onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi dan Keuangan Lembaga ?')">Download AKL</a> -->
       </div>
