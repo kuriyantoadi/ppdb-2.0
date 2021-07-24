@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['status']!="lahc3ooQuug1cheeShu3") {
+if ($_SESSION['status']!="admin") {
     header("location:../../404/index.php");
 }
 include '../header.php';
