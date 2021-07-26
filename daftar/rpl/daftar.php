@@ -1,8 +1,8 @@
 <?php
-session_start();
-if ($_SESSION['status']!="phohghoh3eibohC3Ciex") {
-    header("location:../../404/index.php");
-}
+// session_start();
+// if ($_SESSION['status']!="phohghoh3eibohC3Ciex") {
+//     header("location:../../404/index.php");
+// }
 include '../header.php';
 ?>
 
