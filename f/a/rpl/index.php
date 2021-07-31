@@ -63,10 +63,10 @@ include '../header.php';
             <center>Kondisi
           </th>
           <th>
-            <center>Lihat
+            <center>Hapus
           </th>
           <th>
-            <center>Hapus
+            <center>Lihat
           </th>
         </tr>
       </thead>
