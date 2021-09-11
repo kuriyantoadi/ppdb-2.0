@@ -15,8 +15,8 @@ include 'header.php';
   <table>
     <tr>
       <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-danger btn-md" href="dashboard.php">Kembali</a></td>
-      <td><a style="margin-right: 10px; margin-bottom: 25px;" onclick="return confirm('Reset Data Upload Siswa <?= $d['nama_siswa'] ?> ?')"
-         type="button" style="margin-right: 10px; margin-bottom: 0px;" class="btn btn-warning btn-md" href="reset-upload.php?id=<?= $d['id'] ?>">Reset Upload Berkas</a></td>
+      <!-- <td><a style="margin-right: 10px; margin-bottom: 25px;" onclick="return confirm('Reset Data Upload Siswa <?= $d['nama_siswa'] ?> ?')"
+         type="button" style="margin-right: 10px; margin-bottom: 0px;" class="btn btn-warning btn-md" href="reset-upload.php?id=<?= $d['id'] ?>">Reset Upload Berkas</a></td> -->
 
       <?php if ($d['kondisi'] == 'DITERIMA'): ?>
         <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="../../assets/file/F-PESERTA_DIDIK.pdf">Formulir Dapodik</a></td>
